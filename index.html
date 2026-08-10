@@ -7,18 +7,12 @@
   <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #f0f2f5; color: #1a1a1a; min-height: 100vh; }
-    
-    /* TOPO */
+
     .header {
       background: linear-gradient(90deg, #0d47a1 0%, #1565c0 100%);
-      color: white;
-      padding: 12px 20px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15);
-      flex-wrap: wrap;
-      gap: 10px;
+      color: white; padding: 12px 20px;
+      display: flex; align-items: center; justify-content: space-between;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-wrap: wrap; gap: 10px;
     }
     .header-brand { display: flex; align-items: center; gap: 12px; }
     .header-logo {
@@ -29,11 +23,8 @@
     .header-title { font-size: 16px; font-weight: 700; letter-spacing: 0.3px; }
     .header-subtitle { font-size: 11px; opacity: 0.85; font-weight: 500; }
     .header-info { display: flex; align-items: center; gap: 16px; font-size: 12px; }
-    .header-badge {
-      background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 12px;
-    }
-    
-    /* BARRA DO PACIENTE */
+    .header-badge { background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 12px; }
+
     .patient-bar {
       background: white; border-bottom: 1px solid #d0d7de;
       padding: 14px 20px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
@@ -47,8 +38,7 @@
     .patient-meta { font-size: 12px; color: #555; margin-top: 2px; }
     .badges { display: flex; gap: 8px; flex-wrap: wrap; }
     .badge {
-      padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600;
-      border: 1px solid;
+      padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; border: 1px solid;
     }
     .badge-red { background: #ffebee; color: #c62828; border-color: #ef9a9a; }
     .badge-orange { background: #fff3e0; color: #e65100; border-color: #ffcc80; }
@@ -56,11 +46,11 @@
     .badge-purple { background: #f3e5f5; color: #6a1b9a; border-color: #ce93d8; }
     .badge-green { background: #e8f5e9; color: #2e7d32; border-color: #a5d6a7; }
     .badge-cyan { background: #e0f7fa; color: #006064; border-color: #80deea; }
-    
-    /* LAYOUT */
+    .badge-yellow { background: #fff8e1; color: #f57f17; border-color: #ffe082; }
+    .badge-blue { background: #e3f2fd; color: #0d47a1; border-color: #90caf9; }
+    .badge-gray { background: #f5f5f5; color: #555; border-color: #bdbdbd; }
+
     .layout { display: flex; min-height: calc(100vh - 140px); }
-    
-    /* MENU LATERAL */
     .sidebar {
       width: 240px; background: white; border-right: 1px solid #d0d7de;
       padding: 16px 0; flex-shrink: 0;
@@ -84,8 +74,7 @@
     .nav-btn.add-btn.active {
       background: #e8f5e9; color: #2e7d32; border-left: 3px solid #2e7d32;
     }
-    
-    /* CONTEÚDO */
+
     .content { flex: 1; padding: 20px; overflow-y: auto; }
     .panel {
       background: white; border-radius: 10px; border: 1px solid #d0d7de;
@@ -99,8 +88,7 @@
       margin: 0 0 16px 0; font-size: 18px; color: #2e7d32;
       border-bottom: 2px solid #c8e6c9; padding-bottom: 8px;
     }
-    
-    /* CARDS */
+
     .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
     .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
     .grid-problems { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
@@ -108,15 +96,10 @@
       background: #fafafa; border-radius: 8px; padding: 14px;
       border-left: 4px solid #0d47a1;
     }
-    .card-title {
-      font-size: 11px; color: #888; text-transform: uppercase;
-      font-weight: 700; margin-bottom: 4px;
-    }
+    .card-title { font-size: 11px; color: #888; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
     .card-body { font-size: 14px; color: #333; }
     .card-body-sm { font-size: 13px; color: #333; line-height: 1.7; }
     .card-sub { font-size: 12px; color: #555; margin-top: 4px; }
-    
-    /* CARDS COLORIDOS */
     .card-blue { border-left-color: #0d47a1; }
     .card-red { border-left-color: #c62828; }
     .card-orange { border-left-color: #e65100; }
@@ -125,11 +108,8 @@
     .card-cyan { border-left-color: #006064; }
     .card-yellow { border-left-color: #f9a825; }
     .card-gray { border-left-color: #888; }
-    
-    /* CARDS DE MÉTRICA */
-    .metric-card {
-      border-radius: 10px; padding: 20px; text-align: center;
-    }
+
+    .metric-card { border-radius: 10px; padding: 20px; text-align: center; }
     .metric-blue { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
     .metric-green { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
     .metric-red { background: linear-gradient(135deg, #ffebee, #ffcdd2); }
@@ -142,15 +122,10 @@
     .metric-unit { font-size: 16px; }
     .metric-label { font-size: 12px; color: #555; margin-top: 4px; font-weight: 600; }
     .metric-alert { font-size: 11px; font-weight: 700; margin-top: 2px; }
-    
-    /* ALERT BOX */
-    .alert-box {
-      background: #fff8e1; border-radius: 8px; padding: 14px;
-      border: 1px solid #ffe082;
-    }
+
+    .alert-box { background: #fff8e1; border-radius: 8px; padding: 14px; border: 1px solid #ffe082; }
     .alert-box p { font-size: 13px; color: #5d4037; line-height: 1.6; }
-    
-    /* TIMELINE */
+
     .timeline-item {
       border-left: 3px solid #0d47a1; padding-left: 20px;
       margin-bottom: 20px; position: relative;
@@ -165,58 +140,42 @@
       font-size: 12px; font-weight: 700; margin-bottom: 8px;
     }
     .timeline-text { font-size: 13px; line-height: 1.7; color: #333; }
-    
-    /* PROBLEM ITEM */
-    .problem-item {
-      padding: 10px 14px; border-radius: 8px; font-size: 13px;
-      border-left: 3px solid;
-    }
-    
-    /* FORM */
+
+    .problem-item { padding: 10px 14px; border-radius: 8px; font-size: 13px; border-left: 3px solid; }
+
     .form-group { margin-bottom: 14px; }
-    .form-label {
-      font-size: 12px; font-weight: 600; color: #555;
-      display: block; margin-bottom: 4px;
-    }
+    .form-label { font-size: 12px; font-weight: 600; color: #555; display: block; margin-bottom: 4px; }
     .form-input, .form-select, .form-textarea {
       width: 100%; padding: 10px 12px; border: 1px solid #ccc;
       border-radius: 6px; font-size: 13px; font-family: inherit;
     }
     .form-textarea { min-height: 120px; resize: vertical; }
-    .form-grid-3 {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px;
-    }
+    .form-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
     .btn-primary {
       background: #2e7d32; color: white; border: none;
-      padding: 12px 24px; border-radius: 6px;
-      font-size: 14px; font-weight: 600; cursor: pointer;
+      padding: 12px 24px; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer;
     }
     .btn-primary:hover { background: #1b5e20; }
-    
-    .hint-box {
-      background: #e8f5e9; border-radius: 8px; padding: 14px;
-      margin-bottom: 16px; font-size: 13px; color: #2e7d32;
-    }
-    
-    /* RESPONSIVO */
+    .hint-box { background: #e8f5e9; border-radius: 8px; padding: 14px; margin-bottom: 16px; font-size: 13px; color: #2e7d32; }
+    .loading { text-align: center; padding: 40px; color: #888; font-size: 14px; }
+    .error { text-align: center; padding: 40px; color: #c62828; font-size: 14px; background: #ffebee; border-radius: 8px; }
+
     @media (max-width: 768px) {
       .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #d0d7de; }
       .layout { flex-direction: column; }
       .patient-bar { flex-direction: column; align-items: flex-start; }
       .form-grid-3 { grid-template-columns: 1fr; }
     }
-    
-    /* UTILS */
     .hidden { display: none !important; }
     ul { margin: 6px 0; padding-left: 20px; }
     li { margin-bottom: 4px; }
     p { margin-bottom: 8px; }
     b { font-weight: 700; }
   </style>
+<base target="_blank">
 </head>
 <body>
 
-  <!-- TOPO -->
   <div class="header">
     <div class="header-brand">
       <div class="header-logo">T</div>
@@ -227,34 +186,16 @@
     </div>
     <div class="header-info">
       <span>👤 Dr. Silva</span>
-      <span>🕐 09/08/2026 14:32</span>
+      <span id="clock">🕐 --/--/---- --:--</span>
       <span class="header-badge">UTI</span>
     </div>
   </div>
 
-  <!-- BARRA DO PACIENTE -->
-  <div class="patient-bar">
-    <div style="display: flex; align-items: center; gap: 10px;">
-      <div class="patient-avatar">👴</div>
-      <div>
-        <div class="patient-name">TRASTAMIRO <span>(83 anos, Masc.)</span></div>
-        <div class="patient-meta">Prontuário: <b>083-T/2026</b> | Internação: <b>03/08/2026</b></div>
-      </div>
-    </div>
-    <div class="badges">
-      <span class="badge badge-red">⚠️ TCE Frontal</span>
-      <span class="badge badge-orange">🦴 Lesão C4</span>
-      <span class="badge badge-pink">🫁 CA Pulmão IIIB</span>
-      <span class="badge badge-purple">❤️ ICFEp</span>
-      <span class="badge badge-green">😴 SAOS Grave</span>
-      <span class="badge badge-cyan">⚖️ Obesidade Grave (IMC 54,7)</span>
-    </div>
+  <div class="patient-bar" id="patient-bar">
+    <div class="loading">Carregando dados do paciente...</div>
   </div>
 
-  <!-- LAYOUT -->
   <div class="layout">
-    
-    <!-- MENU LATERAL -->
     <div class="sidebar">
       <div class="sidebar-label">Navegação</div>
       <button class="nav-btn active" onclick="showTab('resumo')" id="btn-resumo">📋 Resumo Clínico</button>
@@ -269,374 +210,266 @@
       <button class="nav-btn add-btn" onclick="showTab('adicionar')" id="btn-adicionar">➕ Adicionar Evolução</button>
     </div>
 
-    <!-- CONTEÚDO -->
-    <div class="content">
-
-      <!-- RESUMO CLÍNICO -->
-      <div id="tab-resumo">
-        <div class="panel">
-          <h2 class="panel-title">📋 Resumo Clínico do Paciente</h2>
-          <div class="grid-2">
-            <div class="card card-blue">
-              <div class="card-title">Identificação</div>
-              <div class="card-body"><b>Trastamiro</b>, 83 anos, Masculino</div>
-              <div class="card-sub">Prontuário: 083-T/2026 | UTI</div>
-            </div>
-            <div class="card card-red">
-              <div class="card-title">Motivo de Internação</div>
-              <div class="card-body">Trauma motociclístico — TCE frontal + Lesão cervical C4</div>
-              <div class="card-sub">Sem capacete | Perda de consciência</div>
-            </div>
-            <div class="card card-orange">
-              <div class="card-title">Status Atual (10/08)</div>
-              <div class="card-body">Sedação suspensa — processo de despertar</div>
-              <div class="card-sub"><b>RASS: -1</b> | Sonolento, desperta ao estímulo verbal</div>
-            </div>
-            <div class="card card-green">
-              <div class="card-title">Comorbidades Principais</div>
-              <div class="card-body-sm">SAOS grave (IAH 115), CA pulmão grandes células cT4N2M0 (IIIB), ICFEp (FE 62%), Obesidade grave (IMC 54,7), Prótese de joelho esquerdo</div>
-            </div>
-            <div class="card card-purple">
-              <div class="card-title">Aspectos Psicossociais</div>
-              <div class="card-body-sm">Irmão gêmeo (Astrogildo) faleceu no mesmo hospital. Ganho de ~50 kg após o luto. <b>Sem suporte familiar.</b> Desconfiança da equipe. Comportamento questionador.</div>
-            </div>
-            <div class="card card-cyan">
-              <div class="card-title">Suporte Ventilatório</div>
-              <div class="card-body">Ventilação mecânica invasiva</div>
-              <div class="card-sub">Uso prévio de BiPAP domiciliar por SAOS grave + hipercapnia</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- DADOS ANTROPOMÉTRICOS -->
-      <div id="tab-dados" class="hidden">
-        <div class="panel">
-          <h2 class="panel-title">📊 Dados Antropométricos</h2>
-          <div class="grid-4" style="margin-bottom: 20px;">
-            <div class="metric-card metric-blue">
-              <div class="metric-value">158 <span class="metric-unit">kg</span></div>
-              <div class="metric-label">PESO ATUAL</div>
-            </div>
-            <div class="metric-card metric-green">
-              <div class="metric-value">1,70 <span class="metric-unit">m</span></div>
-              <div class="metric-label">ESTATURA</div>
-            </div>
-            <div class="metric-card metric-red">
-              <div class="metric-value">54,7</div>
-              <div class="metric-label">IMC kg/m²</div>
-              <div class="metric-alert" style="color:#c62828;">OBESIDADE GRAVE</div>
-            </div>
-            <div class="metric-card metric-orange">
-              <div class="metric-value">108 <span class="metric-unit">kg</span></div>
-              <div class="metric-label">PESO HABITUAL</div>
-            </div>
-          </div>
-          <div class="alert-box">
-            <p><b>⚠️ Variação ponderal:</b> Ganho aproximado de <b>50 kg</b> após evento familiar de grande impacto emocional (falecimento do irmão gêmeo Astrogildo).</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- HISTÓRIA SOCIAL -->
-      <div id="tab-historia" class="hidden">
-        <div class="panel">
-          <h2 class="panel-title">🏠 História Social e Familiar</h2>
-          <div style="display: flex; flex-direction: column; gap: 14px;">
-            <div class="card card-purple">
-              <div style="font-weight: 700; color: #6a1b9a; margin-bottom: 6px;">👥 Irmão Gêmeo — Astrogildo</div>
-              <div class="card-body-sm">Paciente possui irmão gêmeo, <b>Astrogildo</b>, que anteriormente encontrava-se internado e sob cuidados no Hospital dos Estagiários da Tuiuti. Astrogildo apresentou evolução desfavorável e <b>veio a óbito em circunstâncias trágicas</b>.</div>
-            </div>
-            <div class="card card-orange">
-              <div style="font-weight: 700; color: #e65100; margin-bottom: 6px;">⚖️ Ganho Ponderal Pós-Luto</div>
-              <div class="card-body-sm">Após a morte do irmão, Trastamiro apresentou <b>ganho ponderal progressivo de aproximadamente 50 kg</b>.</div>
-            </div>
-            <div class="card card-red">
-              <div style="font-weight: 700; color: #c62828; margin-bottom: 6px;">🏥 Relação com a Equipe</div>
-              <div class="card-body-sm">Desde a internação atual, apresenta <b>maior desconfiança</b> em relação aos profissionais, questiona frequentemente as condutas propostas, demonstra <b>menor colaboração espontânea</b> e solicita explicações sobre procedimentos.</div>
-            </div>
-            <div class="card card-blue">
-              <div style="font-weight: 700; color: #0d47a1; margin-bottom: 6px;">👨‍👩‍👧‍👦 Suporte Familiar</div>
-              <div class="card-body-sm">Durante a evolução hospitalar, <b>perdeu toda a assistência familiar disponível</b>. Paciente encontra-se sem rede de apoio.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ANTECEDENTES -->
-      <div id="tab-antecedentes" class="hidden">
-        <div class="panel">
-          <h2 class="panel-title">📁 Antecedentes Pessoais</h2>
-          
-          <div style="margin-bottom: 20px;">
-            <div style="background: #e3f2fd; padding: 10px 14px; border-radius: 8px 8px 0 0; font-weight: 700; color: #0d47a1; font-size: 14px;">🦴 Antecedente Oncológico Ortopédico</div>
-            <div style="background: #fafafa; padding: 14px; border-radius: 0 0 8px 8px; border: 1px solid #e3f2fd; border-top: none; font-size: 13px; line-height: 1.7; color: #333;">
-              Aos 25 anos, diagnóstico de <b>osteossarcoma em joelho esquerdo</b>. Submetido a tratamento cirúrgico com retirada da lesão e implantação de <b>prótese total de joelho esquerdo</b>. Recuperação satisfatória, retomou a marcha. Até o evento traumático atual, não havia relato de limitação importante da marcha.
-            </div>
-          </div>
-
-          <div style="margin-bottom: 20px;">
-            <div style="background: #f3e5f5; padding: 10px 14px; border-radius: 8px 8px 0 0; font-weight: 700; color: #6a1b9a; font-size: 14px;">😴 Síndrome da Apneia Obstrutiva do Sono (SAOS)</div>
-            <div style="background: #fafafa; padding: 14px; border-radius: 0 0 8px 8px; border: 1px solid #f3e5f5; border-top: none; font-size: 13px; line-height: 1.7; color: #333;">
-              Diagnóstico prévio de <b>SAOS grave</b>. <b>IAH: 115 eventos/hora</b>. História de <b>hipercapnia importante</b> associada ao distúrbio ventilatório. Paciente fazia uso domiciliar de <b>BiPAP</b>.
-            </div>
-          </div>
-
-          <div style="margin-bottom: 20px;">
-            <div style="background: #ffebee; padding: 10px 14px; border-radius: 8px 8px 0 0; font-weight: 700; color: #c62828; font-size: 14px;">🫁 Neoplasia Pulmonar</div>
-            <div style="background: #fafafa; padding: 14px; border-radius: 0 0 8px 8px; border: 1px solid #ffebee; border-top: none; font-size: 13px; line-height: 1.7; color: #333;">
-              <b>Carcinoma pulmonar de grandes células</b><br>
-              <b>Estadiamento: cT4N2M0 — estádio IIIB</b><br>
-              • <b>T4:</b> tumor primário com mais de 7 cm no maior diâmetro<br>
-              • <b>N2:</b> comprometimento de linfonodos mediastinais ipsilaterais e/ou subcarinais<br>
-              • <b>M0:</b> ausência de metástases à distância identificadas no estadiamento inicial
-            </div>
-          </div>
-
-          <div>
-            <div style="background: #e8f5e9; padding: 10px 14px; border-radius: 8px 8px 0 0; font-weight: 700; color: #2e7d32; font-size: 14px;">❤️ Insuficiência Cardíaca — ICFEp</div>
-            <div style="background: #fafafa; padding: 14px; border-radius: 0 0 8px 8px; border: 1px solid #e8f5e9; border-top: none; font-size: 13px; line-height: 1.7; color: #333;">
-              <b>Ecocardiograma:</b><br>
-              • VE: hipertrofia concêntrica moderada, dimensões preservadas<br>
-              • Função sistólica global preservada — <b>FEVE 62%</b><br>
-              • Função diastólica: <b>disfunção diastólica grau II</b>, achados compatíveis com aumento das pressões de enchimento<br>
-              • Átrio esquerdo moderadamente dilatado<br>
-              • VD discretamente aumentado, função sistólica preservada<br>
-              • VM: insuficiência mitral discreta | VA: esclerose valvar, sem estenose significativa | VT: insuficiência tricúspide discreta<br>
-              • <b>PSAP estimada: 45 mmHg</b> | Pericárdio: sem derrame
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- EVENTO ATUAL -->
-      <div id="tab-evento" class="hidden">
-        <div class="panel">
-          <h2 class="panel-title">🚨 História do Evento Atual</h2>
-          <div style="display: flex; gap: 12px; margin-bottom: 16px;">
-            <div style="background: #c62828; color: white; padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 700;">03/08/2026</div>
-            <div style="background: #0d47a1; color: white; padding: 6px 14px; border-radius: 6px; font-size: 12px; font-weight: 700;">ACIDENTE MOTOCICLÍSTICO</div>
-          </div>
-          <div class="card card-red">
-            <p>Paciente sofreu acidente motociclístico após <b>perder o controle da motocicleta durante manobra de empinamento</b>.</p>
-            <p>No momento do acidente, <b>não utilizava capacete</b>.</p>
-            <p style="margin-top: 10px;"><b>Evoluiu com:</b></p>
-            <ul>
-              <li>Traumatismo cranioencefálico frontal</li>
-              <li>Trauma cervical</li>
-              <li>Suspeita de lesão medular em C4</li>
-              <li>Rebaixamento do nível de consciência</li>
-            </ul>
-            <p style="margin-top: 10px;">Foi encaminhado ao <b>Hospital dos Estagiários da Tuiuti</b>.</p>
-          </div>
-        </div>
-      </div>
-
-      <!-- EVOLUÇÃO MÉDICA -->
-      <div id="tab-evolucao" class="hidden">
-        <div class="panel">
-          <h2 class="panel-title">📈 Evolução Médica</h2>
-          
-          <div class="timeline-item">
-            <div class="timeline-dot" style="background: #0d47a1; box-shadow: 0 0 0 1px #0d47a1;"></div>
-            <div class="timeline-badge" style="background: #e3f2fd; color: #0d47a1;">03/08 — Admissão</div>
-            <div class="timeline-text">
-              Paciente admitido após trauma motociclístico. TCE frontal associado a trauma cervical em nível C4. Quadro compatível com <b>lesão medular cervical parcial anterior</b>. Evoluiu com <b>rebaixamento do nível de consciência</b>, indicada transferência para UTI. Realizada <b>intubação orotraqueal</b>. Mantido sob sedação e ventilação mecânica invasiva.
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot" style="background: #f9a825; box-shadow: 0 0 0 1px #f9a825;"></div>
-            <div class="timeline-badge" style="background: #fff8e1; color: #f57f17;">04/08 — Passagem de Plantão</div>
-            <div class="timeline-text">
-              Durante reavaliação pela equipe da manhã, surgem dúvidas quanto à classificação inicial da lesão medular. Achados considerados mais compatíveis com <b>lesão medular parcial posterior em C4</b>. Solicitada revisão da avaliação neurológica e correlação com exames de imagem e exame clínico.
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot" style="background: #888; box-shadow: 0 0 0 1px #888;"></div>
-            <div class="timeline-badge" style="background: #f5f5f5; color: #555;">05–09/08 — Evolução na UTI</div>
-            <div class="timeline-text">
-              Paciente permanece em ventilação mecânica invasiva, mantida sedação. Acompanhamento devido à associação de: TCE, lesão cervical, alteração do nível de consciência, câncer pulmonar, SAOS grave, hipercapnia, ICFEp, obesidade grave, antecedente ortopédico, ausência de suporte familiar.
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot" style="background: #2e7d32; box-shadow: 0 0 0 1px #2e7d32;"></div>
-            <div class="timeline-badge" style="background: #e8f5e9; color: #2e7d32;">10/08 — Evolução Médica</div>
-            <div class="timeline-text">
-              <b>Sedação suspensa.</b> Paciente inicia processo de despertar. <b>RASS: -1.</b> Sonolento, porém desperta ao estímulo verbal e apresenta interação inicial com a equipe. Mantida vigilância quanto a: nível de consciência, capacidade de interação, proteção de vias aéreas, padrão respiratório, resposta motora, comportamento, tolerância à redução da sedação, possibilidade de progressão do suporte ventilatório.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- FISIOTERAPIA -->
-      <div id="tab-fisio" class="hidden">
-        <div class="panel">
-          <h2 class="panel-title">🦵 Evolução Fisioterapêutica</h2>
-          
-          <div class="timeline-item">
-            <div class="timeline-dot" style="background: #0d47a1; box-shadow: 0 0 0 1px #0d47a1;"></div>
-            <div class="timeline-badge" style="background: #e3f2fd; color: #0d47a1;">03/08 — Avaliação Inicial</div>
-            <div class="timeline-text">
-              Paciente em UTI, intubado e em VM invasiva, sob sedação. Histórico prévio: SAOS grave (IAH 115), hipercapnia, BiPAP domiciliar, neoplasia pulmonar, ICFEp, obesidade grave, prótese TQ esquerdo, TCE, trauma cervical C4. Avaliação funcional limitada pelo rebaixamento do nível de consciência e sedação. Conduta: acompanhamento cardiorrespiratório, monitorização, manejo relacionado à VM e prevenção de complicações da imobilidade.
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot" style="background: #f9a825; box-shadow: 0 0 0 1px #f9a825;"></div>
-            <div class="timeline-badge" style="background: #fff8e1; color: #f57f17;">04/08 — Reavaliação</div>
-            <div class="timeline-text">
-              Durante discussão multiprofissional, fisioterapia toma conhecimento da mudança na hipótese de classificação da lesão cervical. Mantida necessidade de considerar restrições decorrentes do trauma cervical até esclarecimento diagnóstico. Avaliação funcional permanece limitada.
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot" style="background: #888; box-shadow: 0 0 0 1px #888;"></div>
-            <div class="timeline-badge" style="background: #f5f5f5; color: #555;">05–09/08</div>
-            <div class="timeline-text">
-              Paciente permanece sedado e em VM. Fisioterapia acompanha: mecânica ventilatória, necessidade de suporte ventilatório, resposta às intervenções, condições para mobilização, risco de perda funcional, repercussões da imobilidade.
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot" style="background: #2e7d32; box-shadow: 0 0 0 1px #2e7d32;"></div>
-            <div class="timeline-badge" style="background: #e8f5e9; color: #2e7d32;">10/08 — Reavaliação</div>
-            <div class="timeline-text">
-              Sedação suspensa. Paciente em processo de despertar. <b>RASS: -1.</b> Apresenta possibilidade inicial de interação com a equipe. Iniciada reavaliação sistemática: nível de consciência, comando motor, força muscular, sensibilidade, padrão respiratório, tosse, manejo de secreções, capacidade de interação, tolerância à mobilização, estabilidade hemodinâmica, risco funcional.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ENFERMAGEM -->
-      <div id="tab-enfermagem" class="hidden">
-        <div class="panel">
-          <h2 class="panel-title">🩺 Evolução de Enfermagem</h2>
-          
-          <div class="timeline-item">
-            <div class="timeline-dot" style="background: #0d47a1; box-shadow: 0 0 0 1px #0d47a1;"></div>
-            <div class="timeline-badge" style="background: #e3f2fd; color: #0d47a1;">03/08</div>
-            <div class="timeline-text">
-              Paciente admitido em UTI após trauma motociclístico. Intubado e sob sedação. Mantida monitorização contínua e cuidados intensivos. Devido ao quadro neurológico e à condição crítica, permanece dependente de cuidados integrais.
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot" style="background: #888; box-shadow: 0 0 0 1px #888;"></div>
-            <div class="timeline-badge" style="background: #f5f5f5; color: #555;">04–09/08</div>
-            <div class="timeline-text">
-              Paciente permanece sob cuidados intensivos. Mantidos cuidados relacionados a: ventilação invasiva, prevenção de complicações da imobilidade, integridade cutânea, posicionamento, dispositivos invasivos, higiene, controle de sinais clínicos, segurança do paciente. <b>Ausência de rede familiar disponível.</b>
-            </div>
-          </div>
-
-          <div class="timeline-item">
-            <div class="timeline-dot" style="background: #2e7d32; box-shadow: 0 0 0 1px #2e7d32;"></div>
-            <div class="timeline-badge" style="background: #e8f5e9; color: #2e7d32;">10/08</div>
-            <div class="timeline-text">
-              Sedação suspensa. Paciente inicia despertar. <b>RASS: -1.</b> Apresenta maior possibilidade de interação com a equipe. Durante abordagem, demonstra <b>comportamento questionador</b> e maior necessidade de explicações antes da realização de determinadas condutas.
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- PROBLEMAS ATIVOS -->
-      <div id="tab-problemas" class="hidden">
-        <div class="panel">
-          <h2 class="panel-title">⚠️ Problemas Ativos</h2>
-          <div class="grid-problems">
-            <div class="problem-item" style="background:#ffebee; border-color:#c62828;"><b>1.</b> TCE frontal pós-trauma</div>
-            <div class="problem-item" style="background:#fff3e0; border-color:#e65100;"><b>2.</b> Lesão medular cervical parcial em C4</div>
-            <div class="problem-item" style="background:#fff8e1; border-color:#f9a825;"><b>3.</b> Lesão reclassificada: anterior → posterior</div>
-            <div class="problem-item" style="background:#e3f2fd; border-color:#0d47a1;"><b>4.</b> Rebaixamento do nível de consciência em recuperação</div>
-            <div class="problem-item" style="background:#f3e5f5; border-color:#6a1b9a;"><b>5.</b> Ventilação mecânica invasiva</div>
-            <div class="problem-item" style="background:#e8f5e9; border-color:#2e7d32;"><b>6.</b> Processo de despertar após suspensão de sedação</div>
-            <div class="problem-item" style="background:#e0f7fa; border-color:#006064;"><b>7.</b> RASS -1 em 10/08</div>
-            <div class="problem-item" style="background:#ffebee; border-color:#c62828;"><b>8.</b> SAOS grave</div>
-            <div class="problem-item" style="background:#fff3e0; border-color:#e65100;"><b>9.</b> IAH 115 eventos/h</div>
-            <div class="problem-item" style="background:#fff8e1; border-color:#f9a825;"><b>10.</b> História de hipercapnia importante</div>
-            <div class="problem-item" style="background:#e3f2fd; border-color:#0d47a1;"><b>11.</b> Uso prévio de BiPAP</div>
-            <div class="problem-item" style="background:#f3e5f5; border-color:#6a1b9a;"><b>12.</b> Carcinoma pulmonar de grandes células</div>
-            <div class="problem-item" style="background:#e8f5e9; border-color:#2e7d32;"><b>13.</b> Câncer pulmonar cT4N2M0 — estádio IIIB</div>
-            <div class="problem-item" style="background:#e0f7fa; border-color:#006064;"><b>14.</b> ICFEp</div>
-            <div class="problem-item" style="background:#ffebee; border-color:#c62828;"><b>15.</b> Hipertrofia ventricular esquerda</div>
-            <div class="problem-item" style="background:#fff3e0; border-color:#e65100;"><b>16.</b> Disfunção diastólica grau II</div>
-            <div class="problem-item" style="background:#fff8e1; border-color:#f9a825;"><b>17.</b> Obesidade grave</div>
-            <div class="problem-item" style="background:#e3f2fd; border-color:#0d47a1;"><b>18.</b> Peso atual de 158 kg</div>
-            <div class="problem-item" style="background:#f3e5f5; border-color:#6a1b9a;"><b>19.</b> IMC 54,7 kg/m²</div>
-            <div class="problem-item" style="background:#e8f5e9; border-color:#2e7d32;"><b>20.</b> Antecedente de osteossarcoma em joelho esquerdo</div>
-            <div class="problem-item" style="background:#e0f7fa; border-color:#006064;"><b>21.</b> Prótese total de joelho esquerdo</div>
-            <div class="problem-item" style="background:#ffebee; border-color:#c62828;"><b>22.</b> Trauma motociclístico</div>
-            <div class="problem-item" style="background:#fff3e0; border-color:#e65100;"><b>23.</b> Ausência de suporte familiar</div>
-            <div class="problem-item" style="background:#fff8e1; border-color:#f9a825;"><b>24.</b> Baixa confiança na equipe hospitalar</div>
-            <div class="problem-item" style="background:#e3f2fd; border-color:#0d47a1;"><b>25.</b> Comportamento questionador</div>
-            <div class="problem-item" style="background:#f3e5f5; border-color:#6a1b9a;"><b>26.</b> Menor colaboração espontânea</div>
-          </div>
-        </div>
-      </div>
-
-      <!-- ADICIONAR EVOLUÇÃO -->
-      <div id="tab-adicionar" class="hidden">
-        <div class="panel">
-          <h2 class="panel-title-green">➕ Adicionar Nova Evolução</h2>
-          <div class="hint-box">
-            <b>💡 Simulação:</b> Em uma implementação real, aqui haveria um formulário para o professor inserir novas evoluções semanais. Os dados seriam salvos em um banco de dados e os alunos veriam as atualizações em tempo real.
-          </div>
-          <div style="display: flex; flex-direction: column; gap: 14px;">
-            <div class="form-group">
-              <label class="form-label">Data da Evolução</label>
-              <input type="date" value="2026-08-16" class="form-input">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Categoria</label>
-              <select class="form-select">
-                <option>Evolução Médica</option>
-                <option>Evolução Fisioterapêutica</option>
-                <option>Evolução de Enfermagem</option>
-                <option>Exames Complementares</option>
-                <option>Conduta / Procedimento</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Descrição da Evolução</label>
-              <textarea class="form-textarea" placeholder="Descreva a evolução do paciente..."></textarea>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Sinais Vitais (opcional)</label>
-              <div class="form-grid-3">
-                <input type="text" placeholder="PA (mmHg)" class="form-input">
-                <input type="text" placeholder="FC (bpm)" class="form-input">
-                <input type="text" placeholder="SpO₂ (%)" class="form-input">
-                <input type="text" placeholder="FR (irpm)" class="form-input">
-                <input type="text" placeholder="Temp (°C)" class="form-input">
-                <input type="text" placeholder="Glicemia" class="form-input">
-              </div>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Prescrições / Condutas</label>
-              <textarea class="form-textarea" style="min-height:80px;" placeholder="Medicamentos, procedimentos, dietas..."></textarea>
-            </div>
-            <button class="btn-primary">💾 Salvar Evolução</button>
-          </div>
-        </div>
-      </div>
-
+    <div class="content" id="content-area">
+      <div class="loading">Carregando prontuário...</div>
     </div>
   </div>
 
   <script>
+    let DADOS = null;
+
+    const CORES = {
+      blue:   { bg: '#e3f2fd',   text: '#0d47a1', border: '#90caf9', dot: '#0d47a1' },
+      red:    { bg: '#ffebee',   text: '#c62828', border: '#ef9a9a', dot: '#c62828' },
+      orange: { bg: '#fff3e0',   text: '#e65100', border: '#ffcc80', dot: '#e65100' },
+      yellow: { bg: '#fff8e1',   text: '#f57f17', border: '#ffe082', dot: '#f9a825' },
+      green:  { bg: '#e8f5e9',   text: '#2e7d32', border: '#a5d6a7', dot: '#2e7d32' },
+      purple: { bg: '#f3e5f5',   text: '#6a1b9a', border: '#ce93d8', dot: '#6a1b9a' },
+      cyan:   { bg: '#e0f7fa',   text: '#006064', border: '#80deea', dot: '#006064' },
+      gray:   { bg: '#f5f5f5',   text: '#555',    border: '#bdbdbd', dot: '#888' },
+      pink:   { bg: '#fce4ec',   text: '#ad1457', border: '#f48fb1', dot: '#ad1457' }
+    };
+
+    const BADGE_CLASSES = {
+      red: 'badge-red', orange: 'badge-orange', pink: 'badge-pink',
+      purple: 'badge-purple', green: 'badge-green', cyan: 'badge-cyan',
+      yellow: 'badge-yellow', blue: 'badge-blue', gray: 'badge-gray'
+    };
+
+    const CARD_CLASSES = {
+      blue: 'card-blue', red: 'card-red', orange: 'card-orange',
+      green: 'card-green', purple: 'card-purple', cyan: 'card-cyan',
+      yellow: 'card-yellow', gray: 'card-gray'
+    };
+
+    function updateClock() {
+      const now = new Date();
+      const pad = n => n.toString().padStart(2, '0');
+      document.getElementById('clock').textContent = `🕐 ${pad(now.getDate())}/${pad(now.getMonth()+1)}/${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
+    }
+    setInterval(updateClock, 1000);
+    updateClock();
+
+    async function carregarDados() {
+      try {
+        const response = await fetch('./dados.json');
+        if (!response.ok) throw new Error("Não foi possível carregar dados.json");
+        DADOS = await response.json();
+        renderizarTudo();
+      } catch (e) {
+        document.getElementById('patient-bar').innerHTML = `<div class="error">❌ Erro ao carregar dados.json: ${e.message}<br><small>Verifique se o arquivo dados.json está na mesma pasta do index.html</small></div>`;
+        document.getElementById('content-area').innerHTML = '';
+      }
+    }
+
+    function renderizarTudo() {
+      renderizarBarraPaciente();
+      renderizarConteudo();
+    }
+
+    function renderizarBarraPaciente() {
+      const p = DADOS.paciente;
+      const badgesHtml = DADOS.badges.map(b => `<span class="badge ${BADGE_CLASSES[b.cor] || 'badge-blue'}">${b.icone || ''} ${b.texto}</span>`).join('');
+      document.getElementById('patient-bar').innerHTML = `
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div class="patient-avatar">👴</div>
+          <div>
+            <div class="patient-name">${p.nome.toUpperCase()} <span>(${p.idade} anos, ${p.sexo})</span></div>
+            <div class="patient-meta">Prontuário: <b>${p.prontuario}</b> | Internação: <b>${p.data_internacao}</b></div>
+          </div>
+        </div>
+        <div class="badges">${badgesHtml}</div>
+      `;
+    }
+
+    function renderizarConteudo() {
+      const area = document.getElementById('content-area');
+      area.innerHTML = `
+        <div id="tab-resumo">${renderResumo()}</div>
+        <div id="tab-dados" class="hidden">${renderDados()}</div>
+        <div id="tab-historia" class="hidden">${renderHistoria()}</div>
+        <div id="tab-antecedentes" class="hidden">${renderAntecedentes()}</div>
+        <div id="tab-evento" class="hidden">${renderEvento()}</div>
+        <div id="tab-evolucao" class="hidden">${renderEvolucao('medica', 'Evolução Médica')}</div>
+        <div id="tab-fisio" class="hidden">${renderEvolucao('fisio', 'Evolução Fisioterapêutica')}</div>
+        <div id="tab-enfermagem" class="hidden">${renderEvolucao('enfermagem', 'Evolução de Enfermagem')}</div>
+        <div id="tab-problemas" class="hidden">${renderProblemas()}</div>
+        <div id="tab-adicionar" class="hidden">${renderAdicionar()}</div>
+      `;
+    }
+
+    function renderResumo() {
+      const r = DADOS.resumo;
+      return `
+        <div class="panel">
+          <h2 class="panel-title">📋 Resumo Clínico do Paciente</h2>
+          <div class="grid-2">
+            <div class="card card-blue"><div class="card-title">Identificação</div><div class="card-body">${r.identificacao}</div></div>
+            <div class="card card-red"><div class="card-title">Motivo de Internação</div><div class="card-body">${r.motivo_internacao}</div></div>
+            <div class="card card-orange"><div class="card-title">Status Atual</div><div class="card-body">${r.status_atual}</div></div>
+            <div class="card card-green"><div class="card-title">Comorbidades Principais</div><div class="card-body-sm">${r.comorbidades}</div></div>
+            <div class="card card-purple"><div class="card-title">Aspectos Psicossociais</div><div class="card-body-sm">${r.psicossociais}</div></div>
+            <div class="card card-cyan"><div class="card-title">Suporte Ventilatório</div><div class="card-body">${r.ventilacao}</div></div>
+          </div>
+        </div>`;
+    }
+
+    function renderDados() {
+      const p = DADOS.paciente;
+      return `
+        <div class="panel">
+          <h2 class="panel-title">📊 Dados Antropométricos</h2>
+          <div class="grid-4" style="margin-bottom:20px;">
+            <div class="metric-card metric-blue"><div class="metric-value">${p.peso_atual_kg} <span class="metric-unit">kg</span></div><div class="metric-label">PESO ATUAL</div></div>
+            <div class="metric-card metric-green"><div class="metric-value">${p.estatura_m.toString().replace('.', ',')} <span class="metric-unit">m</span></div><div class="metric-label">ESTATURA</div></div>
+            <div class="metric-card metric-red"><div class="metric-value">${p.imc.toString().replace('.', ',')}</div><div class="metric-label">IMC kg/m²</div><div class="metric-alert" style="color:#c62828;">OBESIDADE GRAVE</div></div>
+            <div class="metric-card metric-orange"><div class="metric-value">${p.peso_habitual_kg} <span class="metric-unit">kg</span></div><div class="metric-label">PESO HABITUAL</div></div>
+          </div>
+          <div class="alert-box"><p><b>⚠️ Variação ponderal:</b> ${p.variacao_ponderal}</p></div>
+        </div>`;
+    }
+
+    function renderHistoria() {
+      const cards = DADOS.historia_social.map(h => {
+        const cls = CARD_CLASSES[h.cor] || 'card-blue';
+        return `<div class="card ${cls}"><div style="font-weight:700;color:${CORES[h.cor]?.text||'#0d47a1'};margin-bottom:6px;">${h.icone} ${h.titulo}</div><div class="card-body-sm">${h.texto}</div></div>`;
+      }).join('');
+      return `<div class="panel"><h2 class="panel-title">🏠 História Social e Familiar</h2><div style="display:flex;flex-direction:column;gap:14px;">${cards}</div></div>`;
+    }
+
+    function renderAntecedentes() {
+      const items = DADOS.antecedentes.map(a => `
+        <div style="margin-bottom:20px;">
+          <div style="background:${a.cor_header};padding:10px 14px;border-radius:8px 8px 0 0;font-weight:700;color:${a.cor_texto};font-size:14px;">${a.icone} ${a.titulo}</div>
+          <div style="background:#fafafa;padding:14px;border-radius:0 0 8px 8px;border:1px solid ${a.cor_borda};border-top:none;font-size:13px;line-height:1.7;color:#333;">${a.texto}</div>
+        </div>
+      `).join('');
+      return `<div class="panel"><h2 class="panel-title">📁 Antecedentes Pessoais</h2>${items}</div>`;
+    }
+
+    function renderEvento() {
+      const e = DADOS.evento_atual;
+      const lista = e.evoluiu_com.map(item => `<li>${item}</li>`).join('');
+      return `
+        <div class="panel">
+          <h2 class="panel-title">🚨 História do Evento Atual</h2>
+          <div style="display:flex;gap:12px;margin-bottom:16px;">
+            <div style="background:#c62828;color:white;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:700;">${e.data}</div>
+            <div style="background:#0d47a1;color:white;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:700;">${e.titulo}</div>
+          </div>
+          <div class="card card-red">
+            <p>${e.texto}</p>
+            <p style="margin-top:10px;"><b>Evoluiu com:</b></p>
+            <ul>${lista}</ul>
+            <p style="margin-top:10px;">${e.encaminhamento}</p>
+          </div>
+        </div>`;
+    }
+
+    function renderEvolucao(categoria, titulo) {
+      const items = DADOS.evolucoes[categoria].map(ev => {
+        const c = CORES[ev.cor] || CORES.blue;
+        return `
+          <div class="timeline-item" style="border-left-color:${c.dot};">
+            <div class="timeline-dot" style="background:${c.dot};box-shadow:0 0 0 1px ${c.dot};"></div>
+            <div class="timeline-badge" style="background:${c.bg};color:${c.text};">${ev.data} — ${ev.titulo}</div>
+            <div class="timeline-text">${ev.texto}</div>
+          </div>
+        `;
+      }).join('');
+      const icone = categoria === 'medica' ? '📈' : categoria === 'fisio' ? '🦵' : '🩺';
+      return `<div class="panel"><h2 class="panel-title">${icone} ${titulo}</h2>${items}</div>`;
+    }
+
+    function renderProblemas() {
+      const items = DADOS.problemas.map(prob => {
+        const c = CORES[prob.cor] || CORES.blue;
+        return `<div class="problem-item" style="background:${c.bg};border-color:${c.dot};"><b>${prob.numero}.</b> ${prob.texto}</div>`;
+      }).join('');
+      return `<div class="panel"><h2 class="panel-title">⚠️ Problemas Ativos</h2><div class="grid-problems">${items}</div></div>`;
+    }
+
+    function renderAdicionar() {
+      return `
+        <div class="panel">
+          <h2 class="panel-title-green">➕ Adicionar Nova Evolução</h2>
+          <div class="hint-box">
+            <b>💡 Como funciona:</b> Edite o arquivo <b>dados.json</b> no seu repositório GitHub para adicionar novas evoluções. As alterações aparecerão automaticamente no prontuário após o refresh da página.
+          </div>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <div class="form-group">
+              <label class="form-label">Data da Evolução</label>
+              <input type="date" class="form-input" id="nova-data">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Categoria</label>
+              <select class="form-select" id="nova-categoria">
+                <option value="medica">Evolução Médica</option>
+                <option value="fisio">Evolução Fisioterapêutica</option>
+                <option value="enfermagem">Evolução de Enfermagem</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Título</label>
+              <input type="text" class="form-input" id="nova-titulo" placeholder="Ex: Reavaliação, Passagem de plantão...">
+            </div>
+            <div class="form-group">
+              <label class="form-label">Descrição da Evolução</label>
+              <textarea class="form-textarea" id="nova-texto" placeholder="Descreva a evolução do paciente..."></textarea>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Cor do marcador</label>
+              <select class="form-select" id="nova-cor">
+                <option value="blue">Azul (padrão)</option>
+                <option value="green">Verde (melhora)</option>
+                <option value="yellow">Amarelo (atenção)</option>
+                <option value="orange">Laranja (alerta)</option>
+                <option value="red">Vermelho (crítico)</option>
+                <option value="gray">Cinza (estável)</option>
+              </select>
+            </div>
+            <button class="btn-primary" onclick="gerarJSON()">📋 Gerar código JSON para copiar</button>
+            <pre id="json-saida" style="background:#1e1e1e;color:#d4d4d4;padding:14px;border-radius:6px;font-size:12px;overflow-x:auto;display:none;"></pre>
+          </div>
+        </div>`;
+    }
+
+    function gerarJSON() {
+      const data = document.getElementById('nova-data').value;
+      const categoria = document.getElementById('nova-categoria').value;
+      const titulo = document.getElementById('nova-titulo').value;
+      const texto = document.getElementById('nova-texto').value;
+      const cor = document.getElementById('nova-cor').value;
+
+      if (!data || !titulo || !texto) {
+        alert('Preencha data, título e descrição.');
+        return;
+      }
+
+      const dataFormatada = data.split('-').reverse().join('/');
+      const novoItem = { data: dataFormatada, titulo, cor, texto };
+
+      const saida = document.getElementById('json-saida');
+      saida.style.display = 'block';
+      saida.textContent = `// Cole este bloco dentro de "evolucoes.${categoria}" no dados.json:
+` + JSON.stringify(novoItem, null, 2) + ',';
+    }
+
     function showTab(tabId) {
       const tabs = ['resumo','dados','historia','antecedentes','evento','evolucao','fisio','enfermagem','problemas','adicionar'];
       tabs.forEach(t => {
-        document.getElementById('tab-' + t).classList.add('hidden');
+        const el = document.getElementById('tab-' + t);
+        if (el) el.classList.add('hidden');
         const btn = document.getElementById('btn-' + t);
-        btn.classList.remove('active');
+        if (btn) btn.classList.remove('active');
       });
-      document.getElementById('tab-' + tabId).classList.remove('hidden');
-      document.getElementById('btn-' + tabId).classList.add('active');
+      const target = document.getElementById('tab-' + tabId);
+      if (target) target.classList.remove('hidden');
+      const btn = document.getElementById('btn-' + tabId);
+      if (btn) btn.classList.add('active');
     }
-  </script>
 
+    carregarDados();
+  </script>
 </body>
 </html>
