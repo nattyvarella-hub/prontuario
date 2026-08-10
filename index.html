@@ -1,475 +1,191 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Prontuário Eletrônico — Hospital dos Estagiários da Tuiuti</title>
-  <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body { font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; background: #f0f2f5; color: #1a1a1a; min-height: 100vh; }
-
-    .header {
-      background: linear-gradient(90deg, #0d47a1 0%, #1565c0 100%);
-      color: white; padding: 12px 20px;
-      display: flex; align-items: center; justify-content: space-between;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.15); flex-wrap: wrap; gap: 10px;
-    }
-    .header-brand { display: flex; align-items: center; gap: 12px; }
-    .header-logo {
-      width: 36px; height: 36px; background: white; border-radius: 8px;
-      display: flex; align-items: center; justify-content: center;
-      color: #0d47a1; font-weight: 800; font-size: 18px;
-    }
-    .header-title { font-size: 16px; font-weight: 700; letter-spacing: 0.3px; }
-    .header-subtitle { font-size: 11px; opacity: 0.85; font-weight: 500; }
-    .header-info { display: flex; align-items: center; gap: 16px; font-size: 12px; }
-    .header-badge { background: rgba(255,255,255,0.2); padding: 4px 10px; border-radius: 12px; }
-
-    .patient-bar {
-      background: white; border-bottom: 1px solid #d0d7de;
-      padding: 14px 20px; display: flex; align-items: center; gap: 20px; flex-wrap: wrap;
-    }
-    .patient-avatar {
-      width: 48px; height: 48px; background: #e3f2fd; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center; font-size: 22px;
-    }
-    .patient-name { font-size: 15px; font-weight: 700; color: #0d47a1; }
-    .patient-name span { font-size: 11px; color: #666; font-weight: 500; }
-    .patient-meta { font-size: 12px; color: #555; margin-top: 2px; }
-    .badges { display: flex; gap: 8px; flex-wrap: wrap; }
-    .badge {
-      padding: 4px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; border: 1px solid;
-    }
-    .badge-red { background: #ffebee; color: #c62828; border-color: #ef9a9a; }
-    .badge-orange { background: #fff3e0; color: #e65100; border-color: #ffcc80; }
-    .badge-pink { background: #fce4ec; color: #ad1457; border-color: #f48fb1; }
-    .badge-purple { background: #f3e5f5; color: #6a1b9a; border-color: #ce93d8; }
-    .badge-green { background: #e8f5e9; color: #2e7d32; border-color: #a5d6a7; }
-    .badge-cyan { background: #e0f7fa; color: #006064; border-color: #80deea; }
-    .badge-yellow { background: #fff8e1; color: #f57f17; border-color: #ffe082; }
-    .badge-blue { background: #e3f2fd; color: #0d47a1; border-color: #90caf9; }
-    .badge-gray { background: #f5f5f5; color: #555; border-color: #bdbdbd; }
-
-    .layout { display: flex; min-height: calc(100vh - 140px); }
-    .sidebar {
-      width: 240px; background: white; border-right: 1px solid #d0d7de;
-      padding: 16px 0; flex-shrink: 0;
-    }
-    .sidebar-label {
-      padding: 0 16px 8px; font-size: 10px; font-weight: 700;
-      color: #888; text-transform: uppercase; letter-spacing: 0.5px;
-    }
-    .nav-btn {
-      width: 100%; text-align: left; padding: 10px 20px; border: none;
-      background: transparent; color: #444; font-size: 13px; cursor: pointer;
-      border-left: 3px solid transparent; display: flex; align-items: center; gap: 8px;
-      transition: all 0.15s;
-    }
-    .nav-btn:hover { background: #f5f5f5; }
-    .nav-btn.active {
-      background: #e3f2fd; color: #0d47a1; font-weight: 600;
-      border-left: 3px solid #0d47a1;
-    }
-    .nav-btn.add-btn { color: #2e7d32; font-weight: 600; }
-    .nav-btn.add-btn.active {
-      background: #e8f5e9; color: #2e7d32; border-left: 3px solid #2e7d32;
-    }
-
-    .content { flex: 1; padding: 20px; overflow-y: auto; }
-    .panel {
-      background: white; border-radius: 10px; border: 1px solid #d0d7de;
-      padding: 20px; margin-bottom: 16px;
-    }
-    .panel-title {
-      margin: 0 0 16px 0; font-size: 18px; color: #0d47a1;
-      border-bottom: 2px solid #e3f2fd; padding-bottom: 8px;
-    }
-    .panel-title-green {
-      margin: 0 0 16px 0; font-size: 18px; color: #2e7d32;
-      border-bottom: 2px solid #c8e6c9; padding-bottom: 8px;
-    }
-
-    .grid-2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
-    .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
-    .grid-problems { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 10px; }
-    .card {
-      background: #fafafa; border-radius: 8px; padding: 14px;
-      border-left: 4px solid #0d47a1;
-    }
-    .card-title { font-size: 11px; color: #888; text-transform: uppercase; font-weight: 700; margin-bottom: 4px; }
-    .card-body { font-size: 14px; color: #333; }
-    .card-body-sm { font-size: 13px; color: #333; line-height: 1.7; }
-    .card-sub { font-size: 12px; color: #555; margin-top: 4px; }
-    .card-blue { border-left-color: #0d47a1; }
-    .card-red { border-left-color: #c62828; }
-    .card-orange { border-left-color: #e65100; }
-    .card-green { border-left-color: #2e7d32; }
-    .card-purple { border-left-color: #6a1b9a; }
-    .card-cyan { border-left-color: #006064; }
-    .card-yellow { border-left-color: #f9a825; }
-    .card-gray { border-left-color: #888; }
-
-    .metric-card { border-radius: 10px; padding: 20px; text-align: center; }
-    .metric-blue { background: linear-gradient(135deg, #e3f2fd, #bbdefb); }
-    .metric-green { background: linear-gradient(135deg, #e8f5e9, #c8e6c9); }
-    .metric-red { background: linear-gradient(135deg, #ffebee, #ffcdd2); }
-    .metric-orange { background: linear-gradient(135deg, #fff3e0, #ffe0b2); }
-    .metric-value { font-size: 32px; font-weight: 800; }
-    .metric-blue .metric-value { color: #0d47a1; }
-    .metric-green .metric-value { color: #2e7d32; }
-    .metric-red .metric-value { color: #c62828; }
-    .metric-orange .metric-value { color: #e65100; }
-    .metric-unit { font-size: 16px; }
-    .metric-label { font-size: 12px; color: #555; margin-top: 4px; font-weight: 600; }
-    .metric-alert { font-size: 11px; font-weight: 700; margin-top: 2px; }
-
-    .alert-box { background: #fff8e1; border-radius: 8px; padding: 14px; border: 1px solid #ffe082; }
-    .alert-box p { font-size: 13px; color: #5d4037; line-height: 1.6; }
-
-    .timeline-item {
-      border-left: 3px solid #0d47a1; padding-left: 20px;
-      margin-bottom: 20px; position: relative;
-    }
-    .timeline-dot {
-      position: absolute; left: -9px; top: 0;
-      width: 16px; height: 16px; border-radius: 50%;
-      border: 3px solid white; box-shadow: 0 0 0 1px;
-    }
-    .timeline-badge {
-      display: inline-block; padding: 4px 12px; border-radius: 12px;
-      font-size: 12px; font-weight: 700; margin-bottom: 8px;
-    }
-    .timeline-text { font-size: 13px; line-height: 1.7; color: #333; }
-
-    .problem-item { padding: 10px 14px; border-radius: 8px; font-size: 13px; border-left: 3px solid; }
-
-    .form-group { margin-bottom: 14px; }
-    .form-label { font-size: 12px; font-weight: 600; color: #555; display: block; margin-bottom: 4px; }
-    .form-input, .form-select, .form-textarea {
-      width: 100%; padding: 10px 12px; border: 1px solid #ccc;
-      border-radius: 6px; font-size: 13px; font-family: inherit;
-    }
-    .form-textarea { min-height: 120px; resize: vertical; }
-    .form-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
-    .btn-primary {
-      background: #2e7d32; color: white; border: none;
-      padding: 12px 24px; border-radius: 6px; font-size: 14px; font-weight: 600; cursor: pointer;
-    }
-    .btn-primary:hover { background: #1b5e20; }
-    .hint-box { background: #e8f5e9; border-radius: 8px; padding: 14px; margin-bottom: 16px; font-size: 13px; color: #2e7d32; }
-    .loading { text-align: center; padding: 40px; color: #888; font-size: 14px; }
-    .error { text-align: center; padding: 40px; color: #c62828; font-size: 14px; background: #ffebee; border-radius: 8px; }
-
-    @media (max-width: 768px) {
-      .sidebar { width: 100%; border-right: none; border-bottom: 1px solid #d0d7de; }
-      .layout { flex-direction: column; }
-      .patient-bar { flex-direction: column; align-items: flex-start; }
-      .form-grid-3 { grid-template-columns: 1fr; }
-    }
-    .hidden { display: none !important; }
-    ul { margin: 6px 0; padding-left: 20px; }
-    li { margin-bottom: 4px; }
-    p { margin-bottom: 8px; }
-    b { font-weight: 700; }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Prontuário Eletrônico — Hospital dos Estagiários da Tuiuti</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0;font-family:'Segoe UI',system-ui,-apple-system,sans-serif}
+button,input,select,textarea{font:inherit}
+.hdr{background:linear-gradient(90deg,#0d47a1 0%,#1565c0 100%);color:#fff;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;box-shadow:0 2px 8px rgba(0,0,0,0.15)}
+.hb{display:flex;align-items:center;gap:12px}
+.hl{width:36px;height:36px;background:#fff;border-radius:8px;display:flex;align-items:center;justify-content:center;color:#0d47a1;font-weight:800;font-size:18px}
+.ht{font-size:16px;font-weight:700;letter-spacing:0.3px}
+.hs{font-size:11px;opacity:0.85;font-weight:500}
+.hi{display:flex;align-items:center;gap:16px;font-size:12px}
+.hbb{background:rgba(255,255,255,0.2);padding:4px 10px;border-radius:12px}
+.pbar{background:#fff;border-bottom:1px solid #d0d7de;padding:14px 20px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+.pa{width:48px;height:48px;background:#e3f2fd;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:22px}
+.pn{font-size:15px;font-weight:700;color:#0d47a1}
+.pn span{font-size:11px;color:#666;font-weight:500}
+.pm{font-size:12px;color:#555;margin-top:2px}
+.bds{display:flex;gap:8px;flex-wrap:wrap}
+.bd{padding:4px 10px;border-radius:12px;font-size:11px;font-weight:600;border:1px solid}
+.bdr{background:#ffebee;color:#c62828;border-color:#ef9a9a}
+.bdo{background:#fff3e0;color:#e65100;border-color:#ffcc80}
+.bdg{background:#e8f5e9;color:#2e7d32;border-color:#a5d6a7}
+.bdb{background:#e3f2fd;color:#0d47a1;border-color:#90caf9}
+.bdp{background:#f3e5f5;color:#6a1b9a;border-color:#ce93d8}
+.bdy{background:#fff8e1;color:#f57f17;border-color:#ffe082}
+.bdg2{background:#f5f5f5;color:#555;border-color:#bdbdbd}
+.ly{display:flex;min-height:calc(100vh - 140px)}
+.sb{width:240px;background:#fff;border-right:1px solid #d0d7de;padding:16px 0;flex-shrink:0}
+.sl{padding:0 16px 8px;font-size:10px;font-weight:700;color:#888;text-transform:uppercase;letter-spacing:0.5px}
+.nb{width:100%;text-align:left;padding:10px 20px;border:none;background:transparent;color:#444;font-size:13px;cursor:pointer;border-left:3px solid transparent;display:flex;align-items:center;gap:8px;transition:all 0.15s}
+.nb:hover{background:#f5f5f5}
+.nb.a{background:#e3f2fd;color:#0d47a1;font-weight:600;border-left:3px solid #0d47a1}
+.nb.ab{color:#2e7d32;font-weight:600}
+.nb.ab.a{background:#e8f5e9;color:#2e7d32;border-left:3px solid #2e7d32}
+.ct{flex:1;padding:20px;overflow-y:auto;background:#f0f2f5}
+.pn2{background:#fff;border-radius:10px;border:1px solid #d0d7de;padding:20px;margin-bottom:16px}
+.pt{margin:0 0 16px 0;font-size:18px;color:#0d47a1;border-bottom:2px solid #e3f2fd;padding-bottom:8px}
+.ptg{margin:0 0 16px 0;font-size:18px;color:#2e7d32;border-bottom:2px solid #c8e6c9;padding-bottom:8px}
+.g2{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:16px}
+.g4{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:16px}
+.gp{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
+.cd{background:#fafafa;border-radius:8px;padding:14px;border-left:4px solid #0d47a1}
+.ctt{font-size:11px;color:#888;text-transform:uppercase;font-weight:700;margin-bottom:4px}
+.cb{font-size:14px;color:#333;line-height:1.5}
+.cbs{font-size:13px;color:#333;line-height:1.7}
+.mc{border-radius:10px;padding:20px;text-align:center}
+.mcb{background:linear-gradient(135deg,#e3f2fd,#bbdefb)}
+.mcg{background:linear-gradient(135deg,#e8f5e9,#c8e6c9)}
+.mcr{background:linear-gradient(135deg,#ffebee,#ffcdd2)}
+.mco{background:linear-gradient(135deg,#fff3e0,#ffe0b2)}
+.mv{font-size:32px;font-weight:800}
+.mcb .mv{color:#0d47a1}
+.mcg .mv{color:#2e7d32}
+.mcr .mv{color:#c62828}
+.mco .mv{color:#e65100}
+.mu{font-size:16px}
+.ml{font-size:12px;color:#555;margin-top:4px;font-weight:600}
+.abx{background:#fff8e1;border-radius:8px;padding:14px;border:1px solid #ffe082}
+.abx p{font-size:13px;color:#5d4037;line-height:1.6}
+.ti{border-left:3px solid #0d47a1;padding-left:20px;margin-bottom:20px;position:relative}
+.td{position:absolute;left:-9px;top:0;width:16px;height:16px;border-radius:50%;border:3px solid #fff;box-shadow:0 0 0 1px}
+.tbg{display:inline-block;padding:4px 12px;border-radius:12px;font-size:12px;font-weight:700;margin-bottom:8px}
+.ttx{font-size:13px;line-height:1.7;color:#333}
+.pi{padding:10px 14px;border-radius:8px;font-size:13px;border-left:3px solid}
+.fg{margin-bottom:14px}
+.fl{font-size:12px;font-weight:600;color:#555;display:block;margin-bottom:4px}
+.fi,.fs,.ft{width:100%;padding:10px 12px;border:1px solid #ccc;border-radius:6px;font-size:13px}
+.ft{min-height:120px;resize:vertical}
+.fg3{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.bp2{background:#2e7d32;color:#fff;border:none;padding:12px 24px;border-radius:6px;font-size:14px;font-weight:600;cursor:pointer}
+.bp2:hover{background:#1b5e20}
+.hb3{background:#e8f5e9;border-radius:8px;padding:14px;margin-bottom:16px;font-size:13px;color:#2e7d32}
+.cb2{background:#1e1e1e;color:#d4d4d4;padding:14px;border-radius:6px;font-size:12px;overflow-x:auto;font-family:monospace;white-space:pre-wrap;word-break:break-word}
+.eh{background:#f5f5f5;padding:10px 14px;border-radius:8px 8px 0 0;font-weight:700;color:#333;font-size:14px;border:1px solid #d0d7de;border-bottom:none}
+.eb{background:#fafafa;padding:14px;border-radius:0 0 8px 8px;border:1px solid #d0d7de;border-top:none;font-size:13px;line-height:1.7;color:#333}
+.ec{background:#e3f2fd;padding:10px 14px;border-radius:6px;margin-top:10px;font-size:13px;color:#0d47a1;border-left:3px solid #0d47a1}
+.lt{width:100%;border-collapse:collapse;font-size:13px}
+.lt th{background:#f5f5f5;padding:8px 10px;text-align:left;font-weight:600;color:#555;border-bottom:1px solid #d0d7de;font-size:12px}
+.lt td{padding:8px 10px;border-bottom:1px solid #d0d7de;color:#333}
+.lt tr:hover td{background:#f5f5f5}
+.la{color:#c62828;font-weight:700}
+.hdn{display:none !important}
+@media(max-width:768px){.sb{width:100%;border-right:none;border-bottom:1px solid #d0d7de}.ly{flex-direction:column}.pbar{flex-direction:column;align-items:flex-start}.fg3{grid-template-columns:1fr}}
+</style>
 <base target="_blank">
 </head>
 <body>
 
-  <div class="header">
-    <div class="header-brand">
-      <div class="header-logo">T</div>
-      <div>
-        <div class="header-title">HOSPITAL DOS ESTAGIÁRIOS DA TUIUTI</div>
-        <div class="header-subtitle">Prontuário Eletrônico do Paciente — v3.2</div>
-      </div>
-    </div>
-    <div class="header-info">
-      <span>👤 Dr. Silva</span>
-      <span id="clock">🕐 --/--/---- --:--</span>
-      <span class="header-badge">UTI</span>
+<div class="hdr">
+  <div class="hb">
+    <div class="hl">T</div>
+    <div>
+      <div class="ht">HOSPITAL DOS ESTAGIÁRIOS DA TUIUTI</div>
+      <div class="hs">Prontuário Eletrônico do Paciente — v3.2</div>
     </div>
   </div>
-
-  <div class="patient-bar" id="patient-bar">
-    <div class="loading">Carregando dados do paciente...</div>
+  <div class="hi">
+    <span>👤 Dr. Silva</span>
+    <span id="tclk">--/--/---- --:--</span>
+    <span class="hbb">UTI</span>
   </div>
+</div>
 
-  <div class="layout">
-    <div class="sidebar">
-      <div class="sidebar-label">Navegação</div>
-      <button class="nav-btn active" onclick="showTab('resumo')" id="btn-resumo">📋 Resumo Clínico</button>
-      <button class="nav-btn" onclick="showTab('dados')" id="btn-dados">📊 Dados Antropométricos</button>
-      <button class="nav-btn" onclick="showTab('historia')" id="btn-historia">🏠 História Social</button>
-      <button class="nav-btn" onclick="showTab('antecedentes')" id="btn-antecedentes">📁 Antecedentes</button>
-      <button class="nav-btn" onclick="showTab('evento')" id="btn-evento">🚨 Evento Atual</button>
-      <button class="nav-btn" onclick="showTab('evolucao')" id="btn-evolucao">📈 Evolução Médica</button>
-      <button class="nav-btn" onclick="showTab('fisio')" id="btn-fisio">🦵 Fisioterapia</button>
-      <button class="nav-btn" onclick="showTab('enfermagem')" id="btn-enfermagem">🩺 Enfermagem</button>
-      <button class="nav-btn" onclick="showTab('problemas')" id="btn-problemas">⚠️ Problemas Ativos</button>
-      <button class="nav-btn add-btn" onclick="showTab('adicionar')" id="btn-adicionar">➕ Adicionar Evolução</button>
-    </div>
+<div class="pbar" id="pbar"></div>
 
-    <div class="content" id="content-area">
-      <div class="loading">Carregando prontuário...</div>
-    </div>
+<div class="ly">
+  <div class="sb">
+    <div class="sl">Navegação</div>
+    <button class="nb a" onclick="sh('resumo')" id="b-resumo">📋 Resumo Clínico</button>
+    <button class="nb" onclick="sh('dados')" id="b-dados">📊 Dados Antropométricos</button>
+    <button class="nb" onclick="sh('historia')" id="b-historia">👤 História Social</button>
+    <button class="nb" onclick="sh('antecedentes')" id="b-antecedentes">📑 Antecedentes</button>
+    <button class="nb" onclick="sh('evento')" id="b-evento">🚨 Evento Atual</button>
+    <button class="nb" onclick="sh('evolucao')" id="b-evolucao">📝 Evolução Médica</button>
+    <button class="nb" onclick="sh('fisio')" id="b-fisio">🦴 Fisioterapia</button>
+    <button class="nb" onclick="sh('enfermagem')" id="b-enfermagem">🩺 Enfermagem</button>
+    <button class="nb" onclick="sh('imagem')" id="b-imagem">🖼️ Exames de Imagem</button>
+    <button class="nb" onclick="sh('laboratorio')" id="b-laboratorio">🧪 Laboratorial</button>
+    <button class="nb" onclick="sh('problemas')" id="b-problemas">⚠️ Problemas Ativos</button>
+    <div class="sl" style="margin-top:8px">Adicionar</div>
+    <button class="nb ab" onclick="sh('add-ev')" id="b-add-ev">➕ Nova Evolução</button>
+    <button class="nb ab" onclick="sh('add-img')" id="b-add-img">➕ Exame de Imagem</button>
+    <button class="nb ab" onclick="sh('add-lab')" id="b-add-lab">➕ Exame Laboratorial</button>
   </div>
+  <div class="ct" id="area"></div>
+</div>
 
-  <script>
-    let DADOS = null;
+<script>
+const D={
+p:{nome:"Trastamiro",idade:83,sexo:"Masculino",prontuario:"083-T/2026",data_internacao:"03/08/2026",setor:"UTI",peso:158,altura:1.70,imc:54.7,habitual:108,variacao:"Ganho ponderal aproximado de 50 kg após falecimento do irmão gêmeo Astrogildo."},
+badges:[{t:"TCE Frontal",c:"bdr"},{t:"Trauma C4",c:"bdr"},{t:"Lesão Medular",c:"bdr"},{t:"VM Invasiva",c:"bdo"},{t:"Câncer Pulmão IIIB",c:"bdp"},{t:"SAOS Grave",c:"bdo"},{t:"Obesidade Grave",c:"bdo"},{t:"ICFEp",c:"bdb"},{t:"RASS -1",c:"bdg"}],
+resumo:{id:"Paciente masculino, 83 anos, prontuário 083-T/2026. Internado em UTI desde 03/08/2026. Irmão gêmeo de Astrogildo (falecido).",motivo:"TCE frontal e trauma cervical em C4 após acidente motociclístico sem capacete. Realizava manobra de empinamento quando perdeu controle.",status:"Intubado, em VM invasiva, sedação suspensa desde 10/08/2026. RASS -1, sonolento, despertável ao chamado. Dependente para mobilidade.",comorb:"Câncer pulmonar de grandes células (estádio IIIB), SAOS grave (IAH 115/h), hipercapnia, ICFEp, obesidade grave (IMC 54,7), prótese total de joelho esquerdo.",psico:"Luto pelo irmão gêmeo Astrogildo. Ausência de suporte familiar. Comportamento questionador e desconfiado desde internação.",vent:"VM invasiva desde admissão. SpO2 93-95%. Tentativa de avaliação fisioterapêutica em 10/08 resultou em dessaturação para 89%."},
+hist:[{t:"Luto e ganho ponderal",x:"Após falecimento do irmão gêmeo Astrogildo, paciente apresentou ganho ponderal aproximado de 50 kg.",bc:"#c62828"},{t:"Redução de atividades",x:"Deixou de cuidar da horta e plantar verduras. Deixou o hábito de fumar 'paiero' com amigos. Redução importante da participação em atividades sociais e de lazer.",bc:"#e65100"},{t:"Declínio funcional",x:"Menor disposição física nos últimos meses. Sono fragmentado com interrupções noturnas para micção. Marcha com apoio em corrimão, subia escadas lentamente.",bc:"#0d47a1"},{t:"Aspectos psicológicos",x:"Demonstra tristeza relacionada ao falecimento do irmão. Desde a internação atual apresenta comportamento mais questionador, desconfiado e menor colaboração com a equipe.",bc:"#6a1b9a"}],
+ant:[{t:"Ortopedia",x:"Osteossarcoma em joelho esquerdo aos 25 anos. Submetido à ressecção cirúrgica e colocação de prótese total de joelho esquerdo. Recuperação da marcha após procedimento.",ch:"#f5f5f5",ct:"#333",cb:"#d0d7de"},{t:"Apneia do Sono",x:"SAOS grave. IAH: 115 eventos/hora. Hipercapnia importante. Uso domiciliar de BiPAP.",ch:"#fff3e0",ct:"#e65100",cb:"#ffcc80"},{t:"Oncologia",x:"Câncer pulmonar de grandes células em tratamento. Massa pulmonar direita de aproximadamente 8,2 cm. Linfonodomegalias mediastinais. Estadiamento: cT4N2M0, estádio IIIB.",ch:"#f3e5f5",ct:"#6a1b9a",cb:"#ce93d8"},{t:"Cardiovascular",x:"ICFEp. Ecocardiograma prévio: FEVE 62%, disfunção diastólica grau II, hipertrofia concêntrica moderada do VE, átrio esquerdo moderadamente aumentado, PSAP estimada 45 mmHg.",ch:"#ffebee",ct:"#c62828",cb:"#ef9a9a"},{t:"Nutrição",x:"Obesidade grave. IMC 54,7 kg/m². Peso atual 158 kg (peso habitual ~108 kg). Ganho de ~50 kg após luto.",ch:"#fff3e0",ct:"#e65100",cb:"#ffcc80"}],
+evento:{data:"03/08/2026",titulo:"Admissão Médica",texto:"Paciente masculino, 83 anos, admitido após acidente motociclístico. Realizava manobra de empinamento quando perdeu o controle e sofreu queda com impacto frontal da cabeça. Sem capacete. Após o trauma apresentou rebaixamento do nível de consciência.",ev:["TCE frontal e trauma cervical em nível C4","Lesão medular parcial posterior em C4 (inicialmente suspeita de anterior)","Rebaixamento do nível de consciência","Insuficiência respiratória","Intubação orotraqueal e VM invasiva","Sedação"],enc:"Encaminhado à UTI para suporte intensivo, monitorização contínua e investigação neurológica.",ssvv:"PA: 158/92 mmHg | FC: 104 bpm | FR: 22 irpm | SpO2: 94% em VM | T: 36,4°C"},
+med:[{d:"03/08/2026",t:"Admissão",bc:"#c62828",bg:"#ffebee",tc:"#c62828",x:"Paciente admitido após acidente motociclístico. TCE frontal, trauma cervical C4, lesão medular parcial. IOT, VM invasiva, sedação. SSVV: PA 158/92, FC 104, FR 22, SpO2 94%, T 36,4°C."},{d:"04/08/2026",t:"Reavaliação",bc:"#e65100",bg:"#fff3e0",tc:"#e65100",x:"Permanece sedado, intubado e em VM. Divergência na classificação inicial da lesão cervical: hipótese de lesão medular parcial anterior em C4 revista. Quadro passa a ser mais compatível com lesão medular parcial posterior em C4."},{d:"05/08/2026",t:"Evolução",bc:"#0d47a1",bg:"#e3f2fd",tc:"#0d47a1",x:"Paciente permanece em UTI, sedado e em VM invasiva. Mantém diagnóstico de TCE frontal e lesão cervical C4. Mantidas demais comorbidades prévias. Sem novas intercorrências."},{d:"06/08/2026",t:"Evolução",bc:"#0d47a1",bg:"#e3f2fd",tc:"#0d47a1",x:"Paciente permanece sedado, intubado e em VM. Sem alteração clínica significativa. Mantido suporte intensivo."},{d:"07/08/2026",t:"Evolução",bc:"#0d47a1",bg:"#e3f2fd",tc:"#0d47a1",x:"Paciente permanece em VM e sob sedação. Mantidos diagnósticos prévios. Sem novas intercorrências."},{d:"08/08/2026",t:"Evolução",bc:"#0d47a1",bg:"#e3f2fd",tc:"#0d47a1",x:"Paciente permanece em UTI, intubado, sedado e em VM invasiva. Sem novas intercorrências registradas."},{d:"09/08/2026",t:"Evolução",bc:"#f57f17",bg:"#fff8e1",tc:"#f57f17",x:"Paciente permanece sedado, intubado e em VM. Mantidos cuidados intensivos. Programada suspensão progressiva da sedação conforme avaliação clínica."},{d:"10/08/2026",t:"Suspensão da sedação",bc:"#2e7d32",bg:"#e8f5e9",tc:"#2e7d32",x:"Sedação suspensa. Paciente inicia processo de despertar. RASS: -1. Sonolento, despertável ao chamado. Apresenta interação inicial com a equipe. Mantém-se intubado e em VM. SSVV: PA 142/84, FC 92, FR 20, SpO2 95%, T 36,7°C."}],
+fis:[{d:"03/08/2026",t:"Avaliação inicial",bc:"#c62828",bg:"#ffebee",tc:"#c62828",x:"Paciente em UTI, intubado, sedado, em VM. Avaliação funcional não realizada devido à sedação. Tentado TUG, IMS, Borg, MRC — sem condições. Conduta: acompanhamento respiratório e VM. SSVV: FC 102, FR 20, SpO2 93%, PA 151/88."},{d:"04/08/2026",t:"Acompanhamento",bc:"#0d47a1",bg:"#e3f2fd",tc:"#0d47a1",x:"Paciente sedado, intubado e em VM. Tentada MRC, IMS, Borg, TUG — sem resposta adequada. Paciente permanece restrito ao leito. SSVV: PA 146/84, FC 98, FR 19, SpO2 95%, T 36,6°C."},{d:"05/08/2026",t:"Acompanhamento",bc:"#0d47a1",bg:"#e3f2fd",tc:"#0d47a1",x:"Paciente permanece sedado e em VM. IMS, MRC, Borg, TUG não aplicáveis. Tentativa de avaliação de força de MMII sem resposta consistente. Mantido acompanhamento respiratório."},{d:"06/08/2026",t:"Acompanhamento",bc:"#0d47a1",bg:"#e3f2fd",tc:"#0d47a1",x:"Paciente restrito ao leito. IMS, MRC, TUG, Borg não realizados. NYHA classe III (história prévia). Conduta: acompanhamento respiratório e mobilização passiva no leito."},{d:"07/08/2026",t:"Acompanhamento",bc:"#0d47a1",bg:"#e3f2fd",tc:"#0d47a1",x:"Paciente sedado. MRC, IMS, TUG, Borg não concluídos. Tentada Escala de Berg e Índice de Barthel — sem possibilidade. Paciente dependente para mobilidade."},{d:"08/08/2026",t:"Acompanhamento",bc:"#0d47a1",bg:"#e3f2fd",tc:"#0d47a1",x:"Paciente sedado. Avaliação de força muscular respiratória, manovacuometria, mMRC, Borg — não realizadas devido à VM e nível de consciência. Mantido acompanhamento da VM."},{d:"09/08/2026",t:"Acompanhamento",bc:"#0d47a1",bg:"#e3f2fd",tc:"#0d47a1",x:"Paciente sedado. Índice de Barthel, TUG, IMS, MRC — sem possibilidade. Paciente dependente para mobilidade. Mantido acompanhamento respiratório."},{d:"10/08/2026",t:"Despertar",bc:"#2e7d32",bg:"#e8f5e9",tc:"#2e7d32",x:"Sedação suspensa, RASS -1. Sonolento, despertável. MRC incompleta (dificuldade para comandos). IMS parcial, baixa participação. TUG não realizado (VM). Borg, mMRC não aplicáveis. Barthel por estimativa: dependência importante. Berg não realizada (impossibilidade de ortostatismo). NYHA III. STOP-Bang registrado (SAOS grave). Epworth, FOSQ, Mini Sleep não concluídos. Dessaturação para 89% durante avaliação (interrompida). Após repouso, SpO2 retornou para 94%."}],
+enf:[{d:"03/08/2026",t:"Cuidados iniciais",bc:"#0d47a1",bg:"#e3f2fd",tc:"#0d47a1",x:"Paciente em leito de UTI, intubado, sedado e em VM. Mantidos cuidados gerais, higiene, posicionamento, monitorização e cuidados com dispositivos. Paciente dependente de cuidados."},{d:"04/08/2026",t:"Cuidados de rotina",bc:"#0d47a1",bg:"#e3f2fd",tc:"#0d47a1",x:"Paciente sedado, intubado e em VM. Mantidos cuidados com dispositivos, higiene corporal, mudança de decúbito e monitorização."},{d:"06/08/2026",t:"Cuidados de rotina",bc:"#0d47a1",bg:"#e3f2fd",tc:"#0d47a1",x:"Paciente em UTI, sedado, intubado e em VM. Mantidos cuidados de rotina. Sem acompanhante."},{d:"10/08/2026",t:"Despertar",bc:"#2e7d32",bg:"#e8f5e9",tc:"#2e7d32",x:"Paciente com sedação suspensa, RASS -1. Sonolento, desperta ao chamado. Apresenta maior interação com a equipe. Questiona procedimentos realizados. Mantido em VM invasiva. Sem acompanhante."}],
+img:[{d:"03/08/2026",tp:"Tomografia Computadorizada de Crânio",x:"Presença de áreas de contusão hemorrágica frontal, predominando em região frontal bilateral. Pequena quantidade de hemorragia subaracnoidea traumática em região frontal. Sem desvio significativo da linha média. Sistema ventricular sem dilatação significativa. Sem sinais de herniação cerebral.",conc:"TCE com contusões hemorrágicas frontais e pequena hemorragia subaracnoidea traumática."},{d:"03/08/2026",tp:"Tomografia Computadorizada de Coluna Cervical",x:"Alterações degenerativas cervicais. Redução dos espaços discais em níveis inferiores da coluna cervical. Fratura não deslocada do corpo vertebral de C4, associada a alteração do alinhamento posterior.",conc:"Trauma cervical em C4, com fratura e alterações de alinhamento, necessitando correlação com avaliação neurológica."},{d:"04/08/2026",tp:"Ressonância Magnética de Coluna Cervical",x:"Alteração de sinal intramedular em nível de C4, compatível com lesão medular traumática. Predomínio da alteração na região posterior da medula. Edema medular no segmento cervical correspondente. Alterações degenerativas multissegmentares.",conc:"Lesão medular traumática em C4, com predomínio posterior e edema medular."},{d:"04/08/2026",tp:"Tomografia Computadorizada de Tórax",x:"Massa pulmonar de grandes dimensões em pulmão direito, com aproximadamente 8,2 cm no maior eixo. Linfonodomegalias mediastinais, incluindo cadeias paratraqueais e subcarinais. Áreas de redução da aeração pulmonar adjacentes à lesão. Sem evidência de derrame pleural volumoso. Sem lesões ósseas secundárias identificáveis.",conc:"Massa pulmonar compatível com neoplasia conhecida, associada a comprometimento linfonodal mediastinal."}],
+lab:[{d:"03/08/2026",ex:"Hemograma",itens:[{n:"Hemoglobina",v:"14,2",ref:"12,0-16,0",u:"g/dL",a:0},{n:"Hematócrito",v:"42,5",ref:"36,0-48,0",u:"%",a:0},{n:"Leucócitos",v:"12.800",ref:"4.000-11.000",u:"/mm³",a:1},{n:"Neutrófilos",v:"82",ref:"40-70",u:"%",a:1},{n:"Plaquetas",v:"245.000",ref:"150.000-450.000",u:"/mm³",a:0}]},{d:"03/08/2026",ex:"Gasometria Arterial",itens:[{n:"pH",v:"7,32",ref:"7,35-7,45",u:"",a:1},{n:"pCO2",v:"58",ref:"35-45",u:"mmHg",a:1},{n:"pO2",v:"68",ref:"80-100",u:"mmHg",a:1},{n:"HCO3",v:"28",ref:"22-26",u:"mEq/L",a:1},{n:"SatO2",v:"92",ref:"95-100",u:"%",a:1},{n:"Lactato",v:"1,8",ref:"0,5-2,2",u:"mmol/L",a:0}]},{d:"03/08/2026",ex:"Bioquímica",itens:[{n:"Glicose",v:"142",ref:"70-100",u:"mg/dL",a:1},{n:"Ureia",v:"48",ref:"15-45",u:"mg/dL",a:1},{n:"Creatinina",v:"1,1",ref:"0,7-1,3",u:"mg/dL",a:0},{n:"Sódio",v:"138",ref:"135-145",u:"mEq/L",a:0},{n:"Potássio",v:"4,2",ref:"3,5-5,0",u:"mEq/L",a:0},{n:"Troponina",v:"0,02",ref:"<0,04",u:"ng/mL",a:0}]},{d:"04/08/2026",ex:"Hemograma",itens:[{n:"Hemoglobina",v:"13,8",ref:"12,0-16,0",u:"g/dL",a:0},{n:"Leucócitos",v:"11.200",ref:"4.000-11.000",u:"/mm³",a:1},{n:"Neutrófilos",v:"78",ref:"40-70",u:"%",a:1},{n:"Plaquetas",v:"230.000",ref:"150.000-450.000",u:"/mm³",a:0}]},{d:"10/08/2026",ex:"Gasometria Arterial",itens:[{n:"pH",v:"7,36",ref:"7,35-7,45",u:"",a:0},{n:"pCO2",v:"52",ref:"35-45",u:"mmHg",a:1},{n:"pO2",v:"72",ref:"80-100",u:"mmHg",a:1},{n:"HCO3",v:"29",ref:"22-26",u:"mEq/L",a:1},{n:"SatO2",v:"94",ref:"95-100",u:"%",a:1}]}],
+prob:[{n:1,x:"TCE frontal com contusões hemorrágicas e hemorragia subaracnoidea traumática",bc:"#c62828",bg:"#ffebee"},{n:2,x:"Trauma cervical em C4 com fratura e lesão medular parcial posterior",bc:"#c62828",bg:"#ffebee"},{n:3,x:"Edema medular cervical",bc:"#e65100",bg:"#fff3e0"},{n:4,x:"Insuficiência respiratória aguda — VM invasiva",bc:"#c62828",bg:"#ffebee"},{n:5,x:"Câncer pulmonar de grandes células — estádio IIIB (cT4N2M0)",bc:"#6a1b9a",bg:"#f3e5f5"},{n:6,x:"SAOS grave (IAH 115 eventos/h) com hipercapnia",bc:"#e65100",bg:"#fff3e0"},{n:7,x:"ICFEp com disfunção diastólica grau II",bc:"#0d47a1",bg:"#e3f2fd"},{n:8,x:"Obesidade grave (IMC 54,7 kg/m²)",bc:"#e65100",bg:"#fff3e0"},{n:9,x:"Rebaixamento do nível de consciência em recuperação",bc:"#0d47a1",bg:"#e3f2fd"},{n:10,x:"Luto não elaborado — irmão gêmeo falecido",bc:"#6a1b9a",bg:"#f3e5f5"},{n:11,x:"Ausência de suporte familiar/social",bc:"#0d47a1",bg:"#e3f2fd"},{n:12,x:"Prótese total de joelho esquerdo (osteossarcoma prévio)",bc:"#0d47a1",bg:"#e3f2fd"}]
+};
 
-    const CORES = {
-      blue:   { bg: '#e3f2fd',   text: '#0d47a1', border: '#90caf9', dot: '#0d47a1' },
-      red:    { bg: '#ffebee',   text: '#c62828', border: '#ef9a9a', dot: '#c62828' },
-      orange: { bg: '#fff3e0',   text: '#e65100', border: '#ffcc80', dot: '#e65100' },
-      yellow: { bg: '#fff8e1',   text: '#f57f17', border: '#ffe082', dot: '#f9a825' },
-      green:  { bg: '#e8f5e9',   text: '#2e7d32', border: '#a5d6a7', dot: '#2e7d32' },
-      purple: { bg: '#f3e5f5',   text: '#6a1b9a', border: '#ce93d8', dot: '#6a1b9a' },
-      cyan:   { bg: '#e0f7fa',   text: '#006064', border: '#80deea', dot: '#006064' },
-      gray:   { bg: '#f5f5f5',   text: '#555',    border: '#bdbdbd', dot: '#888' },
-      pink:   { bg: '#fce4ec',   text: '#ad1457', border: '#f48fb1', dot: '#ad1457' }
-    };
+function tclk(){const n=new Date(),p=n=>n.toString().padStart(2,'0');document.getElementById('tclk').textContent=`${p(n.getDate())}/${p(n.getMonth()+1)}/${n.getFullYear()} ${p(n.getHours())}:${p(n.getMinutes())}`;}
+setInterval(tclk,1000);tclk();
 
-    const BADGE_CLASSES = {
-      red: 'badge-red', orange: 'badge-orange', pink: 'badge-pink',
-      purple: 'badge-purple', green: 'badge-green', cyan: 'badge-cyan',
-      yellow: 'badge-yellow', blue: 'badge-blue', gray: 'badge-gray'
-    };
+function rBar(){const p=D.p,bh=D.badges.map(b=>`<span class="bd ${b.c}">${b.t}</span>`).join('');document.getElementById('pbar').innerHTML=`<div style="display:flex;align-items:center;gap:10px"><div class="pa">👤</div><div><div class="pn">${p.nome.toUpperCase()} <span>(${p.idade} anos, ${p.sexo})</span></div><div class="pm">Prontuário: <b>${p.prontuario}</b> | Internação: <b>${p.data_internacao}</b> | Setor: <b>${p.setor}</b></div></div></div><div class="bds">${bh}</div>`;}
 
-    const CARD_CLASSES = {
-      blue: 'card-blue', red: 'card-red', orange: 'card-orange',
-      green: 'card-green', purple: 'card-purple', cyan: 'card-cyan',
-      yellow: 'card-yellow', gray: 'card-gray'
-    };
+function rAll(){rBar();document.getElementById('area').innerHTML=`<div id="t-resumo">${rResumo()}</div><div id="t-dados" class="hdn">${rDados()}</div><div id="t-historia" class="hdn">${rHist()}</div><div id="t-antecedentes" class="hdn">${rAnt()}</div><div id="t-evento" class="hdn">${rEvt()}</div><div id="t-evolucao" class="hdn">${rEvo(D.med,'Evolução Médica')}</div><div id="t-fisio" class="hdn">${rEvo(D.fis,'Evolução Fisioterapêutica')}</div><div id="t-enfermagem" class="hdn">${rEvo(D.enf,'Evolução de Enfermagem')}</div><div id="t-imagem" class="hdn">${rImg()}</div><div id="t-laboratorio" class="hdn">${rLab()}</div><div id="t-problemas" class="hdn">${rProb()}</div><div id="t-add-ev" class="hdn">${rAddEv()}</div><div id="t-add-img" class="hdn">${rAddImg()}</div><div id="t-add-lab" class="hdn">${rAddLab()}</div>`;}
 
-    function updateClock() {
-      const now = new Date();
-      const pad = n => n.toString().padStart(2, '0');
-      document.getElementById('clock').textContent = `🕐 ${pad(now.getDate())}/${pad(now.getMonth()+1)}/${now.getFullYear()} ${pad(now.getHours())}:${pad(now.getMinutes())}`;
-    }
-    setInterval(updateClock, 1000);
-    updateClock();
+function rResumo(){const r=D.resumo;return`<div class="pn2"><div class="pt">📋 Resumo Clínico do Paciente</div><div class="g2"><div class="cd"><div class="ctt">Identificação</div><div class="cb">${r.id}</div></div><div class="cd" style="border-left-color:#c62828"><div class="ctt">Motivo de Internação</div><div class="cb">${r.motivo}</div></div><div class="cd" style="border-left-color:#e65100"><div class="ctt">Status Atual</div><div class="cb">${r.status}</div></div><div class="cd" style="border-left-color:#2e7d32"><div class="ctt">Comorbidades Principais</div><div class="cbs">${r.comorb}</div></div><div class="cd" style="border-left-color:#6a1b9a"><div class="ctt">Aspectos Psicossociais</div><div class="cbs">${r.psico}</div></div><div class="cd" style="border-left-color:#006064"><div class="ctt">Suporte Ventilatório</div><div class="cb">${r.vent}</div></div></div></div>`;}
 
-    async function carregarDados() {
-      try {
-        const response = await fetch('./dados.json');
-        if (!response.ok) throw new Error("Não foi possível carregar dados.json");
-        DADOS = await response.json();
-        renderizarTudo();
-      } catch (e) {
-        document.getElementById('patient-bar').innerHTML = `<div class="error">❌ Erro ao carregar dados.json: ${e.message}<br><small>Verifique se o arquivo dados.json está na mesma pasta do index.html</small></div>`;
-        document.getElementById('content-area').innerHTML = '';
-      }
-    }
+function rDados(){const p=D.p;return`<div class="pn2"><div class="pt">📊 Dados Antropométricos</div><div class="g4" style="margin-bottom:20px"><div class="mc mcb"><div class="mv">${p.peso} <span class="mu">kg</span></div><div class="ml">PESO ATUAL</div></div><div class="mc mcg"><div class="mv">${p.altura.toString().replace('.',',')} <span class="mu">m</span></div><div class="ml">ESTATURA</div></div><div class="mc mcr"><div class="mv">${p.imc.toString().replace('.',',')}</div><div class="ml">IMC kg/m²</div><div class="ml" style="color:#c62828">OBESIDADE GRAVE</div></div><div class="mc mco"><div class="mv">${p.habitual} <span class="mu">kg</span></div><div class="ml">PESO HABITUAL</div></div></div><div class="abx"><p><b>⚠️ Variação ponderal:</b> ${p.variacao}</p></div></div>`;}
 
-    function renderizarTudo() {
-      renderizarBarraPaciente();
-      renderizarConteudo();
-    }
+function rHist(){return`<div class="pn2"><div class="pt">👤 História Social e Familiar</div><div style="display:flex;flex-direction:column;gap:14px">${D.hist.map(h=>`<div class="cd" style="border-left-color:${h.bc}"><div style="font-weight:700;color:${h.bc};margin-bottom:6px">${h.t}</div><div class="cbs">${h.x}</div></div>`).join('')}</div></div>`;}
 
-    function renderizarBarraPaciente() {
-      const p = DADOS.paciente;
-      const badgesHtml = DADOS.badges.map(b => `<span class="badge ${BADGE_CLASSES[b.cor] || 'badge-blue'}">${b.icone || ''} ${b.texto}</span>`).join('');
-      document.getElementById('patient-bar').innerHTML = `
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div class="patient-avatar">👴</div>
-          <div>
-            <div class="patient-name">${p.nome.toUpperCase()} <span>(${p.idade} anos, ${p.sexo})</span></div>
-            <div class="patient-meta">Prontuário: <b>${p.prontuario}</b> | Internação: <b>${p.data_internacao}</b></div>
-          </div>
-        </div>
-        <div class="badges">${badgesHtml}</div>
-      `;
-    }
+function rAnt(){return`<div class="pn2"><div class="pt">📑 Antecedentes Pessoais</div>${D.ant.map(a=>`<div style="margin-bottom:20px"><div style="background:${a.ch};padding:10px 14px;border-radius:8px 8px 0 0;font-weight:700;color:${a.ct};font-size:14px;border:1px solid ${a.cb};border-bottom:none">${a.t}</div><div style="background:#fafafa;padding:14px;border-radius:0 0 8px 8px;border:1px solid ${a.cb};border-top:none;font-size:13px;line-height:1.7;color:#333">${a.x}</div></div>`).join('')}</div>`;}
 
-    function renderizarConteudo() {
-      const area = document.getElementById('content-area');
-      area.innerHTML = `
-        <div id="tab-resumo">${renderResumo()}</div>
-        <div id="tab-dados" class="hidden">${renderDados()}</div>
-        <div id="tab-historia" class="hidden">${renderHistoria()}</div>
-        <div id="tab-antecedentes" class="hidden">${renderAntecedentes()}</div>
-        <div id="tab-evento" class="hidden">${renderEvento()}</div>
-        <div id="tab-evolucao" class="hidden">${renderEvolucao('medica', 'Evolução Médica')}</div>
-        <div id="tab-fisio" class="hidden">${renderEvolucao('fisio', 'Evolução Fisioterapêutica')}</div>
-        <div id="tab-enfermagem" class="hidden">${renderEvolucao('enfermagem', 'Evolução de Enfermagem')}</div>
-        <div id="tab-problemas" class="hidden">${renderProblemas()}</div>
-        <div id="tab-adicionar" class="hidden">${renderAdicionar()}</div>
-      `;
-    }
+function rEvt(){const e=D.evento;return`<div class="pn2"><div class="pt">🚨 História do Evento Atual</div><div style="display:flex;gap:12px;margin-bottom:16px"><div style="background:#c62828;color:#fff;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:700">${e.data}</div><div style="background:#0d47a1;color:#fff;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:700">${e.titulo}</div></div><div class="cd" style="border-left-color:#c62828"><p class="cb">${e.texto}</p><p style="margin-top:10px;font-weight:700">Evoluiu com:</p><ul style="margin:6px 0;padding-left:20px">${e.ev.map(i=>`<li style="margin-bottom:4px">${i}</li>`).join('')}</ul><p style="margin-top:10px" class="cbs">${e.enc}</p><p style="margin-top:10px;font-size:12px;color:#555"><b>SSVV:</b> ${e.ssvv}</p></div></div>`;}
 
-    function renderResumo() {
-      const r = DADOS.resumo;
-      return `
-        <div class="panel">
-          <h2 class="panel-title">📋 Resumo Clínico do Paciente</h2>
-          <div class="grid-2">
-            <div class="card card-blue"><div class="card-title">Identificação</div><div class="card-body">${r.identificacao}</div></div>
-            <div class="card card-red"><div class="card-title">Motivo de Internação</div><div class="card-body">${r.motivo_internacao}</div></div>
-            <div class="card card-orange"><div class="card-title">Status Atual</div><div class="card-body">${r.status_atual}</div></div>
-            <div class="card card-green"><div class="card-title">Comorbidades Principais</div><div class="card-body-sm">${r.comorbidades}</div></div>
-            <div class="card card-purple"><div class="card-title">Aspectos Psicossociais</div><div class="card-body-sm">${r.psicossociais}</div></div>
-            <div class="card card-cyan"><div class="card-title">Suporte Ventilatório</div><div class="card-body">${r.ventilacao}</div></div>
-          </div>
-        </div>`;
-    }
+function rEvo(arr,tit){return`<div class="pn2"><div class="pt">${tit}</div>${arr.map(ev=>`<div class="ti" style="border-left-color:${ev.bc}"><div class="td" style="background:${ev.bc};box-shadow:0 0 0 1px ${ev.bc}"></div><div class="tbg" style="background:${ev.bg};color:${ev.tc}">${ev.d} — ${ev.t}</div><div class="ttx">${ev.x}</div></div>`).join('')}</div>`;}
 
-    function renderDados() {
-      const p = DADOS.paciente;
-      return `
-        <div class="panel">
-          <h2 class="panel-title">📊 Dados Antropométricos</h2>
-          <div class="grid-4" style="margin-bottom:20px;">
-            <div class="metric-card metric-blue"><div class="metric-value">${p.peso_atual_kg} <span class="metric-unit">kg</span></div><div class="metric-label">PESO ATUAL</div></div>
-            <div class="metric-card metric-green"><div class="metric-value">${p.estatura_m.toString().replace('.', ',')} <span class="metric-unit">m</span></div><div class="metric-label">ESTATURA</div></div>
-            <div class="metric-card metric-red"><div class="metric-value">${p.imc.toString().replace('.', ',')}</div><div class="metric-label">IMC kg/m²</div><div class="metric-alert" style="color:#c62828;">OBESIDADE GRAVE</div></div>
-            <div class="metric-card metric-orange"><div class="metric-value">${p.peso_habitual_kg} <span class="metric-unit">kg</span></div><div class="metric-label">PESO HABITUAL</div></div>
-          </div>
-          <div class="alert-box"><p><b>⚠️ Variação ponderal:</b> ${p.variacao_ponderal}</p></div>
-        </div>`;
-    }
+function rImg(){return`<div class="pn2"><div class="pt">🖼️ Exames de Imagem</div>${D.img.map(ex=>`<div style="margin-bottom:16px"><div class="eh">📷 ${ex.tp} <span style="margin-left:auto;font-size:12px;color:#888">${ex.d}</span></div><div class="eb">${ex.x}<div class="ec"><b>Conclusão:</b> ${ex.conc}</div></div></div>`).join('')}</div>`;}
 
-    function renderHistoria() {
-      const cards = DADOS.historia_social.map(h => {
-        const cls = CARD_CLASSES[h.cor] || 'card-blue';
-        return `<div class="card ${cls}"><div style="font-weight:700;color:${CORES[h.cor]?.text||'#0d47a1'};margin-bottom:6px;">${h.icone} ${h.titulo}</div><div class="card-body-sm">${h.texto}</div></div>`;
-      }).join('');
-      return `<div class="panel"><h2 class="panel-title">🏠 História Social e Familiar</h2><div style="display:flex;flex-direction:column;gap:14px;">${cards}</div></div>`;
-    }
+function rLab(){return`<div class="pn2"><div class="pt">🧪 Exames Laboratoriais</div>${D.lab.map(l=>`<div style="margin-bottom:16px"><div class="eh" style="border-radius:8px;border-bottom:1px solid #d0d7de">🧪 ${l.ex} <span style="margin-left:auto;font-size:12px;color:#888">${l.d}</span></div><table class="lt"><thead><tr><th>Parâmetro</th><th>Valor</th><th>Referência</th><th>Unidade</th></tr></thead><tbody>${l.itens.map(it=>`<tr><td>${it.n}</td><td class="${it.a?'la':''}">${it.v}</td><td>${it.ref}</td><td>${it.u}</td></tr>`).join('')}</tbody></table></div>`).join('')}</div>`;}
 
-    function renderAntecedentes() {
-      const items = DADOS.antecedentes.map(a => `
-        <div style="margin-bottom:20px;">
-          <div style="background:${a.cor_header};padding:10px 14px;border-radius:8px 8px 0 0;font-weight:700;color:${a.cor_texto};font-size:14px;">${a.icone} ${a.titulo}</div>
-          <div style="background:#fafafa;padding:14px;border-radius:0 0 8px 8px;border:1px solid ${a.cor_borda};border-top:none;font-size:13px;line-height:1.7;color:#333;">${a.texto}</div>
-        </div>
-      `).join('');
-      return `<div class="panel"><h2 class="panel-title">📁 Antecedentes Pessoais</h2>${items}</div>`;
-    }
+function rProb(){return`<div class="pn2"><div class="pt">⚠️ Problemas Ativos</div><div class="gp">${D.prob.map(pr=>`<div class="pi" style="background:${pr.bg};border-color:${pr.bc}"><b>${pr.n}.</b> ${pr.x}</div>`).join('')}</div></div>`;}
 
-    function renderEvento() {
-      const e = DADOS.evento_atual;
-      const lista = e.evoluiu_com.map(item => `<li>${item}</li>`).join('');
-      return `
-        <div class="panel">
-          <h2 class="panel-title">🚨 História do Evento Atual</h2>
-          <div style="display:flex;gap:12px;margin-bottom:16px;">
-            <div style="background:#c62828;color:white;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:700;">${e.data}</div>
-            <div style="background:#0d47a1;color:white;padding:6px 14px;border-radius:6px;font-size:12px;font-weight:700;">${e.titulo}</div>
-          </div>
-          <div class="card card-red">
-            <p>${e.texto}</p>
-            <p style="margin-top:10px;"><b>Evoluiu com:</b></p>
-            <ul>${lista}</ul>
-            <p style="margin-top:10px;">${e.encaminhamento}</p>
-          </div>
-        </div>`;
-    }
+function rAddEv(){return`<div class="pn2"><div class="ptg">➕ Adicionar Nova Evolução</div><div class="hb3"><b>💡 Como funciona:</b> A Profª Natália quem faz, aluno não mexe aqui.</div><div class="fg"><label class="fl">Data da Evolução</label><input type="date" class="fi" id="ed"></div><div class="fg"><label class="fl">Categoria</label><select class="fs" id="ec"><option value="medica">Evolução Médica</option><option value="fisio">Fisioterapia</option><option value="enfermagem">Enfermagem</option></select></div><div class="fg"><label class="fl">Título</label><input type="text" class="fi" id="et" placeholder="Ex: Reavaliação, Passagem de plantão..."></div><div class="fg"><label class="fl">Descrição da Evolução</label><textarea class="ft" id="ex" placeholder="Descreva a evolução do paciente..."></textarea></div><div class="fg"><label class="fl">Cor do marcador</label><select class="fs" id="eclr"><option value="blue">Azul (padrão)</option><option value="green">Verde (melhora)</option><option value="yellow">Amarelo (atenção)</option><option value="orange">Laranja (alerta)</option><option value="red">Vermelho (crítico)</option><option value="gray">Cinza (estável)</option></select></div><button class="bp2" onclick="gEv()">Gerar JSON para copiar</button><pre class="cb2 hdn" id="eout"></pre></div>`;}
 
-    function renderEvolucao(categoria, titulo) {
-      const items = DADOS.evolucoes[categoria].map(ev => {
-        const c = CORES[ev.cor] || CORES.blue;
-        return `
-          <div class="timeline-item" style="border-left-color:${c.dot};">
-            <div class="timeline-dot" style="background:${c.dot};box-shadow:0 0 0 1px ${c.dot};"></div>
-            <div class="timeline-badge" style="background:${c.bg};color:${c.text};">${ev.data} — ${ev.titulo}</div>
-            <div class="timeline-text">${ev.texto}</div>
-          </div>
-        `;
-      }).join('');
-      const icone = categoria === 'medica' ? '📈' : categoria === 'fisio' ? '🦵' : '🩺';
-      return `<div class="panel"><h2 class="panel-title">${icone} ${titulo}</h2>${items}</div>`;
-    }
+function rAddImg(){return`<div class="pn2"><div class="ptg">➕ Adicionar Exame de Imagem</div><div class="hb3"><b>💡 Como funciona:</b> A Profª Natália quem faz, aluno não mexe aqui..</div><div class="fg"><label class="fl">Data do exame</label><input type="date" class="fi" id="id"></div><div class="fg"><label class="fl">Tipo de exame</label><input type="text" class="fi" id="it" placeholder="Ex: Tomografia de Crânio, Ressonância..."></div><div class="fg"><label class="fl">Descrição dos achados</label><textarea class="ft" id="ix" placeholder="Descreva os achados do exame..."></textarea></div><div class="fg"><label class="fl">Conclusão</label><textarea class="ft" id="ic" placeholder="Descreva a conclusão do laudo..."></textarea></div><button class="bp2" onclick="gImg()">Gerar JSON para copiar</button><pre class="cb2 hdn" id="iout"></pre></div>`;}
 
-    function renderProblemas() {
-      const items = DADOS.problemas.map(prob => {
-        const c = CORES[prob.cor] || CORES.blue;
-        return `<div class="problem-item" style="background:${c.bg};border-color:${c.dot};"><b>${prob.numero}.</b> ${prob.texto}</div>`;
-      }).join('');
-      return `<div class="panel"><h2 class="panel-title">⚠️ Problemas Ativos</h2><div class="grid-problems">${items}</div></div>`;
-    }
+function rAddLab(){return`<div class="pn2"><div class="ptg">➕ Adicionar Exame Laboratorial</div><div class="hb3"><b>💡 Como funciona:</b> A Profª Natália quem faz, aluno não mexe aqui..</div><div class="fg"><label class="fl">Data do exame</label><input type="date" class="fi" id="ld"></div><div class="fg"><label class="fl">Nome do exame / painel</label><input type="text" class="fi" id="lt" placeholder="Ex: Hemograma, Gasometria, Bioquímica..."></div><div class="fg"><label class="fl">Itens (um por linha, formato: Nome | Valor | Ref | Unidade | true/false para alterado)</label><textarea class="ft" id="li" placeholder="Hemoglobina | 14,2 | 12,0-16,0 | g/dL | false&#10;Leucócitos | 12.800 | 4.000-11.000 | /mm³ | true"></textarea></div><button class="bp2" onclick="gLab()">Gerar JSON para copiar</button><pre class="cb2 hdn" id="lout"></pre></div>`;}
 
-    function renderAdicionar() {
-      return `
-        <div class="panel">
-          <h2 class="panel-title-green">➕ Adicionar Nova Evolução</h2>
-          <div class="hint-box">
-            <b>💡 Como funciona: a Profª Natália vai atualizar o prontuário, os estagiários não fuxicam aqui
-          </div>
-          <div style="display:flex;flex-direction:column;gap:14px;">
-            <div class="form-group">
-              <label class="form-label">Data da Evolução</label>
-              <input type="date" class="form-input" id="nova-data">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Categoria</label>
-              <select class="form-select" id="nova-categoria">
-                <option value="medica">Evolução Médica</option>
-                <option value="fisio">Evolução Fisioterapêutica</option>
-                <option value="enfermagem">Evolução de Enfermagem</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Título</label>
-              <input type="text" class="form-input" id="nova-titulo" placeholder="Ex: Reavaliação, Passagem de plantão...">
-            </div>
-            <div class="form-group">
-              <label class="form-label">Descrição da Evolução</label>
-              <textarea class="form-textarea" id="nova-texto" placeholder="Descreva a evolução do paciente..."></textarea>
-            </div>
-            <div class="form-group">
-              <label class="form-label">Cor do marcador</label>
-              <select class="form-select" id="nova-cor">
-                <option value="blue">Azul (padrão)</option>
-                <option value="green">Verde (melhora)</option>
-                <option value="yellow">Amarelo (atenção)</option>
-                <option value="orange">Laranja (alerta)</option>
-                <option value="red">Vermelho (crítico)</option>
-                <option value="gray">Cinza (estável)</option>
-              </select>
-            </div>
-            <button class="btn-primary" onclick="gerarJSON()">📋 Gerar código JSON para copiar</button>
-            <pre id="json-saida" style="background:#1e1e1e;color:#d4d4d4;padding:14px;border-radius:6px;font-size:12px;overflow-x:auto;display:none;"></pre>
-          </div>
-        </div>`;
-    }
+function gEv(){const d=document.getElementById('ed').value,c=document.getElementById('ec').value,t=document.getElementById('et').value,x=document.getElementById('ex').value,cl=document.getElementById('eclr').value;if(!d||!t||!x){alert('Preencha data, título e descrição.');return;}const df=d.split('-').reverse().join('/'),cc={blue:'blue',green:'green',yellow:'yellow',orange:'orange',red:'red',gray:'gray'}[cl];const o={data:df,titulo:t,cor:cc,texto:x};document.getElementById('eout').classList.remove('hdn');document.getElementById('eout').textContent=`// Cole em "evolucoes.${c}":\n`+JSON.stringify(o,null,2)+',';}
 
-    function gerarJSON() {
-      const data = document.getElementById('nova-data').value;
-      const categoria = document.getElementById('nova-categoria').value;
-      const titulo = document.getElementById('nova-titulo').value;
-      const texto = document.getElementById('nova-texto').value;
-      const cor = document.getElementById('nova-cor').value;
+function gImg(){const d=document.getElementById('id').value,t=document.getElementById('it').value,x=document.getElementById('ix').value,cc=document.getElementById('ic').value;if(!d||!t||!x){alert('Preencha todos os campos.');return;}const df=d.split('-').reverse().join('/');const o={data:df,tipo:t,descricao:x,conclusao:cc};document.getElementById('iout').classList.remove('hdn');document.getElementById('iout').textContent=`// Cole em "exames_imagem":\n`+JSON.stringify(o,null,2)+',';}
 
-      if (!data || !titulo || !texto) {
-        alert('Preencha data, título e descrição.');
-        return;
-      }
+function gLab(){const d=document.getElementById('ld').value,t=document.getElementById('lt').value,li=document.getElementById('li').value;if(!d||!t||!li){alert('Preencha todos os campos.');return;}const df=d.split('-').reverse().join('/'),its=li.split('\n').map(l=>{const p=l.split('|').map(s=>s.trim());return p.length>=4?{parametro:p[0],valor:p[1],referencia:p[2],unidade:p[3]||'',alterado:(p[4]||'').toLowerCase()==='true'}:null;}).filter(Boolean);const o={data:df,exame:t,itens:its};document.getElementById('lout').classList.remove('hdn');document.getElementById('lout').textContent=`// Cole em "exames_laboratoriais":\n`+JSON.stringify(o,null,2)+',';}
 
-      const dataFormatada = data.split('-').reverse().join('/');
-      const novoItem = { data: dataFormatada, titulo, cor, texto };
+function sh(id){const tabs=['resumo','dados','historia','antecedentes','evento','evolucao','fisio','enfermagem','imagem','laboratorio','problemas','add-ev','add-img','add-lab'];tabs.forEach(t=>{const el=document.getElementById('t-'+t);if(el)el.classList.add('hdn');const b=document.getElementById('b-'+t);if(b)b.classList.remove('a');});const tr=document.getElementById('t-'+id);if(tr)tr.classList.remove('hdn');const bt=document.getElementById('b-'+id);if(bt)bt.classList.add('a');}
 
-      const saida = document.getElementById('json-saida');
-      saida.style.display = 'block';
-      saida.textContent = `// Cole este bloco dentro de "evolucoes.${categoria}" no dados.json:
-` + JSON.stringify(novoItem, null, 2) + ',';
-    }
+rAll();
+</script>
 
-    function showTab(tabId) {
-      const tabs = ['resumo','dados','historia','antecedentes','evento','evolucao','fisio','enfermagem','problemas','adicionar'];
-      tabs.forEach(t => {
-        const el = document.getElementById('tab-' + t);
-        if (el) el.classList.add('hidden');
-        const btn = document.getElementById('btn-' + t);
-        if (btn) btn.classList.remove('active');
-      });
-      const target = document.getElementById('tab-' + tabId);
-      if (target) target.classList.remove('hidden');
-      const btn = document.getElementById('btn-' + tabId);
-      if (btn) btn.classList.add('active');
-    }
-
-    carregarDados();
-  </script>
 </body>
 </html>
