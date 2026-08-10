@@ -5,329 +5,561 @@
     "sexo": "Masculino",
     "prontuario": "083-T/2026",
     "data_internacao": "03/08/2026",
-    "unidade": "UTI",
+    "setor": "UTI",
     "peso_atual_kg": 158,
     "estatura_m": 1.7,
     "imc": 54.7,
     "peso_habitual_kg": 108,
-    "variacao_ponderal": "Ganho aproximado de 50 kg após evento familiar de grande impacto emocional (falecimento do irmão gêmeo Astrogildo)."
+    "variacao_ponderal": "Ganho ponderal aproximado de 50 kg após falecimento do irmão gêmeo Astrogildo."
   },
   "badges": [
     {
       "texto": "TCE Frontal",
-      "cor": "red",
-      "icone": "⚠️"
+      "cor": "red"
     },
     {
-      "texto": "Lesão C4",
-      "cor": "orange",
-      "icone": "🦴"
+      "texto": "Trauma C4",
+      "cor": "red"
     },
     {
-      "texto": "CA Pulmão IIIB",
-      "cor": "pink",
-      "icone": "🫁"
+      "texto": "Lesão Medular",
+      "cor": "red"
     },
     {
-      "texto": "ICFEp",
-      "cor": "purple",
-      "icone": "❤️"
+      "texto": "VM Invasiva",
+      "cor": "orange"
+    },
+    {
+      "texto": "Câncer Pulmão IIIB",
+      "cor": "purple"
     },
     {
       "texto": "SAOS Grave",
-      "cor": "green",
-      "icone": "😴"
+      "cor": "orange"
     },
     {
-      "texto": "Obesidade Grave (IMC 54,7)",
-      "cor": "cyan",
-      "icone": "⚖️"
+      "texto": "Obesidade Grave",
+      "cor": "orange"
+    },
+    {
+      "texto": "ICFEp",
+      "cor": "blue"
+    },
+    {
+      "texto": "RASS -1",
+      "cor": "green"
     }
   ],
   "resumo": {
-    "identificacao": "Trastamiro, 83 anos, Masculino. Prontuário: 083-T/2026 | UTI",
-    "motivo_internacao": "Trauma motociclístico — TCE frontal + Lesão cervical C4. Sem capacete | Perda de consciência",
-    "status_atual": "Sedação suspensa — processo de despertar. RASS: -1 | Sonolento, desperta ao estímulo verbal",
-    "comorbidades": "SAOS grave (IAH 115), CA pulmão grandes células cT4N2M0 (IIIB), ICFEp (FE 62%), Obesidade grave (IMC 54,7), Prótese de joelho esquerdo",
-    "psicossociais": "Irmão gêmeo (Astrogildo) faleceu no mesmo hospital. Ganho de ~50 kg após o luto. Sem suporte familiar. Desconfiança da equipe. Comportamento questionador.",
-    "ventilacao": "Ventilação mecânica invasiva. Uso prévio de BiPAP domiciliar por SAOS grave + hipercapnia"
+    "identificacao": "Paciente masculino, 83 anos, prontuário 083-T/2026. Internado em UTI desde 03/08/2026. Irmão gêmeo de Astrogildo (falecido).",
+    "motivo_internacao": "TCE frontal e trauma cervical em C4 após acidente motociclístico sem capacete. Realizava manobra de empinamento quando perdeu controle.",
+    "status_atual": "Intubado, em VM invasiva, sedação suspensa desde 10/08/2026. RASS -1, sonolento, despertável ao chamado. Dependente para mobilidade.",
+    "comorbidades": "Câncer pulmonar de grandes células (estádio IIIB), SAOS grave (IAH 115/h), hipercapnia, ICFEp, obesidade grave (IMC 54,7), prótese total de joelho esquerdo.",
+    "psicossociais": "Luto pelo irmão gêmeo Astrogildo. Ausência de suporte familiar. Comportamento questionador e desconfiado desde internação.",
+    "ventilacao": "VM invasiva desde admissão. SpO2 93-95%. Tentativa de avaliação fisioterapêutica em 10/08 resultou em dessaturação para 89%."
   },
   "historia_social": [
     {
-      "titulo": "Irmão Gêmeo — Astrogildo",
-      "icone": "👥",
-      "cor": "purple",
-      "texto": "Paciente possui irmão gêmeo, Astrogildo, que anteriormente encontrava-se internado e sob cuidados no Hospital dos Estagiários da Tuiuti. Astrogildo apresentou evolução desfavorável e veio a óbito em circunstâncias trágicas."
+      "titulo": "Luto e ganho ponderal",
+      "texto": "Após falecimento do irmão gêmeo Astrogildo, paciente apresentou ganho ponderal aproximado de 50 kg.",
+      "cor": "red"
     },
     {
-      "titulo": "Ganho Ponderal Pós-Luto",
-      "icone": "⚖️",
-      "cor": "orange",
-      "texto": "Após a morte do irmão, Trastamiro apresentou ganho ponderal progressivo de aproximadamente 50 kg."
+      "titulo": "Redução de atividades",
+      "texto": "Deixou de cuidar da horta e plantar verduras. Deixou o hábito de fumar 'paiero' com amigos. Redução importante da participação em atividades sociais e de lazer.",
+      "cor": "orange"
     },
     {
-      "titulo": "Relação com a Equipe",
-      "icone": "🏥",
-      "cor": "red",
-      "texto": "Desde a internação atual, apresenta maior desconfiança em relação aos profissionais, questiona frequentemente as condutas propostas, demonstra menor colaboração espontânea e solicita explicações sobre procedimentos."
+      "titulo": "Declínio funcional",
+      "texto": "Menor disposição física nos últimos meses. Sono fragmentado com interrupções noturnas para micção. Marcha com apoio em corrimão, subia escadas lentamente.",
+      "cor": "blue"
     },
     {
-      "titulo": "Suporte Familiar",
-      "icone": "👨‍👩‍👧‍👦",
-      "cor": "blue",
-      "texto": "Durante a evolução hospitalar, perdeu toda a assistência familiar disponível. Paciente encontra-se sem rede de apoio."
+      "titulo": "Aspectos psicológicos",
+      "texto": "Demonstra tristeza relacionada ao falecimento do irmão. Desde a internação atual apresenta comportamento mais questionador, desconfiado e menor colaboração com a equipe.",
+      "cor": "purple"
     }
   ],
   "antecedentes": [
     {
-      "titulo": "Antecedente Oncológico Ortopédico",
-      "icone": "🦴",
-      "cor_header": "#e3f2fd",
-      "cor_texto": "#0d47a1",
-      "cor_borda": "#e3f2fd",
-      "texto": "Aos 25 anos, diagnóstico de osteossarcoma em joelho esquerdo. Submetido a tratamento cirúrgico com retirada da lesão e implantação de prótese total de joelho esquerdo. Recuperação satisfatória, retomou a marcha. Até o evento traumático atual, não havia relato de limitação importante da marcha."
+      "titulo": "Ortopedia",
+      "texto": "Osteossarcoma em joelho esquerdo aos 25 anos. Submetido à ressecção cirúrgica e colocação de prótese total de joelho esquerdo. Recuperação da marcha após procedimento.",
+      "cor_header": "#f5f5f5",
+      "cor_texto": "#333",
+      "cor_borda": "#d0d7de"
     },
     {
-      "titulo": "Síndrome da Apneia Obstrutiva do Sono (SAOS)",
-      "icone": "😴",
+      "titulo": "Apneia do Sono",
+      "texto": "SAOS grave. IAH: 115 eventos/hora. Hipercapnia importante. Uso domiciliar de BiPAP.",
+      "cor_header": "#fff3e0",
+      "cor_texto": "#e65100",
+      "cor_borda": "#ffcc80"
+    },
+    {
+      "titulo": "Oncologia",
+      "texto": "Câncer pulmonar de grandes células em tratamento. Massa pulmonar direita de aproximadamente 8,2 cm. Linfonodomegalias mediastinais. Estadiamento: cT4N2M0, estádio IIIB.",
       "cor_header": "#f3e5f5",
       "cor_texto": "#6a1b9a",
-      "cor_borda": "#f3e5f5",
-      "texto": "Diagnóstico prévio de SAOS grave. IAH: 115 eventos/hora. História de hipercapnia importante associada ao distúrbio ventilatório. Paciente fazia uso domiciliar de BiPAP."
+      "cor_borda": "#ce93d8"
     },
     {
-      "titulo": "Neoplasia Pulmonar",
-      "icone": "🫁",
+      "titulo": "Cardiovascular",
+      "texto": "ICFEp. Ecocardiograma prévio: FEVE 62%, disfunção diastólica grau II, hipertrofia concêntrica moderada do VE, átrio esquerdo moderadamente aumentado, PSAP estimada 45 mmHg.",
       "cor_header": "#ffebee",
       "cor_texto": "#c62828",
-      "cor_borda": "#ffebee",
-      "texto": "Carcinoma pulmonar de grandes células. Estadiamento: cT4N2M0 — estádio IIIB. T4: tumor primário com mais de 7 cm no maior diâmetro. N2: comprometimento de linfonodos mediastinais ipsilaterais e/ou subcarinais. M0: ausência de metástases à distância identificadas no estadiamento inicial."
+      "cor_borda": "#ef9a9a"
     },
     {
-      "titulo": "Insuficiência Cardíaca — ICFEp",
-      "icone": "❤️",
-      "cor_header": "#e8f5e9",
-      "cor_texto": "#2e7d32",
-      "cor_borda": "#e8f5e9",
-      "texto": "Ecocardiograma: VE: hipertrofia concêntrica moderada, dimensões preservadas. Função sistólica global preservada — FEVE 62%. Função diastólica: disfunção diastólica grau II, achados compatíveis com aumento das pressões de enchimento. Átrio esquerdo moderadamente dilatado. VD discretamente aumentado, função sistólica preservada. VM: insuficiência mitral discreta | VA: esclerose valvar, sem estenose significativa | VT: insuficiência tricúspide discreta. PSAP estimada: 45 mmHg | Pericárdio: sem derrame."
+      "titulo": "Nutrição",
+      "texto": "Obesidade grave. IMC 54,7 kg/m². Peso atual 158 kg (peso habitual ~108 kg). Ganho de ~50 kg após luto.",
+      "cor_header": "#fff3e0",
+      "cor_texto": "#e65100",
+      "cor_borda": "#ffcc80"
     }
   ],
   "evento_atual": {
     "data": "03/08/2026",
-    "titulo": "ACIDENTE MOTOCICLÍSTICO",
-    "texto": "Paciente sofreu acidente motociclístico após perder o controle da motocicleta durante manobra de empinamento. No momento do acidente, não utilizava capacete.",
+    "titulo": "Admissão Médica",
+    "texto": "Paciente masculino, 83 anos, admitido após acidente motociclístico. Realizava manobra de empinamento quando perdeu o controle e sofreu queda com impacto frontal da cabeça. Sem capacete. Após o trauma apresentou rebaixamento do nível de consciência.",
     "evoluiu_com": [
-      "Traumatismo cranioencefálico frontal",
-      "Trauma cervical",
-      "Suspeita de lesão medular em C4",
-      "Rebaixamento do nível de consciência"
+      "TCE frontal e trauma cervical em nível C4",
+      "Lesão medular parcial posterior em C4 (inicialmente suspeita de anterior)",
+      "Rebaixamento do nível de consciência",
+      "Insuficiência respiratória",
+      "Intubação orotraqueal e VM invasiva",
+      "Sedação"
     ],
-    "encaminhamento": "Foi encaminhado ao Hospital dos Estagiários da Tuiuti."
+    "encaminhamento": "Encaminhado à UTI para suporte intensivo, monitorização contínua e investigação neurológica.",
+    "ssvv": "PA: 158/92 mmHg | FC: 104 bpm | FR: 22 irpm | SpO2: 94% em VM | T: 36,4°C"
   },
   "evolucoes": {
     "medica": [
       {
-        "data": "03/08",
+        "data": "03/08/2026",
         "titulo": "Admissão",
+        "cor": "red",
+        "texto": "Paciente admitido após acidente motociclístico. TCE frontal, trauma cervical C4, lesão medular parcial. IOT, VM invasiva, sedação. SSVV: PA 158/92, FC 104, FR 22, SpO2 94%, T 36,4°C."
+      },
+      {
+        "data": "04/08/2026",
+        "titulo": "Reavaliação",
+        "cor": "orange",
+        "texto": "Permanece sedado, intubado e em VM. Divergência na classificação inicial da lesão cervical: hipótese de lesão medular parcial anterior em C4 revista. Quadro passa a ser mais compatível com lesão medular parcial posterior em C4."
+      },
+      {
+        "data": "05/08/2026",
+        "titulo": "Evolução",
         "cor": "blue",
-        "texto": "Paciente admitido após trauma motociclístico. TCE frontal associado a trauma cervical em nível C4. Quadro compatível com lesão medular cervical parcial anterior. Evoluiu com rebaixamento do nível de consciência, indicada transferência para UTI. Realizada intubação orotraqueal. Mantido sob sedação e ventilação mecânica invasiva."
+        "texto": "Paciente permanece em UTI, sedado e em VM invasiva. Mantém diagnóstico de TCE frontal e lesão cervical C4. Mantidas demais comorbidades prévias. Sem novas intercorrências."
       },
       {
-        "data": "04/08",
-        "titulo": "Passagem de Plantão",
+        "data": "06/08/2026",
+        "titulo": "Evolução",
+        "cor": "blue",
+        "texto": "Paciente permanece sedado, intubado e em VM. Sem alteração clínica significativa. Mantido suporte intensivo."
+      },
+      {
+        "data": "07/08/2026",
+        "titulo": "Evolução",
+        "cor": "blue",
+        "texto": "Paciente permanece em VM e sob sedação. Mantidos diagnósticos prévios. Sem novas intercorrências."
+      },
+      {
+        "data": "08/08/2026",
+        "titulo": "Evolução",
+        "cor": "blue",
+        "texto": "Paciente permanece em UTI, intubado, sedado e em VM invasiva. Sem novas intercorrências registradas."
+      },
+      {
+        "data": "09/08/2026",
+        "titulo": "Evolução",
         "cor": "yellow",
-        "texto": "Durante reavaliação pela equipe da manhã, surgem dúvidas quanto à classificação inicial da lesão medular. Achados considerados mais compatíveis com lesão medular parcial posterior em C4. Solicitada revisão da avaliação neurológica e correlação com exames de imagem e exame clínico."
+        "texto": "Paciente permanece sedado, intubado e em VM. Mantidos cuidados intensivos. Programada suspensão progressiva da sedação conforme avaliação clínica."
       },
       {
-        "data": "05–09/08",
-        "titulo": "Evolução na UTI",
-        "cor": "gray",
-        "texto": "Paciente permanece em ventilação mecânica invasiva, mantida sedação. Acompanhamento devido à associação de: TCE, lesão cervical, alteração do nível de consciência, câncer pulmonar, SAOS grave, hipercapnia, ICFEp, obesidade grave, antecedente ortopédico, ausência de suporte familiar."
-      },
-      {
-        "data": "10/08",
-        "titulo": "Evolução Médica",
+        "data": "10/08/2026",
+        "titulo": "Suspensão da sedação",
         "cor": "green",
-        "texto": "Sedação suspensa. Paciente inicia processo de despertar. RASS: -1. Sonolento, porém desperta ao estímulo verbal e apresenta interação inicial com a equipe. Mantida vigilância quanto a: nível de consciência, capacidade de interação, proteção de vias aéreas, padrão respiratório, resposta motora, comportamento, tolerância à redução da sedação, possibilidade de progressão do suporte ventilatório."
+        "texto": "Sedação suspensa. Paciente inicia processo de despertar. RASS: -1. Sonolento, despertável ao chamado. Apresenta interação inicial com a equipe. Mantém-se intubado e em VM. SSVV: PA 142/84, FC 92, FR 20, SpO2 95%, T 36,7°C."
       }
     ],
     "fisio": [
       {
-        "data": "03/08",
-        "titulo": "Avaliação Inicial",
-        "cor": "blue",
-        "texto": "Paciente em UTI, intubado e em VM invasiva, sob sedação. Histórico prévio: SAOS grave (IAH 115), hipercapnia, BiPAP domiciliar, neoplasia pulmonar, ICFEp, obesidade grave, prótese TQ esquerdo, TCE, trauma cervical C4. Avaliação funcional limitada pelo rebaixamento do nível de consciência e sedação. Conduta: acompanhamento cardiorrespiratório, monitorização, manejo relacionado à VM e prevenção de complicações da imobilidade."
+        "data": "03/08/2026",
+        "titulo": "Avaliação inicial",
+        "cor": "red",
+        "texto": "Paciente em UTI, intubado, sedado, em VM. Avaliação funcional não realizada devido à sedação. Tentado TUG, IMS, Borg, MRC — sem condições. Conduta: acompanhamento respiratório e VM. SSVV: FC 102, FR 20, SpO2 93%, PA 151/88."
       },
       {
-        "data": "04/08",
-        "titulo": "Reavaliação",
-        "cor": "yellow",
-        "texto": "Durante discussão multiprofissional, fisioterapia toma conhecimento da mudança na hipótese de classificação da lesão cervical. Mantida necessidade de considerar restrições decorrentes do trauma cervical até esclarecimento diagnóstico. Avaliação funcional permanece limitada."
-      },
-      {
-        "data": "05–09/08",
+        "data": "04/08/2026",
         "titulo": "Acompanhamento",
-        "cor": "gray",
-        "texto": "Paciente permanece sedado e em VM. Fisioterapia acompanha: mecânica ventilatória, necessidade de suporte ventilatório, resposta às intervenções, condições para mobilização, risco de perda funcional, repercussões da imobilidade."
+        "cor": "blue",
+        "texto": "Paciente sedado, intubado e em VM. Tentada MRC, IMS, Borg, TUG — sem resposta adequada. Paciente permanece restrito ao leito. SSVV: PA 146/84, FC 98, FR 19, SpO2 95%, T 36,6°C."
       },
       {
-        "data": "10/08",
-        "titulo": "Reavaliação",
+        "data": "05/08/2026",
+        "titulo": "Acompanhamento",
+        "cor": "blue",
+        "texto": "Paciente permanece sedado e em VM. IMS, MRC, Borg, TUG não aplicáveis. Tentativa de avaliação de força de MMII sem resposta consistente. Mantido acompanhamento respiratório."
+      },
+      {
+        "data": "06/08/2026",
+        "titulo": "Acompanhamento",
+        "cor": "blue",
+        "texto": "Paciente restrito ao leito. IMS, MRC, TUG, Borg não realizados. NYHA classe III (história prévia). Conduta: acompanhamento respiratório e mobilização passiva no leito."
+      },
+      {
+        "data": "07/08/2026",
+        "titulo": "Acompanhamento",
+        "cor": "blue",
+        "texto": "Paciente sedado. MRC, IMS, TUG, Borg não concluídos. Tentada Escala de Berg e Índice de Barthel — sem possibilidade. Paciente dependente para mobilidade."
+      },
+      {
+        "data": "08/08/2026",
+        "titulo": "Acompanhamento",
+        "cor": "blue",
+        "texto": "Paciente sedado. Avaliação de força muscular respiratória, manovacuometria, mMRC, Borg — não realizadas devido à VM e nível de consciência. Mantido acompanhamento da VM."
+      },
+      {
+        "data": "09/08/2026",
+        "titulo": "Acompanhamento",
+        "cor": "blue",
+        "texto": "Paciente sedado. Índice de Barthel, TUG, IMS, MRC — sem possibilidade. Paciente dependente para mobilidade. Mantido acompanhamento respiratório."
+      },
+      {
+        "data": "10/08/2026",
+        "titulo": "Despertar",
         "cor": "green",
-        "texto": "Sedação suspensa. Paciente em processo de despertar. RASS: -1. Apresenta possibilidade inicial de interação com a equipe. Iniciada reavaliação sistemática: nível de consciência, comando motor, força muscular, sensibilidade, padrão respiratório, tosse, manejo de secreções, capacidade de interação, tolerância à mobilização, estabilidade hemodinâmica, risco funcional."
+        "texto": "Sedação suspensa, RASS -1. Sonolento, despertável. MRC incompleta (dificuldade para comandos). IMS parcial, baixa participação. TUG não realizado (VM). Borg, mMRC não aplicáveis. Barthel por estimativa: dependência importante. Berg não realizada (impossibilidade de ortostatismo). NYHA III. STOP-Bang registrado (SAOS grave). Epworth, FOSQ, Mini Sleep não concluídos. Dessaturação para 89% durante avaliação (interrompida). Após repouso, SpO2 retornou para 94%."
       }
     ],
     "enfermagem": [
       {
-        "data": "03/08",
-        "titulo": "Admissão",
+        "data": "03/08/2026",
+        "titulo": "Cuidados iniciais",
         "cor": "blue",
-        "texto": "Paciente admitido em UTI após trauma motociclístico. Intubado e sob sedação. Mantida monitorização contínua e cuidados intensivos. Devido ao quadro neurológico e à condição crítica, permanece dependente de cuidados integrais."
+        "texto": "Paciente em leito de UTI, intubado, sedado e em VM. Mantidos cuidados gerais, higiene, posicionamento, monitorização e cuidados com dispositivos. Paciente dependente de cuidados."
       },
       {
-        "data": "04–09/08",
-        "titulo": "Cuidados Intensivos",
-        "cor": "gray",
-        "texto": "Paciente permanece sob cuidados intensivos. Mantidos cuidados relacionados a: ventilação invasiva, prevenção de complicações da imobilidade, integridade cutânea, posicionamento, dispositivos invasivos, higiene, controle de sinais clínicos, segurança do paciente. Ausência de rede familiar disponível."
+        "data": "04/08/2026",
+        "titulo": "Cuidados de rotina",
+        "cor": "blue",
+        "texto": "Paciente sedado, intubado e em VM. Mantidos cuidados com dispositivos, higiene corporal, mudança de decúbito e monitorização."
       },
       {
-        "data": "10/08",
+        "data": "06/08/2026",
+        "titulo": "Cuidados de rotina",
+        "cor": "blue",
+        "texto": "Paciente em UTI, sedado, intubado e em VM. Mantidos cuidados de rotina. Sem acompanhante."
+      },
+      {
+        "data": "10/08/2026",
         "titulo": "Despertar",
         "cor": "green",
-        "texto": "Sedação suspensa. Paciente inicia despertar. RASS: -1. Apresenta maior possibilidade de interação com a equipe. Durante abordagem, demonstra comportamento questionador e maior necessidade de explicações antes da realização de determinadas condutas."
+        "texto": "Paciente com sedação suspensa, RASS -1. Sonolento, desperta ao chamado. Apresenta maior interação com a equipe. Questiona procedimentos realizados. Mantido em VM invasiva. Sem acompanhante."
       }
     ]
   },
+  "exames_imagem": [
+    {
+      "data": "03/08/2026",
+      "tipo": "Tomografia Computadorizada de Crânio",
+      "descricao": "Presença de áreas de contusão hemorrágica frontal, predominando em região frontal bilateral. Pequena quantidade de hemorragia subaracnoidea traumática em região frontal. Sem desvio significativo da linha média. Sistema ventricular sem dilatação significativa. Sem sinais de herniação cerebral.",
+      "conclusao": "TCE com contusões hemorrágicas frontais e pequena hemorragia subaracnoidea traumática."
+    },
+    {
+      "data": "03/08/2026",
+      "tipo": "Tomografia Computadorizada de Coluna Cervical",
+      "descricao": "Alterações degenerativas cervicais. Redução dos espaços discais em níveis inferiores da coluna cervical. Fratura não deslocada do corpo vertebral de C4, associada a alteração do alinhamento posterior.",
+      "conclusao": "Trauma cervical em C4, com fratura e alterações de alinhamento, necessitando correlação com avaliação neurológica."
+    },
+    {
+      "data": "04/08/2026",
+      "tipo": "Ressonância Magnética de Coluna Cervical",
+      "descricao": "Alteração de sinal intramedular em nível de C4, compatível com lesão medular traumática. Predomínio da alteração na região posterior da medula. Edema medular no segmento cervical correspondente. Alterações degenerativas multissegmentares.",
+      "conclusao": "Lesão medular traumática em C4, com predomínio posterior e edema medular."
+    },
+    {
+      "data": "04/08/2026",
+      "tipo": "Tomografia Computadorizada de Tórax",
+      "descricao": "Massa pulmonar de grandes dimensões em pulmão direito, com aproximadamente 8,2 cm no maior eixo. Linfonodomegalias mediastinais, incluindo cadeias paratraqueais e subcarinais. Áreas de redução da aeração pulmonar adjacentes à lesão. Sem evidência de derrame pleural volumoso. Sem lesões ósseas secundárias identificáveis.",
+      "conclusao": "Massa pulmonar compatível com neoplasia conhecida, associada a comprometimento linfonodal mediastinal."
+    }
+  ],
+  "exames_laboratoriais": [
+    {
+      "data": "03/08/2026",
+      "exame": "Hemograma",
+      "itens": [
+        {
+          "parametro": "Hemoglobina",
+          "valor": "14,2",
+          "referencia": "12,0-16,0",
+          "unidade": "g/dL",
+          "alterado": false
+        },
+        {
+          "parametro": "Hematócrito",
+          "valor": "42,5",
+          "referencia": "36,0-48,0",
+          "unidade": "%",
+          "alterado": false
+        },
+        {
+          "parametro": "Leucócitos",
+          "valor": "12.800",
+          "referencia": "4.000-11.000",
+          "unidade": "/mm³",
+          "alterado": true
+        },
+        {
+          "parametro": "Neutrófilos",
+          "valor": "82",
+          "referencia": "40-70",
+          "unidade": "%",
+          "alterado": true
+        },
+        {
+          "parametro": "Plaquetas",
+          "valor": "245.000",
+          "referencia": "150.000-450.000",
+          "unidade": "/mm³",
+          "alterado": false
+        }
+      ]
+    },
+    {
+      "data": "03/08/2026",
+      "exame": "Gasometria Arterial",
+      "itens": [
+        {
+          "parametro": "pH",
+          "valor": "7,32",
+          "referencia": "7,35-7,45",
+          "unidade": "",
+          "alterado": true
+        },
+        {
+          "parametro": "pCO2",
+          "valor": "58",
+          "referencia": "35-45",
+          "unidade": "mmHg",
+          "alterado": true
+        },
+        {
+          "parametro": "pO2",
+          "valor": "68",
+          "referencia": "80-100",
+          "unidade": "mmHg",
+          "alterado": true
+        },
+        {
+          "parametro": "HCO3",
+          "valor": "28",
+          "referencia": "22-26",
+          "unidade": "mEq/L",
+          "alterado": true
+        },
+        {
+          "parametro": "SatO2",
+          "valor": "92",
+          "referencia": "95-100",
+          "unidade": "%",
+          "alterado": true
+        },
+        {
+          "parametro": "Lactato",
+          "valor": "1,8",
+          "referencia": "0,5-2,2",
+          "unidade": "mmol/L",
+          "alterado": false
+        }
+      ]
+    },
+    {
+      "data": "03/08/2026",
+      "exame": "Bioquímica",
+      "itens": [
+        {
+          "parametro": "Glicose",
+          "valor": "142",
+          "referencia": "70-100",
+          "unidade": "mg/dL",
+          "alterado": true
+        },
+        {
+          "parametro": "Ureia",
+          "valor": "48",
+          "referencia": "15-45",
+          "unidade": "mg/dL",
+          "alterado": true
+        },
+        {
+          "parametro": "Creatinina",
+          "valor": "1,1",
+          "referencia": "0,7-1,3",
+          "unidade": "mg/dL",
+          "alterado": false
+        },
+        {
+          "parametro": "Sódio",
+          "valor": "138",
+          "referencia": "135-145",
+          "unidade": "mEq/L",
+          "alterado": false
+        },
+        {
+          "parametro": "Potássio",
+          "valor": "4,2",
+          "referencia": "3,5-5,0",
+          "unidade": "mEq/L",
+          "alterado": false
+        },
+        {
+          "parametro": "Troponina",
+          "valor": "0,02",
+          "referencia": "<0,04",
+          "unidade": "ng/mL",
+          "alterado": false
+        }
+      ]
+    },
+    {
+      "data": "04/08/2026",
+      "exame": "Hemograma",
+      "itens": [
+        {
+          "parametro": "Hemoglobina",
+          "valor": "13,8",
+          "referencia": "12,0-16,0",
+          "unidade": "g/dL",
+          "alterado": false
+        },
+        {
+          "parametro": "Leucócitos",
+          "valor": "11.200",
+          "referencia": "4.000-11.000",
+          "unidade": "/mm³",
+          "alterado": true
+        },
+        {
+          "parametro": "Neutrófilos",
+          "valor": "78",
+          "referencia": "40-70",
+          "unidade": "%",
+          "alterado": true
+        },
+        {
+          "parametro": "Plaquetas",
+          "valor": "230.000",
+          "referencia": "150.000-450.000",
+          "unidade": "/mm³",
+          "alterado": false
+        }
+      ]
+    },
+    {
+      "data": "10/08/2026",
+      "exame": "Gasometria Arterial",
+      "itens": [
+        {
+          "parametro": "pH",
+          "valor": "7,36",
+          "referencia": "7,35-7,45",
+          "unidade": "",
+          "alterado": false
+        },
+        {
+          "parametro": "pCO2",
+          "valor": "52",
+          "referencia": "35-45",
+          "unidade": "mmHg",
+          "alterado": true
+        },
+        {
+          "parametro": "pO2",
+          "valor": "72",
+          "referencia": "80-100",
+          "unidade": "mmHg",
+          "alterado": true
+        },
+        {
+          "parametro": "HCO3",
+          "valor": "29",
+          "referencia": "22-26",
+          "unidade": "mEq/L",
+          "alterado": true
+        },
+        {
+          "parametro": "SatO2",
+          "valor": "94",
+          "referencia": "95-100",
+          "unidade": "%",
+          "alterado": true
+        }
+      ]
+    }
+  ],
   "problemas": [
     {
       "numero": 1,
-      "texto": "TCE frontal pós-trauma",
+      "texto": "TCE frontal com contusões hemorrágicas e hemorragia subaracnoidea traumática",
       "cor": "red"
     },
     {
       "numero": 2,
-      "texto": "Lesão medular cervical parcial em C4",
-      "cor": "orange"
+      "texto": "Trauma cervical em C4 com fratura e lesão medular parcial posterior",
+      "cor": "red"
     },
     {
       "numero": 3,
-      "texto": "Lesão reclassificada: anterior → posterior",
-      "cor": "yellow"
+      "texto": "Edema medular cervical",
+      "cor": "orange"
     },
     {
       "numero": 4,
-      "texto": "Rebaixamento do nível de consciência em recuperação",
-      "cor": "blue"
+      "texto": "Insuficiência respiratória aguda — VM invasiva",
+      "cor": "red"
     },
     {
       "numero": 5,
-      "texto": "Ventilação mecânica invasiva",
+      "texto": "Câncer pulmonar de grandes células — estádio IIIB (cT4N2M0)",
       "cor": "purple"
     },
     {
       "numero": 6,
-      "texto": "Processo de despertar após suspensão de sedação",
-      "cor": "green"
-    },
-    {
-      "numero": 7,
-      "texto": "RASS -1 em 10/08",
-      "cor": "cyan"
-    },
-    {
-      "numero": 8,
-      "texto": "SAOS grave",
-      "cor": "red"
-    },
-    {
-      "numero": 9,
-      "texto": "IAH 115 eventos/h",
+      "texto": "SAOS grave (IAH 115 eventos/h) com hipercapnia",
       "cor": "orange"
     },
     {
+      "numero": 7,
+      "texto": "ICFEp com disfunção diastólica grau II",
+      "cor": "blue"
+    },
+    {
+      "numero": 8,
+      "texto": "Obesidade grave (IMC 54,7 kg/m²)",
+      "cor": "orange"
+    },
+    {
+      "numero": 9,
+      "texto": "Rebaixamento do nível de consciência em recuperação",
+      "cor": "blue"
+    },
+    {
       "numero": 10,
-      "texto": "História de hipercapnia importante",
-      "cor": "yellow"
+      "texto": "Luto não elaborado — irmão gêmeo falecido",
+      "cor": "purple"
     },
     {
       "numero": 11,
-      "texto": "Uso prévio de BiPAP",
+      "texto": "Ausência de suporte familiar/social",
       "cor": "blue"
     },
     {
       "numero": 12,
-      "texto": "Carcinoma pulmonar de grandes células",
-      "cor": "purple"
-    },
-    {
-      "numero": 13,
-      "texto": "Câncer pulmonar cT4N2M0 — estádio IIIB",
-      "cor": "green"
-    },
-    {
-      "numero": 14,
-      "texto": "ICFEp",
-      "cor": "cyan"
-    },
-    {
-      "numero": 15,
-      "texto": "Hipertrofia ventricular esquerda",
-      "cor": "red"
-    },
-    {
-      "numero": 16,
-      "texto": "Disfunção diastólica grau II",
-      "cor": "orange"
-    },
-    {
-      "numero": 17,
-      "texto": "Obesidade grave",
-      "cor": "yellow"
-    },
-    {
-      "numero": 18,
-      "texto": "Peso atual de 158 kg",
+      "texto": "Prótese total de joelho esquerdo (osteossarcoma prévio)",
       "cor": "blue"
-    },
-    {
-      "numero": 19,
-      "texto": "IMC 54,7 kg/m²",
-      "cor": "purple"
-    },
-    {
-      "numero": 20,
-      "texto": "Antecedente de osteossarcoma em joelho esquerdo",
-      "cor": "green"
-    },
-    {
-      "numero": 21,
-      "texto": "Prótese total de joelho esquerdo",
-      "cor": "cyan"
-    },
-    {
-      "numero": 22,
-      "texto": "Trauma motociclístico",
-      "cor": "red"
-    },
-    {
-      "numero": 23,
-      "texto": "Ausência de suporte familiar",
-      "cor": "orange"
-    },
-    {
-      "numero": 24,
-      "texto": "Baixa confiança na equipe hospitalar",
-      "cor": "yellow"
-    },
-    {
-      "numero": 25,
-      "texto": "Comportamento questionador",
-      "cor": "blue"
-    },
-    {
-      "numero": 26,
-      "texto": "Menor colaboração espontânea",
-      "cor": "purple"
     }
   ]
 }
