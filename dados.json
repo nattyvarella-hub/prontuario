@@ -1,0 +1,333 @@
+{
+  "paciente": {
+    "nome": "Trastamiro",
+    "idade": 83,
+    "sexo": "Masculino",
+    "prontuario": "083-T/2026",
+    "data_internacao": "03/08/2026",
+    "unidade": "UTI",
+    "peso_atual_kg": 158,
+    "estatura_m": 1.7,
+    "imc": 54.7,
+    "peso_habitual_kg": 108,
+    "variacao_ponderal": "Ganho aproximado de 50 kg após evento familiar de grande impacto emocional (falecimento do irmão gêmeo Astrogildo)."
+  },
+  "badges": [
+    {
+      "texto": "TCE Frontal",
+      "cor": "red",
+      "icone": "⚠️"
+    },
+    {
+      "texto": "Lesão C4",
+      "cor": "orange",
+      "icone": "🦴"
+    },
+    {
+      "texto": "CA Pulmão IIIB",
+      "cor": "pink",
+      "icone": "🫁"
+    },
+    {
+      "texto": "ICFEp",
+      "cor": "purple",
+      "icone": "❤️"
+    },
+    {
+      "texto": "SAOS Grave",
+      "cor": "green",
+      "icone": "😴"
+    },
+    {
+      "texto": "Obesidade Grave (IMC 54,7)",
+      "cor": "cyan",
+      "icone": "⚖️"
+    }
+  ],
+  "resumo": {
+    "identificacao": "Trastamiro, 83 anos, Masculino. Prontuário: 083-T/2026 | UTI",
+    "motivo_internacao": "Trauma motociclístico — TCE frontal + Lesão cervical C4. Sem capacete | Perda de consciência",
+    "status_atual": "Sedação suspensa — processo de despertar. RASS: -1 | Sonolento, desperta ao estímulo verbal",
+    "comorbidades": "SAOS grave (IAH 115), CA pulmão grandes células cT4N2M0 (IIIB), ICFEp (FE 62%), Obesidade grave (IMC 54,7), Prótese de joelho esquerdo",
+    "psicossociais": "Irmão gêmeo (Astrogildo) faleceu no mesmo hospital. Ganho de ~50 kg após o luto. Sem suporte familiar. Desconfiança da equipe. Comportamento questionador.",
+    "ventilacao": "Ventilação mecânica invasiva. Uso prévio de BiPAP domiciliar por SAOS grave + hipercapnia"
+  },
+  "historia_social": [
+    {
+      "titulo": "Irmão Gêmeo — Astrogildo",
+      "icone": "👥",
+      "cor": "purple",
+      "texto": "Paciente possui irmão gêmeo, Astrogildo, que anteriormente encontrava-se internado e sob cuidados no Hospital dos Estagiários da Tuiuti. Astrogildo apresentou evolução desfavorável e veio a óbito em circunstâncias trágicas."
+    },
+    {
+      "titulo": "Ganho Ponderal Pós-Luto",
+      "icone": "⚖️",
+      "cor": "orange",
+      "texto": "Após a morte do irmão, Trastamiro apresentou ganho ponderal progressivo de aproximadamente 50 kg."
+    },
+    {
+      "titulo": "Relação com a Equipe",
+      "icone": "🏥",
+      "cor": "red",
+      "texto": "Desde a internação atual, apresenta maior desconfiança em relação aos profissionais, questiona frequentemente as condutas propostas, demonstra menor colaboração espontânea e solicita explicações sobre procedimentos."
+    },
+    {
+      "titulo": "Suporte Familiar",
+      "icone": "👨‍👩‍👧‍👦",
+      "cor": "blue",
+      "texto": "Durante a evolução hospitalar, perdeu toda a assistência familiar disponível. Paciente encontra-se sem rede de apoio."
+    }
+  ],
+  "antecedentes": [
+    {
+      "titulo": "Antecedente Oncológico Ortopédico",
+      "icone": "🦴",
+      "cor_header": "#e3f2fd",
+      "cor_texto": "#0d47a1",
+      "cor_borda": "#e3f2fd",
+      "texto": "Aos 25 anos, diagnóstico de osteossarcoma em joelho esquerdo. Submetido a tratamento cirúrgico com retirada da lesão e implantação de prótese total de joelho esquerdo. Recuperação satisfatória, retomou a marcha. Até o evento traumático atual, não havia relato de limitação importante da marcha."
+    },
+    {
+      "titulo": "Síndrome da Apneia Obstrutiva do Sono (SAOS)",
+      "icone": "😴",
+      "cor_header": "#f3e5f5",
+      "cor_texto": "#6a1b9a",
+      "cor_borda": "#f3e5f5",
+      "texto": "Diagnóstico prévio de SAOS grave. IAH: 115 eventos/hora. História de hipercapnia importante associada ao distúrbio ventilatório. Paciente fazia uso domiciliar de BiPAP."
+    },
+    {
+      "titulo": "Neoplasia Pulmonar",
+      "icone": "🫁",
+      "cor_header": "#ffebee",
+      "cor_texto": "#c62828",
+      "cor_borda": "#ffebee",
+      "texto": "Carcinoma pulmonar de grandes células. Estadiamento: cT4N2M0 — estádio IIIB. T4: tumor primário com mais de 7 cm no maior diâmetro. N2: comprometimento de linfonodos mediastinais ipsilaterais e/ou subcarinais. M0: ausência de metástases à distância identificadas no estadiamento inicial."
+    },
+    {
+      "titulo": "Insuficiência Cardíaca — ICFEp",
+      "icone": "❤️",
+      "cor_header": "#e8f5e9",
+      "cor_texto": "#2e7d32",
+      "cor_borda": "#e8f5e9",
+      "texto": "Ecocardiograma: VE: hipertrofia concêntrica moderada, dimensões preservadas. Função sistólica global preservada — FEVE 62%. Função diastólica: disfunção diastólica grau II, achados compatíveis com aumento das pressões de enchimento. Átrio esquerdo moderadamente dilatado. VD discretamente aumentado, função sistólica preservada. VM: insuficiência mitral discreta | VA: esclerose valvar, sem estenose significativa | VT: insuficiência tricúspide discreta. PSAP estimada: 45 mmHg | Pericárdio: sem derrame."
+    }
+  ],
+  "evento_atual": {
+    "data": "03/08/2026",
+    "titulo": "ACIDENTE MOTOCICLÍSTICO",
+    "texto": "Paciente sofreu acidente motociclístico após perder o controle da motocicleta durante manobra de empinamento. No momento do acidente, não utilizava capacete.",
+    "evoluiu_com": [
+      "Traumatismo cranioencefálico frontal",
+      "Trauma cervical",
+      "Suspeita de lesão medular em C4",
+      "Rebaixamento do nível de consciência"
+    ],
+    "encaminhamento": "Foi encaminhado ao Hospital dos Estagiários da Tuiuti."
+  },
+  "evolucoes": {
+    "medica": [
+      {
+        "data": "03/08",
+        "titulo": "Admissão",
+        "cor": "blue",
+        "texto": "Paciente admitido após trauma motociclístico. TCE frontal associado a trauma cervical em nível C4. Quadro compatível com lesão medular cervical parcial anterior. Evoluiu com rebaixamento do nível de consciência, indicada transferência para UTI. Realizada intubação orotraqueal. Mantido sob sedação e ventilação mecânica invasiva."
+      },
+      {
+        "data": "04/08",
+        "titulo": "Passagem de Plantão",
+        "cor": "yellow",
+        "texto": "Durante reavaliação pela equipe da manhã, surgem dúvidas quanto à classificação inicial da lesão medular. Achados considerados mais compatíveis com lesão medular parcial posterior em C4. Solicitada revisão da avaliação neurológica e correlação com exames de imagem e exame clínico."
+      },
+      {
+        "data": "05–09/08",
+        "titulo": "Evolução na UTI",
+        "cor": "gray",
+        "texto": "Paciente permanece em ventilação mecânica invasiva, mantida sedação. Acompanhamento devido à associação de: TCE, lesão cervical, alteração do nível de consciência, câncer pulmonar, SAOS grave, hipercapnia, ICFEp, obesidade grave, antecedente ortopédico, ausência de suporte familiar."
+      },
+      {
+        "data": "10/08",
+        "titulo": "Evolução Médica",
+        "cor": "green",
+        "texto": "Sedação suspensa. Paciente inicia processo de despertar. RASS: -1. Sonolento, porém desperta ao estímulo verbal e apresenta interação inicial com a equipe. Mantida vigilância quanto a: nível de consciência, capacidade de interação, proteção de vias aéreas, padrão respiratório, resposta motora, comportamento, tolerância à redução da sedação, possibilidade de progressão do suporte ventilatório."
+      }
+    ],
+    "fisio": [
+      {
+        "data": "03/08",
+        "titulo": "Avaliação Inicial",
+        "cor": "blue",
+        "texto": "Paciente em UTI, intubado e em VM invasiva, sob sedação. Histórico prévio: SAOS grave (IAH 115), hipercapnia, BiPAP domiciliar, neoplasia pulmonar, ICFEp, obesidade grave, prótese TQ esquerdo, TCE, trauma cervical C4. Avaliação funcional limitada pelo rebaixamento do nível de consciência e sedação. Conduta: acompanhamento cardiorrespiratório, monitorização, manejo relacionado à VM e prevenção de complicações da imobilidade."
+      },
+      {
+        "data": "04/08",
+        "titulo": "Reavaliação",
+        "cor": "yellow",
+        "texto": "Durante discussão multiprofissional, fisioterapia toma conhecimento da mudança na hipótese de classificação da lesão cervical. Mantida necessidade de considerar restrições decorrentes do trauma cervical até esclarecimento diagnóstico. Avaliação funcional permanece limitada."
+      },
+      {
+        "data": "05–09/08",
+        "titulo": "Acompanhamento",
+        "cor": "gray",
+        "texto": "Paciente permanece sedado e em VM. Fisioterapia acompanha: mecânica ventilatória, necessidade de suporte ventilatório, resposta às intervenções, condições para mobilização, risco de perda funcional, repercussões da imobilidade."
+      },
+      {
+        "data": "10/08",
+        "titulo": "Reavaliação",
+        "cor": "green",
+        "texto": "Sedação suspensa. Paciente em processo de despertar. RASS: -1. Apresenta possibilidade inicial de interação com a equipe. Iniciada reavaliação sistemática: nível de consciência, comando motor, força muscular, sensibilidade, padrão respiratório, tosse, manejo de secreções, capacidade de interação, tolerância à mobilização, estabilidade hemodinâmica, risco funcional."
+      }
+    ],
+    "enfermagem": [
+      {
+        "data": "03/08",
+        "titulo": "Admissão",
+        "cor": "blue",
+        "texto": "Paciente admitido em UTI após trauma motociclístico. Intubado e sob sedação. Mantida monitorização contínua e cuidados intensivos. Devido ao quadro neurológico e à condição crítica, permanece dependente de cuidados integrais."
+      },
+      {
+        "data": "04–09/08",
+        "titulo": "Cuidados Intensivos",
+        "cor": "gray",
+        "texto": "Paciente permanece sob cuidados intensivos. Mantidos cuidados relacionados a: ventilação invasiva, prevenção de complicações da imobilidade, integridade cutânea, posicionamento, dispositivos invasivos, higiene, controle de sinais clínicos, segurança do paciente. Ausência de rede familiar disponível."
+      },
+      {
+        "data": "10/08",
+        "titulo": "Despertar",
+        "cor": "green",
+        "texto": "Sedação suspensa. Paciente inicia despertar. RASS: -1. Apresenta maior possibilidade de interação com a equipe. Durante abordagem, demonstra comportamento questionador e maior necessidade de explicações antes da realização de determinadas condutas."
+      }
+    ]
+  },
+  "problemas": [
+    {
+      "numero": 1,
+      "texto": "TCE frontal pós-trauma",
+      "cor": "red"
+    },
+    {
+      "numero": 2,
+      "texto": "Lesão medular cervical parcial em C4",
+      "cor": "orange"
+    },
+    {
+      "numero": 3,
+      "texto": "Lesão reclassificada: anterior → posterior",
+      "cor": "yellow"
+    },
+    {
+      "numero": 4,
+      "texto": "Rebaixamento do nível de consciência em recuperação",
+      "cor": "blue"
+    },
+    {
+      "numero": 5,
+      "texto": "Ventilação mecânica invasiva",
+      "cor": "purple"
+    },
+    {
+      "numero": 6,
+      "texto": "Processo de despertar após suspensão de sedação",
+      "cor": "green"
+    },
+    {
+      "numero": 7,
+      "texto": "RASS -1 em 10/08",
+      "cor": "cyan"
+    },
+    {
+      "numero": 8,
+      "texto": "SAOS grave",
+      "cor": "red"
+    },
+    {
+      "numero": 9,
+      "texto": "IAH 115 eventos/h",
+      "cor": "orange"
+    },
+    {
+      "numero": 10,
+      "texto": "História de hipercapnia importante",
+      "cor": "yellow"
+    },
+    {
+      "numero": 11,
+      "texto": "Uso prévio de BiPAP",
+      "cor": "blue"
+    },
+    {
+      "numero": 12,
+      "texto": "Carcinoma pulmonar de grandes células",
+      "cor": "purple"
+    },
+    {
+      "numero": 13,
+      "texto": "Câncer pulmonar cT4N2M0 — estádio IIIB",
+      "cor": "green"
+    },
+    {
+      "numero": 14,
+      "texto": "ICFEp",
+      "cor": "cyan"
+    },
+    {
+      "numero": 15,
+      "texto": "Hipertrofia ventricular esquerda",
+      "cor": "red"
+    },
+    {
+      "numero": 16,
+      "texto": "Disfunção diastólica grau II",
+      "cor": "orange"
+    },
+    {
+      "numero": 17,
+      "texto": "Obesidade grave",
+      "cor": "yellow"
+    },
+    {
+      "numero": 18,
+      "texto": "Peso atual de 158 kg",
+      "cor": "blue"
+    },
+    {
+      "numero": 19,
+      "texto": "IMC 54,7 kg/m²",
+      "cor": "purple"
+    },
+    {
+      "numero": 20,
+      "texto": "Antecedente de osteossarcoma em joelho esquerdo",
+      "cor": "green"
+    },
+    {
+      "numero": 21,
+      "texto": "Prótese total de joelho esquerdo",
+      "cor": "cyan"
+    },
+    {
+      "numero": 22,
+      "texto": "Trauma motociclístico",
+      "cor": "red"
+    },
+    {
+      "numero": 23,
+      "texto": "Ausência de suporte familiar",
+      "cor": "orange"
+    },
+    {
+      "numero": 24,
+      "texto": "Baixa confiança na equipe hospitalar",
+      "cor": "yellow"
+    },
+    {
+      "numero": 25,
+      "texto": "Comportamento questionador",
+      "cor": "blue"
+    },
+    {
+      "numero": 26,
+      "texto": "Menor colaboração espontânea",
+      "cor": "purple"
+    }
+  ]
+}
