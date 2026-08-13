@@ -489,14 +489,16 @@
           "referencia": "22-26",
           "unidade": "mEq/L",
           "alterado": true
-        },
+        }
+      ]
+    },
         {
           "parametro": "SatO2",
           "valor": "94",
           "referencia": "95-100",
           "unidade": "%",
           "alterado": true
-        }
+            },
         {
          "data": "13/08/2026",
       "exame": "Gasometria Arterial",
