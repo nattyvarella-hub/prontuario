@@ -497,6 +497,45 @@
           "unidade": "%",
           "alterado": true
         }
+         "data": "13/08/2026",
+      "exame": "Gasometria Arterial",
+      "itens": [
+        {
+          "parametro": "pH",
+          "valor": "7,36",
+          "referencia": "7,35-7,45",
+          "unidade": "",
+          "alterado": false
+        },
+        {
+          "parametro": "pCO2",
+          "valor": "43",
+          "referencia": "35-45",
+          "unidade": "mmHg",
+          "alterado": false
+        },
+        {
+          "parametro": "pO2",
+          "valor": "86",
+          "referencia": "80-100",
+          "unidade": "mmHg",
+          "alterado": false
+        },
+        {
+          "parametro": "HCO3",
+          "valor": "29",
+          "referencia": "22-26",
+          "unidade": "mEq/L",
+          "alterado": true
+        },
+        {
+          "parametro": "SatO2",
+          "valor": "95",
+          "referencia": "95-100",
+          "unidade": "%",
+          "alterado": false
+        }
+     
       ]
     }
   ],
