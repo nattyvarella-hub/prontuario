@@ -26,10 +26,6 @@
       "cor": "red"
     },
     {
-      "texto": "VM Invasiva",
-      "cor": "orange"
-    },
-    {
       "texto": "Câncer Pulmão IIIB",
       "cor": "purple"
     },
@@ -48,15 +44,23 @@
     {
       "texto": "RASS -1",
       "cor": "green"
+    },
+    {
+      "texto": "Brown-Séquard",
+      "cor": "red"
+    },
+    {
+      "texto": "Pós-extubação",
+      "cor": "green"
     }
   ],
   "resumo": {
     "identificacao": "Paciente masculino, 83 anos, prontuário 083-T/2026. Internado em UTI desde 03/08/2026. Irmão gêmeo de Astrogildo (falecido).",
     "motivo_internacao": "TCE frontal e trauma cervical em C4 após acidente motociclístico sem capacete. Realizava manobra de empinamento quando perdeu controle.",
-    "status_atual": "Intubado, em VM invasiva, sedação suspensa desde 10/08/2026. RASS -1, sonolento, despertável ao chamado. Dependente para mobilidade.",
-    "comorbidades": "Câncer pulmonar de grandes células (estádio IIIB), SAOS grave (IAH 115/h), hipercapnia, ICFEp, obesidade grave (IMC 54,7), prótese total de joelho esquerdo.",
+    "status_atual": "Extubado em 17/08/2026 após teste de respiração espontânea bem tolerado. Mantém respiração espontânea, SpO₂ inicial de 95% em ar ambiente, desperto, comunicativo e responsivo. Apresenta déficit motor assimétrico predominante à direita, controle de tronco reduzido e dependência funcional importante.",
+    "comorbidades": "Câncer pulmonar de grandes células (estádio IIIB), SAOS grave (IAH 115/h), hipercapnia, ICFEp, obesidade grave (IMC 54,7), prótese total de joelho esquerdo.; síndrome de Brown-Séquard associada à lesão medular traumática em C4.",
     "psicossociais": "Luto pelo irmão gêmeo Astrogildo. Ausência de suporte familiar. Comportamento questionador e desconfiado desde internação.",
-    "ventilacao": "VM invasiva desde admissão. SpO2 93-95%. Tentativa de avaliação fisioterapêutica em 10/08 resultou em dessaturação para 89%."
+    "ventilacao": "Ventilação mecânica invasiva desde a admissão até extubação bem-sucedida em 17/08/2026 após períodos progressivos de teste de respiração espontânea. Pós-extubação imediata sem sinais de obstrução, com tosse produtiva e SpO₂ 95% em ar ambiente."
   },
   "historia_social": [
     {
@@ -181,6 +185,48 @@
         "titulo": "Suspensão da sedação",
         "cor": "green",
         "texto": "Sedação suspensa. Paciente inicia processo de despertar. RASS: -1. Sonolento, despertável ao chamado. Apresenta interação inicial com a equipe. Mantém-se intubado e em VM. SSVV: PA 142/84, FC 92, FR 20, SpO2 95%, T 36,7°C."
+      },
+      {
+        "data": "11/08/2026",
+        "titulo": "Evolução",
+        "cor": "blue",
+        "texto": "Paciente permanece em UTI, intubado e em ventilação mecânica invasiva após suspensão da sedação. Glasgow 8T: abertura ocular 2, resposta verbal 1T, não testável devido ao tubo orotraqueal, resposta motora 4. Mantém lesão medular cervical em C4. Após revisão dos exames e correlação com avaliação neurológica, quadro compatível com síndrome de Brown-Séquard. Mantido acompanhamento neurológico e respiratório."
+      },
+      {
+        "data": "12/08/2026",
+        "titulo": "Evolução",
+        "cor": "blue",
+        "texto": "Paciente permanece em ventilação mecânica invasiva. Mantém diagnóstico de TCE frontal, lesão medular cervical em C4 e síndrome de Brown-Séquard. Em acompanhamento para redução progressiva do suporte ventilatório."
+      },
+      {
+        "data": "13/08/2026",
+        "titulo": "Teste de respiração espontânea",
+        "cor": "yellow",
+        "texto": "Paciente permanece em UTI, em acompanhamento após início de teste de respiração espontânea. Mantém lesão cerebral frontal traumática com acometimento orbitofrontal correspondente à área 11 de Brodmann. Lesão medular traumática em C4 compatível com síndrome de Brown-Séquard. Permanece intubado."
+      },
+      {
+        "data": "14/08/2026",
+        "titulo": "Evolução",
+        "cor": "blue",
+        "texto": "Paciente permanece em ventilação mecânica invasiva. Após períodos de teste de respiração espontânea, mantém necessidade de suporte ventilatório. Sem novas alterações neurológicas descritas. Mantém acompanhamento para possível extubação conforme evolução."
+      },
+      {
+        "data": "15/08/2026",
+        "titulo": "Evolução",
+        "cor": "blue",
+        "texto": "Paciente permanece em ventilação mecânica invasiva. Apresenta melhor tolerância aos períodos de respiração espontânea. Mantida programação de novos testes de respiração espontânea."
+      },
+      {
+        "data": "16/08/2026",
+        "titulo": "Avaliação para extubação",
+        "cor": "yellow",
+        "texto": "Paciente apresenta boa tolerância aos períodos de respiração espontânea. Mantém estabilidade clínica. Avaliado para extubação no dia seguinte, conforme manutenção dos parâmetros atuais."
+      },
+      {
+        "data": "17/08/2026",
+        "titulo": "Extubação",
+        "cor": "green",
+        "texto": "Paciente submetido a teste de respiração espontânea, com boa tolerância. Após avaliação clínica, realizada extubação com sucesso. Mantém respiração espontânea após retirada do tubo. Sem intercorrências imediatas."
       }
     ],
     "fisio": [
@@ -231,6 +277,48 @@
         "titulo": "Despertar",
         "cor": "green",
         "texto": "Sedação suspensa, RASS -1. Sonolento, despertável. MRC incompleta (dificuldade para comandos). IMS parcial, baixa participação. TUG não realizado (VM). Borg, mMRC não aplicáveis. Barthel por estimativa: dependência importante. Berg não realizada (impossibilidade de ortostatismo). NYHA III. STOP-Bang registrado (SAOS grave). Epworth, FOSQ, Mini Sleep não concluídos. Dessaturação para 89% durante avaliação (interrompida). Após repouso, SpO2 retornou para 94%."
+      },
+      {
+        "data": "11/08/2026",
+        "titulo": "Avaliação respiratória e funcional",
+        "cor": "blue",
+        "texto": "Paciente em UTI, intubado, em ventilação mecânica invasiva. FiO₂ reduzida para 40%. Tosse presente, produtiva e eficaz, com secreção traqueobrônquica moderada. Realizada higiene brônquica, com melhora da ausculta. Peak flow: 165 L/min. Glasgow 8T. MRC sem escore confiável; IMS sem condições de sedestação ou transferência; NYHA inadequada no momento. Durante mobilização passiva, SpO₂ caiu transitoriamente para 88%, com recuperação após interrupção. Mantida mobilização passiva conforme tolerância."
+      },
+      {
+        "data": "12/08/2026",
+        "titulo": "Início do TRE",
+        "cor": "yellow",
+        "texto": "Paciente em ventilação mecânica invasiva, FiO₂ 40%, com tosse produtiva e eficaz. Iniciado teste de respiração espontânea. Durante o teste: FR 24 irpm, SpO₂ 95%, FC 86 bpm, sem sinais de desconforto respiratório. Paciente mais desperto. MRC sem pontuação completa confiável. Anamnese indireta registra redução progressiva da atividade física, fadiga e dispneia aos esforços antes da internação, além de abandono de atividades habituais."
+      },
+      {
+        "data": "13/08/2026",
+        "titulo": "Avaliação motora parcial",
+        "cor": "orange",
+        "texto": "Paciente em VMI, FiO₂ 40%, com tosse produtiva e secreção traqueobrônquica; realizada higiene brônquica. Mantido TRE, interrompido momentaneamente por aumento transitório da FR para 31 irpm e SpO₂ 91%, com retorno após repouso. MRC parcial: membro superior esquerdo 3/5, superior direito 2/5, inferior esquerdo 2/5 e inferior direito 1/5. Mantém-se restrito ao leito. Joelho esquerdo com ADM passiva aproximada de 0–95°, sem sinais clínicos de instabilidade. Berg não aplicável por ausência de ortostatismo. Durante TRE, taquicardia transitória até 108 bpm, com recuperação após interrupção."
+      },
+      {
+        "data": "14/08/2026",
+        "titulo": "Melhor tolerância ao TRE",
+        "cor": "blue",
+        "texto": "Paciente em VMI, FiO₂ 40%, com tosse produtiva e secreção pequena a moderada; realizada higiene brônquica. Novo TRE com FR 22–25 irpm, SpO₂ 94–96% e FC 82–96 bpm, com melhor tolerância. Maior abertura ocular. IMS: 1, apenas mobilidade no leito; não consegue sentar sem auxílio. Mantida mobilização ativa-assistida. Escalas de Borg sem resultado confiável devido à intubação. Em acompanhamento por neoplasia pulmonar."
+      },
+      {
+        "data": "15/08/2026",
+        "titulo": "Progressão motora",
+        "cor": "blue",
+        "texto": "Paciente em VMI, FiO₂ 40%, com tosse produtiva e secreção; realizada higiene brônquica. TRE com boa tolerância: FR 20–24 irpm, SpO₂ 95–97%, FC 78–92 bpm, sem desconforto. Mais desperto e capaz de seguir comandos simples. MRC: membros superiores esquerdo 4/5 e direito 3/5; membros inferiores esquerdo 3/5 e direito 2/5. Mantém déficit motor assimétrico, predominando à direita, e dependência para mobilidade. Prótese de joelho esquerdo sem complicação aguda."
+      },
+      {
+        "data": "16/08/2026",
+        "titulo": "Preparação para extubação",
+        "cor": "green",
+        "texto": "Paciente em VMI, FiO₂ 40%, com tosse produtiva e pouca secreção. TRE bem tolerado: FR 18–22 irpm, SpO₂ 96–98%, FC 76–88 bpm, sem desconforto. Desperto, colaborativo e capaz de seguir comandos simples. Mantém déficit motor assimétrico, predominando à direita. IMS: 2, movimentação ativa no leito, sem sedestação independente. Considerada história de SAOS grave, IAH 115 eventos/h, uso domiciliar de BiPAP e hipercapnia. Epworth sem escore confiável."
+      },
+      {
+        "data": "17/08/2026",
+        "titulo": "Pós-extubação e avaliação funcional",
+        "cor": "green",
+        "texto": "Paciente extubado após TRE, sem intercorrências imediatas. Mantém respiração espontânea, tosse produtiva e eficaz, sem sinais imediatos de obstrução; SpO₂ 95% em ar ambiente após observação inicial. Desperto, comunicativo e segue comandos simples. Apresenta comportamento expansivo e espontâneo, com dificuldade ocasional de inibição e mudanças rápidas do conteúdo emocional ao abordar o falecimento do irmão. Relata atividade como drag queen, nome artístico Miss Fortune Monsoon, desejo de participar do RuPaul's Drag Race, relacionamento com Agi Otta e fila de adoção. Após extubação, realiza sedestação à beira-leito com assistência moderada por aproximadamente 4 minutos, com controle de tronco reduzido. Não realizado ortostatismo. FC 82→101 bpm, PA 136/78→148/82 mmHg, SpO₂ 94–96%, Borg modificada 3/10. Mantém déficit motor maior à direita e prótese de joelho esquerdo sem intercorrência aguda. Relata ganho ponderal aproximado de 50 kg após o falecimento do irmão, redução da atividade física e afastamento familiar por não aceitação de sua atuação como drag queen."
       }
     ],
     "enfermagem": [
@@ -257,6 +345,48 @@
         "titulo": "Despertar",
         "cor": "green",
         "texto": "Paciente com sedação suspensa, RASS -1. Sonolento, desperta ao chamado. Apresenta maior interação com a equipe. Questiona procedimentos realizados. Mantido em VM invasiva. Sem acompanhante."
+      },
+      {
+        "data": "11/08/2026",
+        "titulo": "Cuidados de rotina",
+        "cor": "blue",
+        "texto": "Paciente em leito de UTI, intubado, em ventilação mecânica. Sedação suspensa, abertura ocular ao estímulo e movimentação de membros. Mantidos cuidados de higiene, posicionamento, monitorização e cuidados com tubo orotraqueal e demais dispositivos."
+      },
+      {
+        "data": "12/08/2026",
+        "titulo": "Maior interação",
+        "cor": "blue",
+        "texto": "Paciente acordando aos estímulos, mantido em ventilação mecânica. Apresenta maior interação com a equipe e questiona os procedimentos realizados."
+      },
+      {
+        "data": "13/08/2026",
+        "titulo": "Cuidados de rotina",
+        "cor": "blue",
+        "texto": "Paciente mais desperto e interativo, mantendo tubo orotraqueal e ventilação mecânica. Demonstra maior aceitação da equipe e solicita informações antes dos procedimentos."
+      },
+      {
+        "data": "14/08/2026",
+        "titulo": "Comunicação por gestos",
+        "cor": "blue",
+        "texto": "Paciente em UTI, intubado e em ventilação mecânica. Mais desperto durante os cuidados, comunicando-se por gestos. Mantida monitorização."
+      },
+      {
+        "data": "15/08/2026",
+        "titulo": "Interação com a equipe",
+        "cor": "blue",
+        "texto": "Paciente mais desperto, mantido em ventilação mecânica. Apresenta maior interação com os profissionais."
+      },
+      {
+        "data": "16/08/2026",
+        "titulo": "Ansiedade pré-extubação",
+        "cor": "yellow",
+        "texto": "Paciente desperto e interativo, permanece intubado e em ventilação mecânica. Demonstra ansiedade em relação à retirada do tubo e solicita informações sobre a evolução do tratamento."
+      },
+      {
+        "data": "17/08/2026",
+        "titulo": "Pós-extubação",
+        "cor": "green",
+        "texto": "Paciente extubado após TRE, mantendo respiração espontânea. Desperto, comunicativo e responsivo. Apresenta comportamento questionador e solicita explicações antes dos procedimentos. Mantida monitorização após extubação."
       }
     ]
   },
@@ -489,18 +619,18 @@
           "referencia": "22-26",
           "unidade": "mEq/L",
           "alterado": true
-        }
-      ]
-    },
+        },
         {
           "parametro": "SatO2",
           "valor": "94",
           "referencia": "95-100",
           "unidade": "%",
           "alterado": true
-            },
-        {
-         "data": "13/08/2026",
+        }
+      ]
+    },
+    {
+      "data": "13/08/2026",
       "exame": "Gasometria Arterial",
       "itens": [
         {
@@ -538,7 +668,6 @@
           "unidade": "%",
           "alterado": false
         }
-     
       ]
     }
   ],
@@ -550,7 +679,7 @@
     },
     {
       "numero": 2,
-      "texto": "Trauma cervical em C4 com fratura e lesão medular parcial posterior",
+      "texto": "Trauma cervical em C4 com fratura e lesão medular traumática posterior — síndrome de Brown-Séquard",
       "cor": "red"
     },
     {
@@ -560,7 +689,7 @@
     },
     {
       "numero": 4,
-      "texto": "Insuficiência respiratória aguda — VM invasiva",
+      "texto": "Insuficiência respiratória aguda — extubado em 17/08/2026 após TRE",
       "cor": "red"
     },
     {
@@ -595,13 +724,23 @@
     },
     {
       "numero": 11,
-      "texto": "Ausência de suporte familiar/social",
-      "cor": "blue"
+      "texto": "Presença de suporte familiar/social - Agi Otta",
+      "cor": "green"
     },
     {
       "numero": 12,
       "texto": "Prótese total de joelho esquerdo (osteossarcoma prévio)",
       "cor": "blue"
+    },
+    {
+      "numero": 13,
+      "texto": "Déficit motor assimétrico, predominante à direita, com dependência funcional",
+      "cor": "orange"
+    },
+    {
+      "numero": 14,
+      "texto": "Pós-extubação em respiração espontânea",
+      "cor": "green"
     }
   ]
 }
