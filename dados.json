@@ -52,15 +52,27 @@
     {
       "texto": "Pós-extubação",
       "cor": "green"
+    },
+    {
+      "texto": "Hipercapnia",
+      "cor": "orange"
+    },
+    {
+      "texto": "Rebaixamento neurológico",
+      "cor": "red"
+    },
+    {
+      "texto": "Metástases ósseas",
+      "cor": "purple"
     }
   ],
   "resumo": {
     "identificacao": "Paciente masculino, 83 anos, prontuário 083-T/2026. Internado em UTI desde 03/08/2026. Irmão gêmeo de Astrogildo (falecido).",
     "motivo_internacao": "TCE frontal e trauma cervical em C4 após acidente motociclístico sem capacete. Realizava manobra de empinamento quando perdeu controle.",
-    "status_atual": "Extubado em 17/08/2026 após teste de respiração espontânea bem tolerado. Mantém respiração espontânea, SpO₂ inicial de 95% em ar ambiente, desperto, comunicativo e responsivo. Apresenta déficit motor assimétrico predominante à direita, controle de tronco reduzido e dependência funcional importante.",
-    "comorbidades": "Câncer pulmonar de grandes células (estádio IIIB), SAOS grave (IAH 115/h), hipercapnia, ICFEp, obesidade grave (IMC 54,7), prótese total de joelho esquerdo.; síndrome de Brown-Séquard associada à lesão medular traumática em C4.",
+    "status_atual": "Extubado em 17/08/2026 após TRE, mantendo respiração espontânea e tosse produtiva e eficaz. Evolui, entretanto, com rebaixamento persistente do nível de consciência após episódio de hipercapnia importante durante a noite, sem recuperação neurológica adequada até o momento. Mantida vigilância respiratória e neurológica.",
+    "comorbidades": "Câncer pulmonar de grandes células (estádio IIIB), SAOS grave (IAH 115/h), hipercapnia, ICFEp, obesidade grave (IMC 54,7), prótese total de joelho esquerdo.; síndrome de Brown-Séquard associada à lesão medular traumática em C4.; progressão da neoplasia pulmonar com metástases ósseas em coluna vertebral e fígado; episódio recente de acidemia hipercápnica.",
     "psicossociais": "Luto pelo irmão gêmeo Astrogildo. Ausência de suporte familiar. Comportamento questionador e desconfiado desde internação.",
-    "ventilacao": "Ventilação mecânica invasiva desde a admissão até extubação bem-sucedida em 17/08/2026 após períodos progressivos de teste de respiração espontânea. Pós-extubação imediata sem sinais de obstrução, com tosse produtiva e SpO₂ 95% em ar ambiente."
+    "ventilacao": "Ventilação mecânica invasiva desde a admissão até extubação em 17/08/2026 após TRE. Em 16/08/2026 apresentou piora importante da retenção de CO₂, com gasometria mostrando pH 7,22 e PaCO₂ 68 mmHg. Após extubação, mantém respiração espontânea, porém com rebaixamento persistente do nível de consciência."
   },
   "historia_social": [
     {
@@ -227,6 +239,18 @@
         "titulo": "Extubação",
         "cor": "green",
         "texto": "Paciente submetido a teste de respiração espontânea, com boa tolerância. Após avaliação clínica, realizada extubação com sucesso. Mantém respiração espontânea após retirada do tubo. Sem intercorrências imediatas."
+      },
+      {
+        "data": "16/08/2026",
+        "titulo": "Intercorrência: hipercapnia e rebaixamento",
+        "cor": "orange",
+        "texto": "Paciente com neoplasia pulmonar de grandes células, estádio III, com progressão da doença e aparecimento de metástases ósseas em coluna vertebral e fígado. Durante o período noturno, apresentou piora importante da retenção de CO₂, associada a rebaixamento do nível de consciência. Gasometria arterial: pH 7,22, PaCO₂ 68 mmHg, PaO₂ 125 mmHg, HCO₃⁻ 28 mEq/L, BE +4. Quadro compatível com acidemia associada à hipercapnia importante. Mantém lesão medular C4, síndrome de Brown-Séquard, TCE frontal, ICFEp e história de SAOS grave com IAH 115 eventos/h e hipercapnia."
+      },
+      {
+        "data": "17/08/2026",
+        "titulo": "Complemento pós-extubação",
+        "cor": "orange",
+        "texto": "Paciente permanece com rebaixamento do nível de consciência após episódio de hipercapnia importante durante a noite. Apesar do rebaixamento neurológico, foi submetido a teste de respiração espontânea e posteriormente extubado. Após extubação, mantém respiração espontânea, porém sem recuperação adequada do nível de consciência. Mantida vigilância respiratória e neurológica e investigação da causa do rebaixamento persistente."
       }
     ],
     "fisio": [
@@ -319,6 +343,24 @@
         "titulo": "Pós-extubação e avaliação funcional",
         "cor": "green",
         "texto": "Paciente extubado após TRE, sem intercorrências imediatas. Mantém respiração espontânea, tosse produtiva e eficaz, sem sinais imediatos de obstrução; SpO₂ 95% em ar ambiente após observação inicial. Desperto, comunicativo e segue comandos simples. Apresenta comportamento expansivo e espontâneo, com dificuldade ocasional de inibição e mudanças rápidas do conteúdo emocional ao abordar o falecimento do irmão. Relata atividade como drag queen, nome artístico Miss Fortune Monsoon, desejo de participar do RuPaul's Drag Race, relacionamento com Agi Otta e fila de adoção. Após extubação, realiza sedestação à beira-leito com assistência moderada por aproximadamente 4 minutos, com controle de tronco reduzido. Não realizado ortostatismo. FC 82→101 bpm, PA 136/78→148/82 mmHg, SpO₂ 94–96%, Borg modificada 3/10. Mantém déficit motor maior à direita e prótese de joelho esquerdo sem intercorrência aguda. Relata ganho ponderal aproximado de 50 kg após o falecimento do irmão, redução da atividade física e afastamento familiar por não aceitação de sua atuação como drag queen."
+      },
+      {
+        "data": "16/08/2026",
+        "titulo": "Intercorrência respiratória",
+        "cor": "orange",
+        "texto": "Paciente em VMI, em acompanhamento fisioterapêutico respiratório, com história de SAOS grave, IAH 115 eventos/h, hipercapnia importante e acompanhamento regular com fisioterapia do sono. Durante a noite, evoluiu com piora da hipercapnia e rebaixamento do nível de consciência. Gasometria: pH 7,22; PaCO₂ 68 mmHg; PaO₂ 125 mmHg; HCO₃⁻ 28 mEq/L; BE +4. Paciente permanece rebaixado. Escala de Epworth sem resultado confiável devido à condição clínica."
+      },
+      {
+        "data": "17/08/2026",
+        "titulo": "Pós-extubação com rebaixamento",
+        "cor": "orange",
+        "texto": "Paciente permanece com rebaixamento do nível de consciência após episódio de hipercapnia durante a madrugada. Realizado TRE, evoluindo posteriormente para extubação. Após extubação, mantém respiração espontânea e tosse produtiva e eficaz, porém permanece rebaixado e sem recuperação adequada do nível de consciência. Mantida monitorização respiratória e neurológica, com observação da evolução da ventilação e do nível de consciência."
+      },
+      {
+        "data": "17/08/2026",
+        "titulo": "Complemento da evolução",
+        "cor": "orange",
+        "texto": "Após extubação, paciente não apresentou recuperação esperada do nível de consciência. Mantém padrão de rebaixamento neurológico, temporalmente associado ao episódio de hipercapnia ocorrido durante a noite anterior."
       }
     ],
     "enfermagem": [
@@ -387,6 +429,12 @@
         "titulo": "Pós-extubação",
         "cor": "green",
         "texto": "Paciente extubado após TRE, mantendo respiração espontânea. Desperto, comunicativo e responsivo. Apresenta comportamento questionador e solicita explicações antes dos procedimentos. Mantida monitorização após extubação."
+      },
+      {
+        "data": "17/08/2026",
+        "titulo": "Vigilância pós-extubação",
+        "cor": "orange",
+        "texto": "Após extubação, paciente mantém respiração espontânea, porém apresenta rebaixamento persistente do nível de consciência após episódio de hipercapnia noturna. Mantida monitorização respiratória e neurológica, com observação contínua e comunicação à equipe."
       }
     ]
   },
@@ -669,6 +717,48 @@
           "alterado": false
         }
       ]
+    },
+    {
+      "data": "16/08/2026",
+      "exame": "Gasometria Arterial",
+      "itens": [
+        {
+          "parametro": "pH",
+          "valor": "7,22",
+          "referencia": "7,35-7,45",
+          "unidade": "",
+          "alterado": true
+        },
+        {
+          "parametro": "PaCO₂",
+          "valor": "68",
+          "referencia": "35-45",
+          "unidade": "mmHg",
+          "alterado": true
+        },
+        {
+          "parametro": "PaO₂",
+          "valor": "125",
+          "referencia": "80-100",
+          "unidade": "mmHg",
+          "alterado": true
+        },
+        {
+          "parametro": "HCO₃⁻",
+          "valor": "28",
+          "referencia": "22-26",
+          "unidade": "mEq/L",
+          "alterado": true
+        },
+        {
+          "parametro": "BE",
+          "valor": "+4",
+          "referencia": "-2 a +2",
+          "unidade": "mEq/L",
+          "alterado": true
+        }
+      ],
+      "interpretacao": "Acidemia com hipercapnia importante, compatível com distúrbio respiratório predominante."
     }
   ],
   "problemas": [
@@ -724,8 +814,8 @@
     },
     {
       "numero": 11,
-      "texto": "Presença de suporte familiar/social - Agi Otta",
-      "cor": "green"
+      "texto": "Ausência de suporte familiar/social",
+      "cor": "blue"
     },
     {
       "numero": 12,
@@ -741,6 +831,21 @@
       "numero": 14,
       "texto": "Pós-extubação em respiração espontânea",
       "cor": "green"
+    },
+    {
+      "numero": 15,
+      "texto": "Hipercapnia importante com acidemia respiratória (pH 7,22; PaCO₂ 68 mmHg)",
+      "cor": "red"
+    },
+    {
+      "numero": 16,
+      "texto": "Rebaixamento persistente do nível de consciência após episódio de hipercapnia e extubação",
+      "cor": "orange"
+    },
+    {
+      "numero": 17,
+      "texto": "Progressão da neoplasia pulmonar com metástases ósseas em coluna vertebral e fígado",
+      "cor": "purple"
     }
   ]
 }
