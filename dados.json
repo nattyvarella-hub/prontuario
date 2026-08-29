@@ -6,11 +6,11 @@
     "prontuario": "083-T/2026",
     "data_internacao": "03/08/2026",
     "setor": "UTI",
-    "peso_atual_kg": 158,
+    "peso_atual_kg": 125,
     "estatura_m": 1.7,
-    "imc": 54.7,
+    "imc": 43.3,
     "peso_habitual_kg": 108,
-    "variacao_ponderal": "Ganho ponderal aproximado de 50 kg após falecimento do irmão gêmeo Astrogildo."
+    "variacao_ponderal": "Perda ponderal de ~25kg durante internação (edema, paracentese e massa magra). Peso real atualizado para 125kg após calibração de balança."
   },
   "badges": [
     {
@@ -50,29 +50,37 @@
       "cor": "red"
     },
     {
-      "texto": "Pós-extubação",
-      "cor": "green"
-    },
-    {
       "texto": "Hipercapnia",
       "cor": "orange"
     },
     {
-      "texto": "Rebaixamento neurológico",
+      "texto": "Metástases ósseas",
+      "cor": "purple"
+    },
+    {
+      "texto": "ICFEr (FE 35%)",
       "cor": "red"
     },
     {
-      "texto": "Metástases ósseas",
-      "cor": "purple"
+      "texto": "Cor Pulmonale",
+      "cor": "orange"
+    },
+    {
+      "texto": "Uso de BiPAP",
+      "cor": "blue"
+    },
+    {
+      "texto": "Pós-Op Ortopédico",
+      "cor": "green"
     }
   ],
   "resumo": {
     "identificacao": "Paciente masculino, 83 anos, prontuário 083-T/2026. Internado em UTI desde 03/08/2026. Irmão gêmeo de Astrogildo (falecido).",
     "motivo_internacao": "TCE frontal e trauma cervical em C4 após acidente motociclístico sem capacete. Realizava manobra de empinamento quando perdeu controle.",
-    "status_atual": "Extubado em 17/08/2026 após TRE, mantendo respiração espontânea e tosse produtiva e eficaz. Evolui, entretanto, com rebaixamento persistente do nível de consciência após episódio de hipercapnia importante durante a noite, sem recuperação neurológica adequada até o momento. Mantida vigilância respiratória e neurológica.",
-    "comorbidades": "Câncer pulmonar de grandes células (estádio IIIB), SAOS grave (IAH 115/h), hipercapnia, ICFEp, obesidade grave (IMC 54,7), prótese total de joelho esquerdo.; síndrome de Brown-Séquard associada à lesão medular traumática em C4.; progressão da neoplasia pulmonar com metástases ósseas em coluna vertebral e fígado; episódio recente de acidemia hipercápnica.",
-    "psicossociais": "Luto pelo irmão gêmeo Astrogildo. Ausência de suporte familiar. Comportamento questionador e desconfiado desde internação.",
-    "ventilacao": "Ventilação mecânica invasiva desde a admissão até extubação em 17/08/2026 após TRE. Em 16/08/2026 apresentou piora importante da retenção de CO₂, com gasometria mostrando pH 7,22 e PaCO₂ 68 mmHg. Após extubação, mantém respiração espontânea, porém com rebaixamento persistente do nível de consciência."
+    "status_atual": "Consciente e comunicativo, porém com importante limitação funcional. Pós-operatório de fixação de fratura de rádio e ulna (queda em 24/08). Mantém uso de BiPAP noturno/intermitente por SAOS grave e cor pulmonale. Rebaixamento prévio resolvido após suporte ventilatório.",
+    "comorbidades": "Câncer pulmonar de grandes células (estádio IIIB), SAOS grave (IAH 115/h), hipercapnia, ICFEp, obesidade grave (IMC 54,7), prótese total de joelho esquerdo.; síndrome de Brown-Séquard associada à lesão medular traumática em C4.; progressão da neoplasia pulmonar com metástases ósseas em coluna vertebral e fígado; episódio recente de acidemia hipercápnica.; IC com fração de ejeção reduzida (FE 35%); Cor Pulmonale; DPOC GOLD D; Fratura de rádio e ulna fixada cirurgicamente.",
+    "psicossociais": "Luto pelo irmão gêmeo Astrogildo. Ausência de suporte familiar. Comportamento questionador e desconfiado desde internação. Reaparecimento e posterior desaparecimento da filha após apropriação de prêmio de loteria (R$ 10 milhões). Interesse em atividades artísticas (Drag Race) como fator de motivação.",
+    "ventilacao": "Extubado em 17/08. Apresentou hipercapnia e rebaixamento, necessitando de BiPAP intermitente com boa resposta. Mantém suporte não invasivo para controle de SAOS e cor pulmonale."
   },
   "historia_social": [
     {
@@ -251,6 +259,66 @@
         "titulo": "Complemento pós-extubação",
         "cor": "orange",
         "texto": "Paciente permanece com rebaixamento do nível de consciência após episódio de hipercapnia importante durante a noite. Apesar do rebaixamento neurológico, foi submetido a teste de respiração espontânea e posteriormente extubado. Após extubação, mantém respiração espontânea, porém sem recuperação adequada do nível de consciência. Mantida vigilância respiratória e neurológica e investigação da causa do rebaixamento persistente."
+      },
+      {
+        "data": "18/08/2026",
+        "titulo": "Hipótese de RNC por hipercapnia",
+        "cor": "orange",
+        "texto": "Paciente permanece em pós-extubação com rebaixamento do nível de consciência. Hipótese de RNC secundário à hipercapnia ganha probabilidade devido ao histórico de SAOS grave (IAH 115/h). Reiniciado BiPAP com melhora progressiva da eliminação de CO₂ e do nível de consciência."
+      },
+      {
+        "data": "19/08/2026",
+        "titulo": "Avaliação Neurológica (ASIA)",
+        "cor": "blue",
+        "texto": "Melhora do nível de consciência com BiPAP. Avaliação neurológica (ASIA) compatível com lesão medular parcial em C4. Hemicorpo direito: comprometimento de força, propriocepção e sensibilidade profunda. Hemicorpo esquerdo: comprometimento de sensibilidade superficial (dor, temperatura, pressão)."
+      },
+      {
+        "data": "20/08/2026",
+        "titulo": "Revisão de Peso e Volemia",
+        "cor": "orange",
+        "texto": "Paciente consciente mas sonolento. Mantém BiPAP. Identificada inconsistência na pesagem anterior (balança descalibrada). Peso real aferido: 125 kg. Iniciada investigação cardiovascular por edema periférico importante."
+      },
+      {
+        "data": "21/08/2026",
+        "titulo": "Balanço Hídrico e Perda Ponderal",
+        "cor": "blue",
+        "texto": "Peso 125 kg (perda de ~25kg na internação: 5kg massa, 5kg edema/diurético, 15kg paracentese). Mantém sinais de sobrecarga volêmica. Solicitado novo ecocardiograma."
+      },
+      {
+        "data": "22/08/2026",
+        "titulo": "Piora Cardiovascular",
+        "cor": "red",
+        "texto": "Ecocardiograma: FEVE 35%, disfunção de VD e remodelamento com hipertrofia excêntrica. Quadro compatível com IC com fração de ejeção reduzida e cor pulmonale (DPOC GOLD D). Mantida diureticoterapia."
+      },
+      {
+        "data": "23/08/2026",
+        "titulo": "Dor Lombar Limitante",
+        "cor": "orange",
+        "texto": "Dor lombar importante durante mudanças de posição. Paciente passa a evitar movimentação espontânea e reduz participação em atividades."
+      },
+      {
+        "data": "24/08/2026",
+        "titulo": "Queda e Fratura",
+        "cor": "red",
+        "texto": "Queda da própria altura durante tentativa de transferência. Identificada fratura de rádio e ulna (antebraço) em três partes. Realizada imobilização e avaliação ortopédica."
+      },
+      {
+        "data": "25/08/2026",
+        "titulo": "Restrição Funcional",
+        "cor": "orange",
+        "texto": "Mantida restrição do membro superior. Dor lombar persiste com redução da mobilidade no leito e resistência a posicionamentos."
+      },
+      {
+        "data": "26/08/2026",
+        "titulo": "Fixação Cirúrgica",
+        "cor": "green",
+        "texto": "Submetido a fixação de fratura de rádio e ulna com FETA. Sem intercorrências pós-operatórias imediatas."
+      },
+      {
+        "data": "27/08/2026",
+        "titulo": "Questão Social e Familiar",
+        "cor": "purple",
+        "texto": "Relato de reaparecimento de contato familiar (filha e neto). Filha encontrou bilhete premiado (R$ 10 milhões) na residência do paciente, sacou o prêmio e encontra-se desaparecida. Paciente mantém dor lombar e redução da mobilidade."
       }
     ],
     "fisio": [
@@ -361,6 +429,66 @@
         "titulo": "Complemento da evolução",
         "cor": "orange",
         "texto": "Após extubação, paciente não apresentou recuperação esperada do nível de consciência. Mantém padrão de rebaixamento neurológico, temporalmente associado ao episódio de hipercapnia ocorrido durante a noite anterior."
+      },
+      {
+        "data": "18/08/2026",
+        "titulo": "Início de BiPAP",
+        "cor": "orange",
+        "texto": "Paciente pós-extubação com rebaixamento e hipoventilação. Iniciado BiPAP devido à SAOS grave. Observado aumento progressivo da interação após suporte. Tosse produtiva, higiene brônquica realizada. Restrito ao leito."
+      },
+      {
+        "data": "19/08/2026",
+        "titulo": "Avaliação Motora e Sensitiva",
+        "cor": "blue",
+        "texto": "Mais desperto, boa tolerância ao BiPAP. FR 20, SpO2 95%, FC 84. Déficit motor e sensitivo predominante em hemicorpo direito. Mantida mobilização ativa-assistida."
+      },
+      {
+        "data": "20/08/2026",
+        "titulo": "Limitação por Dor Lombar",
+        "cor": "orange",
+        "texto": "Consciente, sonolento. Queixa de dor lombar. Tentada sedestação: tolerou 3 min, interrompida por dor. Borg 4/10. Baixa participação."
+      },
+      {
+        "data": "21/08/2026",
+        "titulo": "Sedestação Assistida",
+        "cor": "blue",
+        "texto": "Maior participação. Sedestação à beira-leito por 5 min com assistência. Controle de tronco reduzido, fadiga ao final. Borg 3/10. Edema em redução."
+      },
+      {
+        "data": "22/08/2026",
+        "titulo": "Restrição por IC",
+        "cor": "orange",
+        "texto": "Avaliado após eco (FEVE 35%). Durante mobilização, FC subiu para 103 e SpO2 caiu para 92%. Atividade reduzida para baixa intensidade devido à resposta cardiorrespiratória."
+      },
+      {
+        "data": "23/08/2026",
+        "titulo": "Insegurança na Transferência",
+        "cor": "orange",
+        "texto": "Importante limitação funcional por dor lombar. Tentada transferência para cadeira: interrompida por insegurança e falta de controle de tronco."
+      },
+      {
+        "data": "24/08/2026",
+        "titulo": "Intercorrência: Queda",
+        "cor": "red",
+        "texto": "Queda durante tentativa de saída do leito. Dor intensa em antebraço com limitação importante. Atendimento interrompido e equipe acionada."
+      },
+      {
+        "data": "25/08/2026",
+        "titulo": "Mobilização Restrita",
+        "cor": "orange",
+        "texto": "Fratura de rádio e ulna. Membro imobilizado. Suspensas cargas no membro afetado. Dor lombar persiste, necessita de assistência total para mobilidade no leito."
+      },
+      {
+        "data": "26/08/2026",
+        "titulo": "Pós-Operatório",
+        "cor": "blue",
+        "texto": "Pós-operatório de fixação de fratura. Membro protegido. Realizado posicionamento. Dor à mudança de decúbito. Sedestação não realizada."
+      },
+      {
+        "data": "27/08/2026",
+        "titulo": "Fisioterapia e Dança",
+        "cor": "green",
+        "texto": "Consciente e comunicativo. Relata interesse no Drag Race. Realizados movimentos ativos associados a ritmo musical (coreografias adaptadas). Maior participação e menor resistência."
       }
     ],
     "enfermagem": [
@@ -435,6 +563,66 @@
         "titulo": "Vigilância pós-extubação",
         "cor": "orange",
         "texto": "Após extubação, paciente mantém respiração espontânea, porém apresenta rebaixamento persistente do nível de consciência após episódio de hipercapnia noturna. Mantida monitorização respiratória e neurológica, com observação contínua e comunicação à equipe."
+      },
+      {
+        "data": "18/08/2026",
+        "titulo": "Instalação de BiPAP",
+        "cor": "orange",
+        "texto": "Pós-extubação, rebaixado, sonolento. Instalado BiPAP por hipoventilação. Tosse produtiva com aspiração ocasional. Mantidos cuidados de pele e decúbito."
+      },
+      {
+        "data": "19/08/2026",
+        "titulo": "Melhora da Responsividade",
+        "cor": "blue",
+        "texto": "Mais responsivo, boa tolerância ao BiPAP. Higiene e mudança de decúbito com auxílio de 2 profissionais. Redução de edema em MMII."
+      },
+      {
+        "data": "20/08/2026",
+        "titulo": "Queixa de Dor Lombar",
+        "cor": "orange",
+        "texto": "Períodos de sonolência. Recusa mudanças de posição por dor lombar. Orientado sobre necessidade de alternância de decúbito."
+      },
+      {
+        "data": "21/08/2026",
+        "titulo": "Aumento da Diurese",
+        "cor": "blue",
+        "texto": "Mais comunicativo. Dor lombar persiste. Diurese aumentada após diurético. Controle rigoroso de balanço hídrico."
+      },
+      {
+        "data": "22/08/2026",
+        "titulo": "Ansiedade na Mobilização",
+        "cor": "orange",
+        "texto": "Consciente e comunicativo. Ansiedade durante mobilização, solicita interrupção por desconforto. Edema em redução."
+      },
+      {
+        "data": "23/08/2026",
+        "titulo": "Recusa de Decúbito",
+        "cor": "orange",
+        "texto": "Dor lombar importante. Recusa mudanças de decúbito. Insegurança na tentativa de transferência."
+      },
+      {
+        "data": "24/08/2026",
+        "titulo": "Registro de Queda",
+        "cor": "red",
+        "texto": "Queda durante tentativa de saída do leito. Dor intensa e deformidade em antebraço. Realizada imobilização provisória e encaminhamento médico."
+      },
+      {
+        "data": "25/08/2026",
+        "titulo": "Irritabilidade por Dor",
+        "cor": "orange",
+        "texto": "Membro imobilizado. Refere dor intensa (antebraço e lombar). Irritabilidade durante os cuidados. Auxílio total para higiene."
+      },
+      {
+        "data": "26/08/2026",
+        "titulo": "Cuidados Pós-Cirúrgicos",
+        "cor": "blue",
+        "texto": "Pós-operatório de fixação de fratura. Membro protegido. Dor controlada. Mantida dificuldade para mudança de decúbito."
+      },
+      {
+        "data": "27/08/2026",
+        "titulo": "Interação Social",
+        "cor": "green",
+        "texto": "Consciente, animado com atividades artísticas. Relata visita da filha e neto. Posteriormente demonstra preocupação com desaparecimento da filha."
       }
     ]
   },
@@ -779,7 +967,7 @@
     },
     {
       "numero": 4,
-      "texto": "Insuficiência respiratória aguda — extubado em 17/08/2026 após TRE",
+      "texto": "Insuficiência respiratória crônica agudizada — Uso de BiPAP intermitente",
       "cor": "red"
     },
     {
@@ -794,7 +982,7 @@
     },
     {
       "numero": 7,
-      "texto": "ICFEp com disfunção diastólica grau II",
+      "texto": "ICFEr (FE 35%) e Cor Pulmonale (DPOC GOLD D)",
       "cor": "blue"
     },
     {
@@ -845,6 +1033,16 @@
     {
       "numero": 17,
       "texto": "Progressão da neoplasia pulmonar com metástases ósseas em coluna vertebral e fígado",
+      "cor": "purple"
+    },
+    {
+      "numero": 15,
+      "texto": "Fratura de rádio e ulna direita fixada com FETA (queda da própria altura)",
+      "cor": "red"
+    },
+    {
+      "numero": 16,
+      "texto": "Abandono familiar e possível fraude financeira (filha desaparecida com prêmio)",
       "cor": "purple"
     }
   ]
