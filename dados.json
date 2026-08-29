@@ -139,6 +139,13 @@
       "cor_header": "#fff3e0",
       "cor_texto": "#e65100",
       "cor_borda": "#ffcc80"
+    },
+    {
+      "titulo": "Avaliação Neurológica (ASIA)",
+      "texto": "19/08/2026: Nível C4, incompleta (Brown-Séquard). Lado Direito: ↓força, propriocepção, sensibilidade profunda. Lado Esquerdo: ↓dor, temperatura, pressão leve.",
+      "cor_header": "#e8f5e9",
+      "cor_texto": "#2e7d32",
+      "cor_borda": "#a5d6a7"
     }
   ],
   "evento_atual": {
@@ -650,6 +657,30 @@
       "tipo": "Tomografia Computadorizada de Tórax",
       "descricao": "Massa pulmonar de grandes dimensões em pulmão direito, com aproximadamente 8,2 cm no maior eixo. Linfonodomegalias mediastinais, incluindo cadeias paratraqueais e subcarinais. Áreas de redução da aeração pulmonar adjacentes à lesão. Sem evidência de derrame pleural volumoso. Sem lesões ósseas secundárias identificáveis.",
       "conclusao": "Massa pulmonar compatível com neoplasia conhecida, associada a comprometimento linfonodal mediastinal."
+    },
+    {
+      "data": "12/08/2026",
+      "tipo": "Ressonância Magnética de Encéfalo",
+      "descricao": "Área de alteração de sinal em região frontal inferior, com acometimento da região orbitofrontal, topograficamente correspondente à área 11 de Brodmann. Sem sinais de herniação cerebral.",
+      "conclusao": "Lesão traumática frontal com acometimento da região orbitofrontal, correspondente à área 11 de Brodmann."
+    },
+    {
+      "data": "22/08/2026",
+      "tipo": "Ecocardiograma Transtorácico",
+      "descricao": "VE: FE 35% (Simpson), hipocinesia difusa, remodelamento excêntrico. VD: dilatado com hipertrofia e redução da função (TAPSE 13mm). AE/AD dilatados. Insuficiência tricúspide moderada. PSAP 58 mmHg. Veia cava inferior dilatada.",
+      "conclusao": "Disfunção sistólica global do VE (FE 35%), disfunção de VD e hipertensão pulmonar severa. Compatível com cor pulmonale e ICFEr."
+    },
+    {
+      "data": "24/08/2026",
+      "tipo": "Radiografia do Antebraço",
+      "descricao": "Fratura envolvendo rádio e ulna em três partes com desalinhamento dos fragmentos e edema de partes moles.",
+      "conclusao": "Fratura de rádio e ulna em três partes secundária a trauma por queda."
+    },
+    {
+      "data": "26/08/2026",
+      "tipo": "Radiografia de Controle do Antebraço",
+      "descricao": "Pós-operatório de fixação. Material de síntese em posição adequada, redução satisfatória dos fragmentos.",
+      "conclusao": "Controle pós-operatório satisfatório de fixação de fratura de rádio e ulna."
     }
   ],
   "exames_laboratoriais": [
@@ -947,6 +978,90 @@
         }
       ],
       "interpretacao": "Acidemia com hipercapnia importante, compatível com distúrbio respiratório predominante."
+    },
+    {
+      "data": "18/08/2026",
+      "exame": "Gasometria Arterial",
+      "itens": [
+        {
+          "parametro": "pH",
+          "valor": "7,25",
+          "referencia": "7,35-7,45",
+          "unidade": "",
+          "alterado": true
+        },
+        {
+          "parametro": "pCO2",
+          "valor": "72",
+          "referencia": "35-45",
+          "unidade": "mmHg",
+          "alterado": true
+        },
+        {
+          "parametro": "pO2",
+          "valor": "88",
+          "referencia": "80-100",
+          "unidade": "mmHg",
+          "alterado": false
+        },
+        {
+          "parametro": "HCO3",
+          "valor": "31",
+          "referencia": "22-26",
+          "unidade": "mEq/L",
+          "alterado": true
+        },
+        {
+          "parametro": "BE",
+          "valor": "+3",
+          "referencia": "-2 a +2",
+          "unidade": "mEq/L",
+          "alterado": true
+        }
+      ],
+      "interpretacao": "Acidemia associada à hipercapnia importante, com componente de retenção crônica de CO₂."
+    },
+    {
+      "data": "19/08/2026",
+      "exame": "Gasometria Arterial",
+      "itens": [
+        {
+          "parametro": "pH",
+          "valor": "7,34",
+          "referencia": "7,35-7,45",
+          "unidade": "",
+          "alterado": true
+        },
+        {
+          "parametro": "pCO2",
+          "valor": "55",
+          "referencia": "35-45",
+          "unidade": "mmHg",
+          "alterado": true
+        },
+        {
+          "parametro": "pO2",
+          "valor": "96",
+          "referencia": "80-100",
+          "unidade": "mmHg",
+          "alterado": false
+        },
+        {
+          "parametro": "HCO3",
+          "valor": "29",
+          "referencia": "22-26",
+          "unidade": "mEq/L",
+          "alterado": true
+        },
+        {
+          "parametro": "BE",
+          "valor": "+3",
+          "referencia": "-2 a +2",
+          "unidade": "mEq/L",
+          "alterado": true
+        }
+      ],
+      "interpretacao": "Melhora da hipercapnia após reinício do suporte ventilatório não invasivo."
     }
   ],
   "problemas": [
