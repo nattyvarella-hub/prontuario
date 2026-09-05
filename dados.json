@@ -1,4 +1,4 @@
-{
+        {
   "paciente": {
     "nome": "Trastamiro",
     "idade": 83,
@@ -54,7 +54,7 @@
       "cor": "orange"
     },
     {
-      "texto": "Metástases ósseas",
+      "texto": "Metástases ósseas (L1-L3)",
       "cor": "purple"
     },
     {
@@ -70,17 +70,21 @@
       "cor": "blue"
     },
     {
-      "texto": "Pós-Op Ortopédico",
-      "cor": "green"
+      "texto": "Colecistectomia Pós-Op",
+      "cor": "yellow"
+    },
+    {
+      "texto": "Refratura Antebraço",
+      "cor": "red"
     }
   ],
   "resumo": {
     "identificacao": "Paciente masculino, 83 anos, prontuário 083-T/2026. Internado em UTI desde 03/08/2026. Irmão gêmeo de Astrogildo (falecido).",
     "motivo_internacao": "TCE frontal e trauma cervical em C4 após acidente motociclístico sem capacete. Realizava manobra de empinamento quando perdeu controle.",
-    "status_atual": "Consciente e comunicativo, porém com importante limitação funcional. Pós-operatório de fixação de fratura de rádio e ulna (queda em 24/08). Mantém uso de BiPAP noturno/intermitente por SAOS grave e cor pulmonale. Rebaixamento prévio resolvido após suporte ventilatório.",
-    "comorbidades": "Câncer pulmonar de grandes células (estádio IIIB), SAOS grave (IAH 115/h), hipercapnia, ICFEp, obesidade grave (IMC 54,7), prótese total de joelho esquerdo.; síndrome de Brown-Séquard associada à lesão medular traumática em C4.; progressão da neoplasia pulmonar com metástases ósseas em coluna vertebral e fígado; episódio recente de acidemia hipercápnica.; IC com fração de ejeção reduzida (FE 35%); Cor Pulmonale; DPOC GOLD D; Fratura de rádio e ulna fixada cirurgicamente.",
+    "status_atual": "Consciente e comunicativo, porém com importante limitação funcional. Pós-operatório de colecistectomia de emergência (01/09) e fixação de refratura de rádio e ulna com deslocamento de FETA. Identificadas lesões osteolíticas em L1, L2 e L3 com fraturas patológicas (03/09), mantendo restrição de mobilização para a coluna. Mantém uso de BiPAP noturno/intermitente. Rebaixamento prévio resolvido após suporte ventilatório.",
+    "comorbidades": "Câncer pulmonar de grandes células (estádio IIIB), metástases ósseas em L1-L3 com fraturas patológicas, SAOS grave (IAH 115/h), hipercapnia, ICFEp, ICFEr (FE 35%), Cor Pulmonale, DPOC GOLD D, obesidade grave, colecistectomia pós-operatória recente, refratura de rádio e ulna com deslocamento de FETA.; síndrome de Brown-Séquard associada à lesão medular traumática em C4.; progressão da neoplasia pulmonar com metástases ósseas em coluna vertebral e fígado; episódio recente de acidemia hipercápnica.; prótese total de joelho esquerdo.",
     "psicossociais": "Luto pelo irmão gêmeo Astrogildo. Ausência de suporte familiar. Comportamento questionador e desconfiado desde internação. Reaparecimento e posterior desaparecimento da filha após apropriação de prêmio de loteria (R$ 10 milhões). Interesse em atividades artísticas (Drag Race) como fator de motivação.",
-    "ventilacao": "Extubado em 17/08. Apresentou hipercapnia e rebaixamento, necessitando de BiPAP intermitente com boa resposta. Mantém suporte não invasivo para controle de SAOS e cor pulmonale."
+    "ventilacao": "Extubado com sucesso em menos de 24h após colecistectomia de emergência (02/09), mantendo respiração espontânea e tosse produtiva. Em uso de BiPAP noturno/intermitente por SAOS grave e cor pulmonale."
   },
   "historia_social": [
     {
@@ -107,7 +111,7 @@
   "antecedentes": [
     {
       "titulo": "Ortopedia",
-      "texto": "Osteossarcoma em joelho esquerdo aos 25 anos. Submetido à ressecção cirúrgica e colocação de prótese total de joelho esquerdo. Recuperação da marcha após procedimento.",
+      "texto": "Osteossarcoma em joelho esquerdo aos 25 anos. Submetido à ressecção cirúrgica e colocação de prótese total de joelho esquerdo. Recuperação da marcha após procedimento. Fratura recente de rádio e ulna com reabertura de foco e deslocamento de FETA em 31/08/2026.",
       "cor_header": "#f5f5f5",
       "cor_texto": "#333",
       "cor_borda": "#d0d7de"
@@ -121,21 +125,21 @@
     },
     {
       "titulo": "Oncologia",
-      "texto": "Câncer pulmonar de grandes células em tratamento. Massa pulmonar direita de aproximadamente 8,2 cm. Linfonodomegalias mediastinais. Estadiamento: cT4N2M0, estádio IIIB.",
+      "texto": "Câncer pulmonar de grandes células em tratamento. Massa pulmonar direita de aproximadamente 8,2 cm. Linfonodomegalias mediastinais. Estadiamento: cT4N2M0, estádio IIIB. Progressão da doença e metástases ósseas secundárias em L1, L2 e L3 com fraturas patológicas associadas (03/09/2026).",
       "cor_header": "#f3e5f5",
       "cor_texto": "#6a1b9a",
       "cor_borda": "#ce93d8"
     },
     {
       "titulo": "Cardiovascular",
-      "texto": "ICFEp. Ecocardiograma prévio: FEVE 62%, disfunção diastólica grau II, hipertrofia concêntrica moderada do VE, átrio esquerdo moderadamente aumentado, PSAP estimada 45 mmHg.",
+      "texto": "ICFEp. Ecocardiograma prévio: FEVE 62%, disfunção diastólica grau II, hipertrofia concêntrica moderada do VE, átrio esquerdo moderadamente aumentado, PSAP estimada 45 mmHg. ICFEr (FE 35%). Cor pulmonale (DPOC GOLD D). Disfunção sistólica global e hipertensão pulmonar severa.",
       "cor_header": "#ffebee",
       "cor_texto": "#c62828",
       "cor_borda": "#ef9a9a"
     },
     {
       "titulo": "Nutrição",
-      "texto": "Obesidade grave. IMC 54,7 kg/m². Peso atual 158 kg (peso habitual ~108 kg). Ganho de ~50 kg após luto.",
+      "texto": "Obesidade grave. IMC 43,3 kg/m². Peso atual 125 kg (peso habitual ~108 kg). Ganho de ~50 kg após luto.",
       "cor_header": "#fff3e0",
       "cor_texto": "#e65100",
       "cor_borda": "#ffcc80"
@@ -143,6 +147,13 @@
     {
       "titulo": "Avaliação Neurológica (ASIA)",
       "texto": "19/08/2026: Nível C4, incompleta (Brown-Séquard). Lado Direito: ↓força, propriocepção, sensibilidade profunda. Lado Esquerdo: ↓dor, temperatura, pressão leve.",
+      "cor_header": "#e8f5e9",
+      "cor_texto": "#2e7d32",
+      "cor_borda": "#a5d6a7"
+    },
+    {
+      "titulo": "Cirúrgicos Recentes",
+      "texto": "Colecistectomia de emergência realizada em 01/09/2026 devido a perfuração/ruptura de vesícula biliar.",
       "cor_header": "#e8f5e9",
       "cor_texto": "#2e7d32",
       "cor_borda": "#a5d6a7"
@@ -326,6 +337,36 @@
         "titulo": "Questão Social e Familiar",
         "cor": "purple",
         "texto": "Relato de reaparecimento de contato familiar (filha e neto). Filha encontrou bilhete premiado (R$ 10 milhões) na residência do paciente, sacou o prêmio e encontra-se desaparecida. Paciente mantém dor lombar e redução da mobilidade."
+      },
+      {
+        "data": "31/08/2026",
+        "titulo": "Trauma em MSD",
+        "cor": "red",
+        "texto": "Paciente apresentou trauma em membro superior direito durante exercício fisioterapêutico com remo ergométrico. Histórico recente de fratura de rádio e ulna e fixação com FETA. Após novo episódio de dor e deformidade, solicitada radiografia de antebraço direito."
+      },
+      {
+        "data": "01/09/2026",
+        "titulo": "Abdome Agudo / Colecistectomia",
+        "cor": "red",
+        "texto": "Evoluiu com dor abdominal intensa, de início súbito, predominando em hipocôndrio direito, com defesa e piora progressiva. Indicada laparotomia exploratória de emergência e colecistectomia. Necessitou de IOT intraoperatória e encaminhado à UTI em VMI."
+      },
+      {
+        "data": "02/09/2026",
+        "titulo": "Extubação Pós-Operatória",
+        "cor": "green",
+        "texto": "Pós-operatório de laparotomia exploratória e colecistectomia. Após redução da sedação e TRE realizado sem sinais de intolerância, realizada interrupção da ventilação mecânica e extubação com sucesso em menos de 24 horas após o procedimento cirúrgico."
+      },
+      {
+        "data": "03/09/2026",
+        "titulo": "Piora de Dor Lombar / TC Lombar",
+        "cor": "red",
+        "texto": "Piora súbita de dor lombar intensa, de caráter lancinante, durante tentativa de sedestação. Considerando antecedente de neoplasia pulmonar metastática, solicitada TC de coluna lombar de urgência que demonstrou lesões osteolíticas multifocais em L1, L2 e L3 e fraturas por compressão patológicas."
+      },
+      {
+        "data": "04/09/2026",
+        "titulo": "Acometimento Metastático Lombar",
+        "cor": "red",
+        "texto": "Confirmação de acometimento metastático de coluna lombar, com lesões em L1, L2 e L3 e fraturas patológicas associadas. Mantém dor lombar importante, com piora aos movimentos e mudanças de posição. Mantida restrição de mobilização de coluna até avaliação especializada."
       }
     ],
     "fisio": [
@@ -496,6 +537,36 @@
         "titulo": "Fisioterapia e Dança",
         "cor": "green",
         "texto": "Consciente e comunicativo. Relata interesse no Drag Race. Realizados movimentos ativos associados a ritmo musical (coreografias adaptadas). Maior participação e menor resistência."
+      },
+      {
+        "data": "31/08/2026",
+        "titulo": "Intercorrência no Remo Ergométrico",
+        "cor": "red",
+        "texto": "Paciente realizando exercícios ativos para MMSS com remo ergométrico. Apresentou dificuldade devido à resistência elevada e relatou dor súbita em antebraço direito. Exercício interrompido. Observada deformidade e aumento de dor no MSD, com limitação importante. Equipe médica comunicada e encaminhado para radiografia."
+      },
+      {
+        "data": "01/09/2026",
+        "titulo": "Pós-Op de Colecistectomia em VMI",
+        "cor": "orange",
+        "texto": "Paciente submetido a procedimento cirúrgico abdominal de emergência devido a ruptura de vesícula biliar. Em VMI no pós-operatório imediato, sedado. Realizada avaliação respiratória e acompanhamento da mecânica ventilatória."
+      },
+      {
+        "data": "02/09/2026",
+        "titulo": "Extubação e Tosse Produtiva",
+        "cor": "green",
+        "texto": "Após TRE com padrão respiratório adequado, extubado após ~18 horas de VMI. Apresenta tosse presente e produtiva. Mantida vigilância devido ao histórico de SAOS grave, hipercapnia e VNI prévia."
+      },
+      {
+        "data": "03/09/2026",
+        "titulo": "Suspensão por Dor Lombar Intensa",
+        "cor": "red",
+        "texto": "Durante tentativa de sedestação à beira-leito, apresenta dor lombar súbita, de forte intensidade, descrita como lancinante. Atividade imediatamente interrompida. Paciente encaminhado para avaliação médica e investigação por imagem."
+      },
+      {
+        "data": "04/09/2026",
+        "titulo": "Suspensão de Mobilização Vertical",
+        "cor": "orange",
+        "texto": "Extubado há ~48 horas, mantém respiração espontânea e tosse produtiva. Após identificação de fraturas patológicas em L1, L2 e L3, suspensas atividades de mobilização que envolvam sedestação, ortostatismo ou transferência até nova avaliação. Mantido posicionamento no leito e acompanhamento respiratório."
       }
     ],
     "enfermagem": [
@@ -630,6 +701,36 @@
         "titulo": "Interação Social",
         "cor": "green",
         "texto": "Consciente, animado com atividades artísticas. Relata visita da filha e neto. Posteriormente demonstra preocupação com desaparecimento da filha."
+      },
+      {
+        "data": "31/08/2026",
+        "titulo": "Encaminhamento Ortopédico",
+        "cor": "red",
+        "texto": "Atendimento à intercorrência com remo ergométrico. Membro superior direito imobilizado e encaminhado para avaliação radiológica devido à suspeita de refratura."
+      },
+      {
+        "data": "01/09/2026",
+        "titulo": "Retorno da Cirurgia Abdominal",
+        "cor": "red",
+        "texto": "Encaminhado ao centro cirúrgico em caráter de emergência para laparotomia com colecistectomia. Retorna à UTI intubado e em ventilação mecânica. Mantida monitorização contínua, controle de sinais vitais, balanço hídrico, acessos venosos e cuidados com ferida operatória."
+      },
+      {
+        "data": "02/09/2026",
+        "titulo": "Extubação e Dor Cirúrgica",
+        "cor": "green",
+        "texto": "Após redução da sedação, realizado TRE e extubação no mesmo dia. Mantém respiração espontânea, com SpO₂ estável. Refere dor abdominal relacionada ao procedimento cirúrgico. Mantidos cuidados com ferida operatória e monitorização."
+      },
+      {
+        "data": "03/09/2026",
+        "titulo": "Crise de Dor Lombar na Mobilização",
+        "cor": "orange",
+        "texto": "Apresentou episódio de dor súbita e intensa na região lombar durante tentativa de sedestação; atividade interrompida. Mantido em leito e encaminhado para avaliação médica e tomografia."
+      },
+      {
+        "data": "04/09/2026",
+        "titulo": "Cuidados com Fraturas Vertebrais",
+        "cor": "blue",
+        "texto": "Paciente consciente e comunicativo. Mantém dor lombar intensa, principalmente durante movimentação. Manteve-se em leito após identificação das fraturas vertebrais. Cuidados realizados com auxílio da equipe para evitar movimentos bruscos. Ferida operatória abdominal em acompanhamento."
       }
     ]
   },
@@ -681,6 +782,18 @@
       "tipo": "Radiografia de Controle do Antebraço",
       "descricao": "Pós-operatório de fixação. Material de síntese em posição adequada, redução satisfatória dos fragmentos.",
       "conclusao": "Controle pós-operatório satisfatório de fixação de fratura de rádio e ulna."
+    },
+    {
+      "data": "31/08/2026",
+      "tipo": "Radiografia do Antebraço Direito",
+      "descricao": "Fratura completa do rádio e da ulna no terço médio-distal do antebraço direito, com reabertura do foco de fratura previamente tratado. Presença de desvio dos fragmentos ósseos, com angulação e perda do alinhamento. Alteração da relação entre os fragmentos e o material de fixação, com deslocamento do dispositivo de fixação externa (FETA) e perda parcial da estabilidade. Edema importante de partes moles adjacentes.",
+      "conclusao": "Refratura de rádio e ulna direitos em região previamente fraturada, perda do alinhamento ósseo e deslocamento do material de fixação externa."
+    },
+    {
+      "data": "03/09/2026",
+      "tipo": "Tomografia Computadorizada — Coluna Lombar",
+      "descricao": "Lesões osteolíticas multifocais nos corpos vertebrais de L1, L2 e L3, com perda da arquitetura óssea habitual. Áreas de redução da densidade óssea e comprometimento cortical associadas a deformidade dos corpos vertebrais. Fraturas por compressão nos níveis L1, L2 e L3, sem antecedente de trauma de alta energia no período.",
+      "conclusao": "Lesões ósseas secundárias em L1, L2 e L3 (metástases) com fraturas patológicas associadas."
     }
   ],
   "exames_laboratoriais": [
@@ -1102,7 +1215,7 @@
     },
     {
       "numero": 8,
-      "texto": "Obesidade grave (IMC 54,7 kg/m²)",
+      "texto": "Obesidade grave (IMC 43,3 kg/m²)",
       "cor": "orange"
     },
     {
@@ -1151,14 +1264,24 @@
       "cor": "purple"
     },
     {
-      "numero": 15,
-      "texto": "Fratura de rádio e ulna direita fixada com FETA (queda da própria altura)",
+      "numero": 18,
+      "texto": "Fraturas patológicas em L1, L2 e L3",
       "cor": "red"
     },
     {
-      "numero": 16,
+      "numero": 19,
+      "texto": "Fratura de rádio e ulna direita fixada com FETA (queda da própria altura) e subsequente refratura",
+      "cor": "red"
+    },
+    {
+      "numero": 20,
       "texto": "Abandono familiar e possível fraude financeira (filha desaparecida com prêmio)",
       "cor": "purple"
+    },
+    {
+      "numero": 21,
+      "texto": "Pós-operatório de colecistectomia de emergência por ruptura vesicular",
+      "cor": "orange"
     }
   ]
 }
